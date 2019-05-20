@@ -1,0 +1,164 @@
+<#compress>
+<#if (model)??>
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+{
+	"model": {
+		"retCode": "000000",
+		"retMsg": "SUCCESS",
+		"data": {
+			"limit": "9999.0",
+			"tranDate": "20190419",
+			"listDetail": [{
+				"totalNum": "-1",
+				"bankName": "中国农业银行",
+				"bankId": "103100000026"
+			}, {
+				"totalNum": "-1",
+				"bankName": "中国银行",
+				"bankId": "104100000004"
+			}, {
+				"totalNum": "-1",
+				"bankName": "中国工商银行",
+				"bankId": "102100099996"
+			}, {
+				"totalNum": "-1",
+				"bankName": "中国建设银行",
+				"bankId": "105100000017"
+			}, {
+				"totalNum": "-1",
+				"bankName": "招商银行",
+				"bankId": "308584000013"
+			}]
+		}
+	}
+}
+ -->
+
+
+<service>
+	<sys-header>
+		<data name="SYS_HEAD">
+			<struct>
+				<data name="COMPANY">
+					<field type="string" length="4">BODC</field>
+				</data>
+				<data name="CONSUMER_BUSI_NO">
+					<field type="string" length="14">10112323435556</field>
+				</data>
+				<data name="CONSUMER_ID">
+					<field type="string" length="3">143</field>
+				</data>
+				<data name="EC_NO">
+					<field type="string" length="6">100430</field>
+				</data>
+				<data name="MESSAGE_CODE">
+					<field type="string" length="4">0020</field>
+				</data>
+				<data name="MESSAGE_TYPE">
+					<field type="string" length="4">1400</field>
+				</data>
+				<data name="REFERENCE">
+					<field type="string" length="16">1904190000003247</field>
+				</data>
+				<data name="SEQ_NO">
+					<field type="string" length="17">39385991538409472</field>
+				</data>
+				<data name="SERVICE_CODE">
+					<field type="string" length="11">MBSD_IFP_TP</field>
+				</data>
+				<data name="SOURCE_TYPE">
+					<field type="string" length="2">43</field>
+				</data>
+				<data name="THIRD_ID">
+					<field type="string" length="32">7b581155a0664bbab9c53d307f9ec847
+					</field>
+				</data>
+				<data name="TRAN_CODE">
+					<field type="string" length="8">88888888</field>
+				</data>
+				<data name="TRAN_DATE">
+					<field type="string" length="8">20190419</field>
+				</data>
+				<data name="TRAN_TIMESTAMP">
+					<field type="string" length="9">162552139</field>
+				</data>
+				<data name="RET_STATUS">
+					<field type="string" length="1">S</field>
+				</data>
+				<data name="RET">
+					<array>
+						<data name="RET_CODE">
+							<field type="string" length="6">${model.retCode?default("")}</field>
+						</data>
+						<data name="RET_MSG">
+							<field type="string" length="7">${model.retMsg?default("")}</field>
+						</data>
+					</array>
+				</data>
+			</struct>
+		</data>
+	</sys-header>
+	<app-header>
+		<data name="APP_HEAD">
+			<struct>
+				<data name="CURRENT_NUM">
+					<field type="string" length="1">0</field>
+				</data>
+				<data name="PGUP_OR_PGDN">
+					<field type="string" length="1">1</field>
+				</data>
+				<data name="TOTAL_FLAG">
+					<field type="string" length="1">E</field>
+				</data>
+				<data name="TOTAL_NUM">
+					<field type="string" length="2">
+						<#if (model.data)?? && (model.data.listDetail)??> 
+							<#list model.data.listDetail as obj>
+								<#if obj_index == 0>
+									${obj.totalNum?default("-1")}
+									 <#break>
+								</#if>
+							</#list>
+						</#if>
+					</field>
+				</data>
+			</struct>
+		</data>
+	</app-header>
+	<local-header />
+	<body>
+		<data name="LIST_DETAIL">
+			<array>
+			<#if (model.data)?? && (model.data.listDetail)??> 
+				<#list model.data.listDetail as obj>
+					<struct>
+						<data name="BANK_ID">
+							<field type="string" length="12">${obj.bankId?default("")}</field>
+						</data>
+						<data name="BANK_NAME">
+							<field type="string" length="6">${obj.bankName?default("")}</field>
+						</data>
+						<data name="CARD_DAY_LIMIT">
+							<field type="double" length="128">999999.0</field>
+						</data>
+						<data name="CARD_TYPE">
+							<field type="string" length="2">01</field>
+						</data>
+						<data name="LIMIT">
+							<!-- 如果mode中的数据是数字类型，为避免数据超过四位之后自动用逗号分隔就采用 加?c的的方式-->
+							<field type="double" length="128">${model.data.limit?c}</field>
+						</data>
+					</struct>
+				</#list>
+			</#if>
+			
+			</array>
+		</data>
+		<data name="STATUS">
+			<field type="string" length="1">S</field>
+		</data>
+	</body>
+</service>
+</#if>
+</#compress>

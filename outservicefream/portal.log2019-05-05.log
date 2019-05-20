@@ -1,0 +1,918 @@
+2019-05-05 09:18:44,101 main INFO  [PackProcessEngine:36] b45a4bf1-2193-42a8-a30c-17abfcbea70a----begin----
+2019-05-05 09:18:44,104 main INFO  [PackProcessEngine:37] b45a4bf1-2193-42a8-a30c-17abfcbea70a----ESB XML报文是：﻿<?xml version="1.0" encoding="UTF-8"?><service>	<sys-header>		<data name="SYS_HEAD">			<struct>				<data name="MESSAGE_CODE">					<field type="string" length="10">292002</field>				</data>				<data name="MESSAGE_TYPE">					<field type="string" length="10">bohaibank</field>				</data>				<data name="TRAN_FLOW">					<field type="string" length="10">API_OUT_NEW</field>				</data>			</struct>		</data>	</sys-header>	<app-header />	<local-header />	<body>		<data name="TYPE_NO">			<field type="string" length="32">asdfasdf</field>		</data>		<data name="CHANNEL_ID">			<field type="string" length="2">sdafasdf</field>		</data>		<data name="PARTNER_CODE">			<field type="string" length="5">asdfasdf</field>		</data>		<data name="PARTNER_NAME">			<field type="string" length="100">asdfasdf</field>		</data>		<data name="SIGNTYPE">			<field type="string" length="2">asdfasdf</field>		</data>		<data name="SIGNMESSAGE">			<field type="string" length="1000">asdfasdf</field>		</data>		<data name="POLICY_NO">			<field type="string" length="30">asdfasdf</field>		</data>		<data name="WDSERIALNO">			<field type="string" length="30">asdfasdf</field>		</data>		<data name="NOTICETYPE">			<field type="string" length="8">asdfasdf</field>		</data>	</body></service>
+2019-05-05 09:18:44,242 main INFO  [PackProcessEngine:43] b45a4bf1-2193-42a8-a30c-17abfcbea70a----ESB XML转换成map之后的结果是：{sys-header={SYS_HEAD={MESSAGE_CODE=292002, MESSAGE_TYPE=bohaibank, TRAN_FLOW=API_OUT_NEW}}, body={WDSERIALNO=asdfasdf, NOTICETYPE=asdfasdf, CHANNEL_ID=sdafasdf, TYPE_NO=asdfasdf, SIGNTYPE=asdfasdf, PARTNER_CODE=asdfasdf, PARTNER_NAME=asdfasdf, POLICY_NO=asdfasdf, SIGNMESSAGE=asdfasdf}}
+2019-05-05 09:18:44,242 main INFO  [PackProcessEngine:47] b45a4bf1-2193-42a8-a30c-17abfcbea70a渠道名称是：bohaibank，接口名称是：292002
+2019-05-05 09:18:44,242 main INFO  [StandardPackFlowImpl:27] b45a4bf1-2193-42a8-a30c-17abfcbea70a----ESB转成Json的模板是：bohaibank_292002_req
+2019-05-05 09:18:44,243 main INFO  [StandardPackFlowImpl:30] b45a4bf1-2193-42a8-a30c-17abfcbea70a----JSON转成ESB XML的模板是：bohaibank_292002_resp
+2019-05-05 09:18:44,340 main INFO  [StandardPackFlowImpl:34] b45a4bf1-2193-42a8-a30c-17abfcbea70a----map转换成json之后的结果是：{"CHANNEL_ID":"sdafasdf","NOTICETYPE":"asdfasdf","PARTNER_CODE":"asdfasdf","PARTNER_NAME":"asdfasdf","POLICY_NO":"asdfasdf","SIGNMESSAGE":"asdfasdf","SIGNTYPE":"asdfasdf","TYPE_NO":"asdfasdf","WDSERIALNO":"asdfasdf"}
+2019-05-05 09:18:44,629 main INFO  [StandardPackFlowImpl:41] b45a4bf1-2193-42a8-a30c-17abfcbea70a----加密之后的结果是：{d1=Vu6ZMz0l34masvpWd6kUCPoL40HWntDy8Rbiq3FeJ0V4wwsLgzcaxZLXOe3apWopLiePjj9sAYs/
+StMKR05c1Iw5agLuq1vkLNiq/FsmUuwYCgtBqf2DTP2c7ni5rbO9HuW2DAFbIR4WvPRTRNSoCWgO
+5HEY1EQI0SBrGoOENfA=, d2=d9XcIfuv/l6brAk+NkeGx2cCgOSu9yDhX94WOCyRAI/EQn/VcNWgKLzh+2v5ldlMqBRh/QJf3EXH
+i8Wkgaax3vj9DxBTEBCYiGjqZGR9UwTISQU1tKvEby1ZMrqMd84wgQPdl/7rZTGvMY2X2ZgtTzoQ
+RQy5xs32Lo3zjKZqR45sxVBaRy3wchx3j1bf3Oa2LZDpfB+xYBhCbJt/3ka2DTv3YsFUEBoI9Abg
+1t8hxQLsDY6aJRREGzdQ22a6LV9dYqk2wELMIrdgPfra5lYpOeHp36MAYcgKhGgIsODhUGuCKbgH
+Nq0Pz+qRerLtxGiYYh5FokqQzSzx3/LRLWfFCQ==}
+2019-05-05 09:18:44,630 main INFO  [StandardPackFlowImpl:53] b45a4bf1-2193-42a8-a30c-17abfcbea70a----发送请求到http://221.239.93.139:9080/HttpICSrecv/CTHJZBYH1/292002.hp请求参数是:{d1=Vu6ZMz0l34masvpWd6kUCPoL40HWntDy8Rbiq3FeJ0V4wwsLgzcaxZLXOe3apWopLiePjj9sAYs/
+StMKR05c1Iw5agLuq1vkLNiq/FsmUuwYCgtBqf2DTP2c7ni5rbO9HuW2DAFbIR4WvPRTRNSoCWgO
+5HEY1EQI0SBrGoOENfA=, d2=d9XcIfuv/l6brAk+NkeGx2cCgOSu9yDhX94WOCyRAI/EQn/VcNWgKLzh+2v5ldlMqBRh/QJf3EXH
+i8Wkgaax3vj9DxBTEBCYiGjqZGR9UwTISQU1tKvEby1ZMrqMd84wgQPdl/7rZTGvMY2X2ZgtTzoQ
+RQy5xs32Lo3zjKZqR45sxVBaRy3wchx3j1bf3Oa2LZDpfB+xYBhCbJt/3ka2DTv3YsFUEBoI9Abg
+1t8hxQLsDY6aJRREGzdQ22a6LV9dYqk2wELMIrdgPfra5lYpOeHp36MAYcgKhGgIsODhUGuCKbgH
+Nq0Pz+qRerLtxGiYYh5FokqQzSzx3/LRLWfFCQ==}
+2019-05-05 09:18:44,739 main INFO  [HttpClientUtil:149] 正在发送请求:http://221.239.93.139:9080/HttpICSrecv/CTHJZBYH1/292002.hp，参数：d1=Vu6ZMz0l34masvpWd6kUCPoL40HWntDy8Rbiq3FeJ0V4wwsLgzcaxZLXOe3apWopLiePjj9sAYs/
+StMKR05c1Iw5agLuq1vkLNiq/FsmUuwYCgtBqf2DTP2c7ni5rbO9HuW2DAFbIR4WvPRTRNSoCWgO
+5HEY1EQI0SBrGoOENfA=&d2=d9XcIfuv/l6brAk+NkeGx2cCgOSu9yDhX94WOCyRAI/EQn/VcNWgKLzh+2v5ldlMqBRh/QJf3EXH
+i8Wkgaax3vj9DxBTEBCYiGjqZGR9UwTISQU1tKvEby1ZMrqMd84wgQPdl/7rZTGvMY2X2ZgtTzoQ
+RQy5xs32Lo3zjKZqR45sxVBaRy3wchx3j1bf3Oa2LZDpfB+xYBhCbJt/3ka2DTv3YsFUEBoI9Abg
+1t8hxQLsDY6aJRREGzdQ22a6LV9dYqk2wELMIrdgPfra5lYpOeHp36MAYcgKhGgIsODhUGuCKbgH
+Nq0Pz+qRerLtxGiYYh5FokqQzSzx3/LRLWfFCQ==
+2019-05-05 09:18:46,589 main INFO  [HttpClientUtil:155] 获取响应成功:d1=H0qICZ8z5rBWcMXFsuCxLmuTjhYeNCV69c5Z6tUYVggAVS3zfLhZiANLxPVccO7aa8DrDuDJ1rm2
+l913InPNGhSx60FzQaY66I5ckNZrogeQ7Og26nTbeUMYz94kf47+WS6gEWbO2++MYbFpJptUZL39
+hgf9BNSpKNMNA3t1+og=&d2=LbYah3ua8QDzlgGralIQqJkK2Jjf6YbAHKLVXp3qbNpJUo5o2H/AgNSiR7hnV7RBVY2RUtCR6Kf2
+EMhz1onkwgknMpHF/bRNQr2k9hwf4/C4o15GTS/3rKRzLHA+3FqnFIFVw6QfuMHsqH8wIGuTevyr
+GXvdoK1ej4lG38k21PwwyX5kpIzTzePGWhReFuU40aWgNOmi47qDDGrw8afDtzvzzV1FaRyJ2F6C
+tiVV9GKCwWrD9qpiEIktf9yhvEZcmf9aD9823rWgVZex/5+kZYGuaRD+z9ULApzdwsbQFbuHeQRb
+wU8NtrO9o4RJDMpc4oBoI+Wb+/8lDka6GgZ6Xxj1FL+1B3W04qDuS6IKsS78qN1tZVjgneGmx673
+zTwn+P94KVy81nhmFkWO4jiPNI8xaoFGT/OAiMwFgVy3yVEIoaHTjSFzzaqTaiHRvOq71DadZfj8
+rZRkwalSwRoo7zTI9YFcrpFGVH+yeeSDe1ub+KLFpA7kL5TlyMISxd8RXSnn6v1jpiZsqY6ueXiy
+pbJy8nvLUfqc3WeScbGz2mjNiKfhtc7fMs691mOGrpOFpiQUnzO9AZJqdvwMaGH8pqL46SCbGHQE
+0YZ7zvwkKiW4ZLs7yki2rt3IHwgL/WjrYIKNPDWclQbrLuJkCFjempEZ/BFgbm9BgwgnyuX5XZI=
+2019-05-05 09:18:46,590 main INFO  [StandardPackFlowImpl:55] b45a4bf1-2193-42a8-a30c-17abfcbea70a----得到的响应是:d1=H0qICZ8z5rBWcMXFsuCxLmuTjhYeNCV69c5Z6tUYVggAVS3zfLhZiANLxPVccO7aa8DrDuDJ1rm2
+l913InPNGhSx60FzQaY66I5ckNZrogeQ7Og26nTbeUMYz94kf47+WS6gEWbO2++MYbFpJptUZL39
+hgf9BNSpKNMNA3t1+og=&d2=LbYah3ua8QDzlgGralIQqJkK2Jjf6YbAHKLVXp3qbNpJUo5o2H/AgNSiR7hnV7RBVY2RUtCR6Kf2
+EMhz1onkwgknMpHF/bRNQr2k9hwf4/C4o15GTS/3rKRzLHA+3FqnFIFVw6QfuMHsqH8wIGuTevyr
+GXvdoK1ej4lG38k21PwwyX5kpIzTzePGWhReFuU40aWgNOmi47qDDGrw8afDtzvzzV1FaRyJ2F6C
+tiVV9GKCwWrD9qpiEIktf9yhvEZcmf9aD9823rWgVZex/5+kZYGuaRD+z9ULApzdwsbQFbuHeQRb
+wU8NtrO9o4RJDMpc4oBoI+Wb+/8lDka6GgZ6Xxj1FL+1B3W04qDuS6IKsS78qN1tZVjgneGmx673
+zTwn+P94KVy81nhmFkWO4jiPNI8xaoFGT/OAiMwFgVy3yVEIoaHTjSFzzaqTaiHRvOq71DadZfj8
+rZRkwalSwRoo7zTI9YFcrpFGVH+yeeSDe1ub+KLFpA7kL5TlyMISxd8RXSnn6v1jpiZsqY6ueXiy
+pbJy8nvLUfqc3WeScbGz2mjNiKfhtc7fMs691mOGrpOFpiQUnzO9AZJqdvwMaGH8pqL46SCbGHQE
+0YZ7zvwkKiW4ZLs7yki2rt3IHwgL/WjrYIKNPDWclQbrLuJkCFjempEZ/BFgbm9BgwgnyuX5XZI=
+2019-05-05 09:18:46,602 main INFO  [StandardPackFlowImpl:58] b45a4bf1-2193-42a8-a30c-17abfcbea70a----解密后的结果是:{"RspCode":"000999","RspMsg":"程序异常：[java.lang.ClassNotFoundException: ]","OPERATETYPE":"","APPROVEOPINION":"","TYPENO":"","TYPENAME":"","WDSERIALNO":"asdfasdf","BUSINESSSUM":"","CURRENCY":"","CREDITSUM":"","BASERATE":"","CREDITBALANCE":"","LUSEMOD":"","LINETERM":"","TERMTYPE":"","MINLOANTERM":"","MAXLOANTERM":"","LEXP_DT":"","APPLYDATE":"","DUE_DAY":"","FINISHTIME":"","CUSTOMERNAME":"","CERTTYPE":"","CERTID":"","RESERVE1":"","RESERVE2":""}
+2019-05-05 09:18:46,679 main INFO  [StandardPackFlowImpl:63] b45a4bf1-2193-42a8-a30c-17abfcbea70a----转换成ESB XML的模型数据是:{model={"APPLYDATE":"","APPROVEOPINION":"","BASERATE":"","BUSINESSSUM":"","CERTID":"","CERTTYPE":"","CREDITBALANCE":"","CREDITSUM":"","CURRENCY":"","CUSTOMERNAME":"","DUE_DAY":"","FINISHTIME":"","LEXP_DT":"","LINETERM":"","LUSEMOD":"","MAXLOANTERM":"","MINLOANTERM":"","OPERATETYPE":"","RESERVE1":"","RESERVE2":"","RspCode":"000999","RspMsg":"程序异常：[java.lang.ClassNotFoundException: ]","TERMTYPE":"","TYPENAME":"","TYPENO":"","WDSERIALNO":"asdfasdf"}}
+2019-05-05 09:18:46,969 main INFO  [StandardPackFlowImpl:66] b45a4bf1-2193-42a8-a30c-17abfcbea70a----响应ESB XML报文是：
+<?xml version="1.0" encoding="UTF-8"?>
+<service>
+<sys-header>
+<data name="SYS_HEAD">
+<struct>
+<data name="MESSAGE_CODE">
+<field type="string" length="10">360010</field>
+</data>
+<data name="MESSAGE_TYPE">
+<field type="string" length="10">bohaibank</field>
+</data>
+<data name="RET">
+<array>
+<data name="RET_CODE">
+<field type="string" length="6">000999</field>
+</data>
+<data name="RET_MSG">
+<field type="string" length="7">程序异常：[java.lang.ClassNotFoundException: ]</field>
+</data>
+</array>
+</data>
+</struct>
+</data>
+</sys-header>
+<app-header />
+<local-header />
+<body>
+<data name="TranTime">
+<field type="string" length="1"></field>
+</data>
+<data name="OPERATETYPE">
+<field type="string" length="1"></field>
+</data>
+<data name="RET_CODE">
+<field type="string" length="6">000999</field>
+</data>
+<data name="RET_MSG">
+<field type="string" length="7">程序异常：[java.lang.ClassNotFoundException: ]</field>
+</data>
+<data name="OPERATETYPE">
+<field type="string" length="7"></field>
+</data>
+<data name="TYPENO">
+<field type="string" length="7"></field>
+</data>
+<data name="TYPENAME">
+<field type="string" length="7"></field>
+</data>
+<data name="WDSERIALNO">
+<field type="string" length="7">asdfasdf</field>
+</data>
+<data name="BUSINESSSUM">
+<field type="number" length="7"></field>
+</data>
+<data name="CURRENCY">
+<field type="string" length="7"></field>
+</data>
+<data name="CREDITSUM">
+<field type="number" length="7"></field>
+</data>
+<data name="BASERATE">
+<field type="number" length="7"></field>
+</data>
+<data name="CREDITBALANCE">
+<field type="number" length="7"></field>
+</data>
+<data name="LUSEMOD">
+<field type="string" length="7"></field>
+</data>
+<data name="LINETERM">
+<field type="number" length="7"></field>
+</data>
+<data name="APPROVEOPINION">
+<field type="string" length="7"></field>
+</data>
+<data name="TERMTYPE">
+<field type="string" length="7"></field>
+</data>
+<data name="MINLOANTERM">
+<field type="number" length="7"></field>
+</data>
+<data name="MAXLOANTERM">
+<field type="number" length="7"></field>
+</data>
+<data name="LEXP_DT">
+<field type="string" length="7"></field>
+</data>
+<data name="APPLYDATE">
+<field type="string" length="7"></field>
+</data>
+<data name="DUE_DAY">
+<field type="string" length="7"></field>
+</data>
+<data name="FINISHTIME">
+<field type="string" length="7"></field>
+</data>
+<data name="CUSTOMERNAME">
+<field type="string" length="7"></field>
+</data>
+<data name="CERTTYPE">
+<field type="string" length="7"></field>
+</data>
+<data name="CERTID">
+<field type="string" length="7"></field>
+</data>
+<data name="RESERVE1">
+<field type="string" length="7"></field>
+</data>
+<data name="RESERVE2">
+<field type="string" length="7"></field>
+</data>
+</body>
+</service>
+2019-05-05 09:18:46,970 main INFO  [PackProcessEngine:50] b45a4bf1-2193-42a8-a30c-17abfcbea70a----耗時：2844毫秒
+2019-05-05 09:18:46,970 main INFO  [PackProcessEngine:51] b45a4bf1-2193-42a8-a30c-17abfcbea70a----end----
+2019-05-05 10:58:00,467 main INFO  [PackProcessEngine:36] 16bf8a1b-40ba-4c1f-a836-27d8fb4ace93----begin----
+2019-05-05 10:58:00,469 main INFO  [PackProcessEngine:37] 16bf8a1b-40ba-4c1f-a836-27d8fb4ace93----ESB XML报文是：﻿<?xml version="1.0" encoding="UTF-8"?><service>	<sys-header>		<data name="SYS_HEAD">			<struct>				<data name="MESSAGE_CODE">					<field type="string" length="10">292002</field>				</data>				<data name="MESSAGE_TYPE">					<field type="string" length="10">bohaibank</field>				</data>				<data name="TRAN_FLOW">					<field type="string" length="10">API_OUT_NEW</field>				</data>			</struct>		</data>	</sys-header>	<app-header />	<local-header />	<body>		<data name="TYPE_NO">			<field type="string" length="32">asdfasdf</field>		</data>		<data name="CHANNEL_ID">			<field type="string" length="2">sdafasdf</field>		</data>		<data name="PARTNER_CODE">			<field type="string" length="5">asdfasdf</field>		</data>		<data name="PARTNER_NAME">			<field type="string" length="100">asdfasdf</field>		</data>		<data name="SIGNTYPE">			<field type="string" length="2">asdfasdf</field>		</data>		<data name="SIGNMESSAGE">			<field type="string" length="1000">asdfasdf</field>		</data>		<data name="POLICY_NO">			<field type="string" length="30">asdfasdf</field>		</data>		<data name="WDSERIALNO">			<field type="string" length="30">asdfasdf</field>		</data>		<data name="NOTICETYPE">			<field type="string" length="8">asdfasdf</field>		</data>	</body></service>
+2019-05-05 10:58:00,578 main INFO  [PackProcessEngine:43] 16bf8a1b-40ba-4c1f-a836-27d8fb4ace93----ESB XML转换成map之后的结果是：{sys-header={SYS_HEAD={MESSAGE_CODE=292002, MESSAGE_TYPE=bohaibank, TRAN_FLOW=API_OUT_NEW}}, body={WDSERIALNO=asdfasdf, NOTICETYPE=asdfasdf, CHANNEL_ID=sdafasdf, TYPE_NO=asdfasdf, SIGNTYPE=asdfasdf, PARTNER_CODE=asdfasdf, PARTNER_NAME=asdfasdf, POLICY_NO=asdfasdf, SIGNMESSAGE=asdfasdf}}
+2019-05-05 10:58:00,578 main INFO  [PackProcessEngine:47] 16bf8a1b-40ba-4c1f-a836-27d8fb4ace93渠道名称是：bohaibank，接口名称是：292002
+2019-05-05 10:58:00,578 main INFO  [StandardPackFlowImpl:27] 16bf8a1b-40ba-4c1f-a836-27d8fb4ace93----ESB转成Json的模板是：bohaibank_292002_req
+2019-05-05 10:58:00,580 main INFO  [StandardPackFlowImpl:30] 16bf8a1b-40ba-4c1f-a836-27d8fb4ace93----JSON转成ESB XML的模板是：bohaibank_292002_resp
+2019-05-05 10:58:00,672 main INFO  [StandardPackFlowImpl:34] 16bf8a1b-40ba-4c1f-a836-27d8fb4ace93----map转换成json之后的结果是：{"CHANNEL_ID":"sdafasdf","NOTICETYPE":"asdfasdf","PARTNER_CODE":"asdfasdf","PARTNER_NAME":"asdfasdf","POLICY_NO":"asdfasdf","SIGNMESSAGE":"asdfasdf","SIGNTYPE":"asdfasdf","TYPE_NO":"asdfasdf","WDSERIALNO":"asdfasdf"}
+2019-05-05 10:58:00,969 main INFO  [StandardPackFlowImpl:41] 16bf8a1b-40ba-4c1f-a836-27d8fb4ace93----加密之后的结果是：{d1=LBwIh0VeD53utbhIO3YVAySeBZe4OfsAeIDvw676a9e/N50kA6KXWovCIrelVCC+IiC+HybBYHrQ
+80C0o7yX1oRNjbkW0Un7Zxrfrdye9WnKPDx+9nB5tU5Exy2xmATMnw97QGrJ/Clk85d4Dwg4PN0P
+8SHKmbcGhr0nQc76KZ0=, d2=CBnK+rsHxN1t3+1HLhqnaAazxF4zy37NpZ2f3ypeMxBz+RRXVO7CTfWEA4z/o/9Sl07qYwF6Mtkt
+vao4ii2dhX76X9U1AHvH55k9dRbLx1VNguQ9lFoFWyHJraY9H/hw9NQA08lmpcZ2hNknYBcgNjo7
+Q9JT32P6scpwhIfTzhRlVs8hz60jkLXLI39CgoNa1O1YA7FHPOyryksGiTRcS3YmPqku0w/vF1N8
+ZY6z4rmMPUvMpk0z/zKE2ZE6XaijiZMb/9klOJL+11jwvUvF4ukozSEMj1seW5WCoEiBZiHbVLU1
+f//h6x0m/Rxea5ENTGIFO0OMSw9pVar9nha+eg==}
+2019-05-05 10:58:00,969 main INFO  [StandardPackFlowImpl:53] 16bf8a1b-40ba-4c1f-a836-27d8fb4ace93----发送请求到http://221.239.93.139:9080/HttpICSrecv/CTHJZBYH1/292002.hp请求参数是:{d1=LBwIh0VeD53utbhIO3YVAySeBZe4OfsAeIDvw676a9e/N50kA6KXWovCIrelVCC+IiC+HybBYHrQ
+80C0o7yX1oRNjbkW0Un7Zxrfrdye9WnKPDx+9nB5tU5Exy2xmATMnw97QGrJ/Clk85d4Dwg4PN0P
+8SHKmbcGhr0nQc76KZ0=, d2=CBnK+rsHxN1t3+1HLhqnaAazxF4zy37NpZ2f3ypeMxBz+RRXVO7CTfWEA4z/o/9Sl07qYwF6Mtkt
+vao4ii2dhX76X9U1AHvH55k9dRbLx1VNguQ9lFoFWyHJraY9H/hw9NQA08lmpcZ2hNknYBcgNjo7
+Q9JT32P6scpwhIfTzhRlVs8hz60jkLXLI39CgoNa1O1YA7FHPOyryksGiTRcS3YmPqku0w/vF1N8
+ZY6z4rmMPUvMpk0z/zKE2ZE6XaijiZMb/9klOJL+11jwvUvF4ukozSEMj1seW5WCoEiBZiHbVLU1
+f//h6x0m/Rxea5ENTGIFO0OMSw9pVar9nha+eg==}
+2019-05-05 10:58:01,098 main INFO  [HttpClientUtil:149] 正在发送请求:http://221.239.93.139:9080/HttpICSrecv/CTHJZBYH1/292002.hp，参数：d1=LBwIh0VeD53utbhIO3YVAySeBZe4OfsAeIDvw676a9e/N50kA6KXWovCIrelVCC+IiC+HybBYHrQ
+80C0o7yX1oRNjbkW0Un7Zxrfrdye9WnKPDx+9nB5tU5Exy2xmATMnw97QGrJ/Clk85d4Dwg4PN0P
+8SHKmbcGhr0nQc76KZ0=&d2=CBnK+rsHxN1t3+1HLhqnaAazxF4zy37NpZ2f3ypeMxBz+RRXVO7CTfWEA4z/o/9Sl07qYwF6Mtkt
+vao4ii2dhX76X9U1AHvH55k9dRbLx1VNguQ9lFoFWyHJraY9H/hw9NQA08lmpcZ2hNknYBcgNjo7
+Q9JT32P6scpwhIfTzhRlVs8hz60jkLXLI39CgoNa1O1YA7FHPOyryksGiTRcS3YmPqku0w/vF1N8
+ZY6z4rmMPUvMpk0z/zKE2ZE6XaijiZMb/9klOJL+11jwvUvF4ukozSEMj1seW5WCoEiBZiHbVLU1
+f//h6x0m/Rxea5ENTGIFO0OMSw9pVar9nha+eg==
+2019-05-05 10:58:01,976 main INFO  [HttpClientUtil:155] 获取响应成功:d1=LCI5gXKfVlkDjZ9DsNj6lE2z2S8vdqhm2WZwD4g3g0G1AuuWd3Tm30m1XUSGSfv+NskxBUn/BQeR
+UiMQvmuQyknJgolg+lauz0aGdYc/LeR9gJPLG0dMFluM1B5n4d2REtaLQJ1hwfe/JbeovJ6e3HUT
+wxAV3jP40SrKa48ECks=&d2=RzmuRF0R01GhGQ0dtdwssIVLpsyXC1v3VbEFrgn9rkcVSWusKxNGjIO9uJYwHvEHr11B6x5jo/4U
+6o/SPd96guSaqsMdEcbp0bVK09Vrbs6V29FkO8/p0H40+KYDSGjlr7qZAx2OyCsY/UAFpMRvpqYC
+++kiFZorpK6eIrW19Ek/O71uaB99XETOP91/uIlha0lwYaC29gixuHT2ZsA0d4CRVehBOoVa7lEW
+GhAej15Cp7rNnj+IVkMNGPxeSJmq7DExsM0waywcG2y4vBxvYoN5iOHSTNoAJzBiP+XQtLsTxZ1v
+rOztduYT4PMLAV3I9b+1/lrKvoDL2BAJzptQzIUWfe6BgZdBjKqQOo+louaBKt7JdbSMw5Q5fNSo
+GNLrtvTHsMen2FG0uTZIxkC/MZVXeXiv7TwnXfLxcXya3KfHZJ53/o1gGqLyiXDJ7YeQIKXqEn70
+sHnkZ8f18Kx3W71zNqHDrCaz2821xt3KIfpWYtI9qAi0+N75DTuGWcrgUBM8jM3Ci6Dzqoxtaqlf
+RttLwMPwdWwjGE/9cHt3CnnjDMAHeCXioPFILpFhawVuTqfuneyYfEQEDFUdXNAXwOiMKnufZxhk
+JQMoC3UtBhWhK9J0jbXjWj8K2PgcO8DGkX3ZkyRFwN/eiTut7Xbu8MxDj2t7WT+wVOYTmNDbfic=
+2019-05-05 10:58:01,978 main INFO  [StandardPackFlowImpl:55] 16bf8a1b-40ba-4c1f-a836-27d8fb4ace93----得到的响应是:d1=LCI5gXKfVlkDjZ9DsNj6lE2z2S8vdqhm2WZwD4g3g0G1AuuWd3Tm30m1XUSGSfv+NskxBUn/BQeR
+UiMQvmuQyknJgolg+lauz0aGdYc/LeR9gJPLG0dMFluM1B5n4d2REtaLQJ1hwfe/JbeovJ6e3HUT
+wxAV3jP40SrKa48ECks=&d2=RzmuRF0R01GhGQ0dtdwssIVLpsyXC1v3VbEFrgn9rkcVSWusKxNGjIO9uJYwHvEHr11B6x5jo/4U
+6o/SPd96guSaqsMdEcbp0bVK09Vrbs6V29FkO8/p0H40+KYDSGjlr7qZAx2OyCsY/UAFpMRvpqYC
+++kiFZorpK6eIrW19Ek/O71uaB99XETOP91/uIlha0lwYaC29gixuHT2ZsA0d4CRVehBOoVa7lEW
+GhAej15Cp7rNnj+IVkMNGPxeSJmq7DExsM0waywcG2y4vBxvYoN5iOHSTNoAJzBiP+XQtLsTxZ1v
+rOztduYT4PMLAV3I9b+1/lrKvoDL2BAJzptQzIUWfe6BgZdBjKqQOo+louaBKt7JdbSMw5Q5fNSo
+GNLrtvTHsMen2FG0uTZIxkC/MZVXeXiv7TwnXfLxcXya3KfHZJ53/o1gGqLyiXDJ7YeQIKXqEn70
+sHnkZ8f18Kx3W71zNqHDrCaz2821xt3KIfpWYtI9qAi0+N75DTuGWcrgUBM8jM3Ci6Dzqoxtaqlf
+RttLwMPwdWwjGE/9cHt3CnnjDMAHeCXioPFILpFhawVuTqfuneyYfEQEDFUdXNAXwOiMKnufZxhk
+JQMoC3UtBhWhK9J0jbXjWj8K2PgcO8DGkX3ZkyRFwN/eiTut7Xbu8MxDj2t7WT+wVOYTmNDbfic=
+2019-05-05 10:58:01,991 main INFO  [StandardPackFlowImpl:58] 16bf8a1b-40ba-4c1f-a836-27d8fb4ace93----解密后的结果是:{"RspCode":"000999","RspMsg":"程序异常：[java.lang.ClassNotFoundException: ]","OPERATETYPE":"","APPROVEOPINION":"","TYPENO":"","TYPENAME":"","WDSERIALNO":"asdfasdf","BUSINESSSUM":"","CURRENCY":"","CREDITSUM":"","BASERATE":"","CREDITBALANCE":"","LUSEMOD":"","LINETERM":"","TERMTYPE":"","MINLOANTERM":"","MAXLOANTERM":"","LEXP_DT":"","APPLYDATE":"","DUE_DAY":"","FINISHTIME":"","CUSTOMERNAME":"","CERTTYPE":"","CERTID":"","RESERVE1":"","RESERVE2":""}
+2019-05-05 10:58:02,052 main INFO  [StandardPackFlowImpl:63] 16bf8a1b-40ba-4c1f-a836-27d8fb4ace93----转换成ESB XML的模型数据是:{model={"APPLYDATE":"","APPROVEOPINION":"","BASERATE":"","BUSINESSSUM":"","CERTID":"","CERTTYPE":"","CREDITBALANCE":"","CREDITSUM":"","CURRENCY":"","CUSTOMERNAME":"","DUE_DAY":"","FINISHTIME":"","LEXP_DT":"","LINETERM":"","LUSEMOD":"","MAXLOANTERM":"","MINLOANTERM":"","OPERATETYPE":"","RESERVE1":"","RESERVE2":"","RspCode":"000999","RspMsg":"程序异常：[java.lang.ClassNotFoundException: ]","TERMTYPE":"","TYPENAME":"","TYPENO":"","WDSERIALNO":"asdfasdf"}}
+2019-05-05 10:58:02,333 main INFO  [StandardPackFlowImpl:66] 16bf8a1b-40ba-4c1f-a836-27d8fb4ace93----响应ESB XML报文是：
+<?xml version="1.0" encoding="UTF-8"?>
+<service>
+<sys-header>
+<data name="SYS_HEAD">
+<struct>
+<data name="MESSAGE_CODE">
+<field type="string" length="10">360010</field>
+</data>
+<data name="MESSAGE_TYPE">
+<field type="string" length="10">bohaibank</field>
+</data>
+<data name="RET">
+<array>
+<data name="RET_CODE">
+<field type="string" length="6">000999</field>
+</data>
+<data name="RET_MSG">
+<field type="string" length="7">程序异常：[java.lang.ClassNotFoundException: ]</field>
+</data>
+</array>
+</data>
+</struct>
+</data>
+</sys-header>
+<app-header />
+<local-header />
+<body>
+<data name="TranTime">
+<field type="string" length="1"></field>
+</data>
+<data name="OPERATETYPE">
+<field type="string" length="1"></field>
+</data>
+<data name="RET_CODE">
+<field type="string" length="6">000999</field>
+</data>
+<data name="RET_MSG">
+<field type="string" length="7">程序异常：[java.lang.ClassNotFoundException: ]</field>
+</data>
+<data name="OPERATETYPE">
+<field type="string" length="7"></field>
+</data>
+<data name="TYPENO">
+<field type="string" length="7"></field>
+</data>
+<data name="TYPENAME">
+<field type="string" length="7"></field>
+</data>
+<data name="WDSERIALNO">
+<field type="string" length="7">asdfasdf</field>
+</data>
+<data name="BUSINESSSUM">
+<field type="number" length="7"></field>
+</data>
+<data name="CURRENCY">
+<field type="string" length="7"></field>
+</data>
+<data name="CREDITSUM">
+<field type="number" length="7"></field>
+</data>
+<data name="BASERATE">
+<field type="number" length="7"></field>
+</data>
+<data name="CREDITBALANCE">
+<field type="number" length="7"></field>
+</data>
+<data name="LUSEMOD">
+<field type="string" length="7"></field>
+</data>
+<data name="LINETERM">
+<field type="number" length="7"></field>
+</data>
+<data name="APPROVEOPINION">
+<field type="string" length="7"></field>
+</data>
+<data name="TERMTYPE">
+<field type="string" length="7"></field>
+</data>
+<data name="MINLOANTERM">
+<field type="number" length="7"></field>
+</data>
+<data name="MAXLOANTERM">
+<field type="number" length="7"></field>
+</data>
+<data name="LEXP_DT">
+<field type="string" length="7"></field>
+</data>
+<data name="APPLYDATE">
+<field type="string" length="7"></field>
+</data>
+<data name="DUE_DAY">
+<field type="string" length="7"></field>
+</data>
+<data name="FINISHTIME">
+<field type="string" length="7"></field>
+</data>
+<data name="CUSTOMERNAME">
+<field type="string" length="7"></field>
+</data>
+<data name="CERTTYPE">
+<field type="string" length="7"></field>
+</data>
+<data name="CERTID">
+<field type="string" length="7"></field>
+</data>
+<data name="RESERVE1">
+<field type="string" length="7"></field>
+</data>
+<data name="RESERVE2">
+<field type="string" length="7"></field>
+</data>
+</body>
+</service>
+2019-05-05 10:58:02,334 main INFO  [PackProcessEngine:50] 16bf8a1b-40ba-4c1f-a836-27d8fb4ace93----耗時：1865毫秒
+2019-05-05 10:58:02,334 main INFO  [PackProcessEngine:51] 16bf8a1b-40ba-4c1f-a836-27d8fb4ace93----end----
+2019-05-05 16:58:37,262 main INFO  [PackProcessEngine:36] b98f76c6-7f16-4699-959c-d5c077e8c5f3----begin----
+2019-05-05 16:58:37,265 main INFO  [PackProcessEngine:37] b98f76c6-7f16-4699-959c-d5c077e8c5f3----ESB XML报文是：﻿<?xml version="1.0" encoding="UTF-8"?><service>	<sys-header>		<data name="SYS_HEAD">			<struct>				<data name="MESSAGE_CODE">					<field type="string" length="10">292002</field>				</data>				<data name="MESSAGE_TYPE">					<field type="string" length="10">bohaibank</field>				</data>				<data name="TRAN_FLOW">					<field type="string" length="10">API_OUT_NEW</field>				</data>			</struct>		</data>	</sys-header>	<app-header />	<local-header />	<body>		<data name="TYPE_NO">			<field type="string" length="32">asdfasdf</field>		</data>		<data name="CHANNEL_ID">			<field type="string" length="2">sdafasdf</field>		</data>		<data name="PARTNER_CODE">			<field type="string" length="5">asdfasdf</field>		</data>		<data name="PARTNER_NAME">			<field type="string" length="100">asdfasdf</field>		</data>		<data name="SIGNTYPE">			<field type="string" length="2">asdfasdf</field>		</data>		<data name="SIGNMESSAGE">			<field type="string" length="1000">asdfasdf</field>		</data>		<data name="POLICY_NO">			<field type="string" length="30">asdfasdf</field>		</data>		<data name="WDSERIALNO">			<field type="string" length="30">asdfasdf</field>		</data>		<data name="NOTICETYPE">			<field type="string" length="8">asdfasdf</field>		</data>	</body></service>
+2019-05-05 16:58:37,362 main INFO  [PackProcessEngine:43] b98f76c6-7f16-4699-959c-d5c077e8c5f3----ESB XML转换成map之后的结果是：{sys-header={SYS_HEAD={MESSAGE_CODE=292002, MESSAGE_TYPE=bohaibank, TRAN_FLOW=API_OUT_NEW}}, body={WDSERIALNO=asdfasdf, NOTICETYPE=asdfasdf, CHANNEL_ID=sdafasdf, TYPE_NO=asdfasdf, SIGNTYPE=asdfasdf, PARTNER_CODE=asdfasdf, PARTNER_NAME=asdfasdf, POLICY_NO=asdfasdf, SIGNMESSAGE=asdfasdf}}
+2019-05-05 16:58:37,362 main INFO  [PackProcessEngine:47] b98f76c6-7f16-4699-959c-d5c077e8c5f3渠道名称是：bohaibank，接口名称是：292002
+2019-05-05 16:58:37,362 main INFO  [StandardPackFlowImpl:27] b98f76c6-7f16-4699-959c-d5c077e8c5f3----ESB转成Json的模板是：bohaibank_292002_req
+2019-05-05 16:58:37,364 main INFO  [StandardPackFlowImpl:30] b98f76c6-7f16-4699-959c-d5c077e8c5f3----JSON转成ESB XML的模板是：bohaibank_292002_resp
+2019-05-05 16:58:37,445 main INFO  [StandardPackFlowImpl:34] b98f76c6-7f16-4699-959c-d5c077e8c5f3----map转换成json之后的结果是：{"CHANNEL_ID":"sdafasdf","NOTICETYPE":"asdfasdf","PARTNER_CODE":"asdfasdf","PARTNER_NAME":"asdfasdf","POLICY_NO":"asdfasdf","SIGNMESSAGE":"asdfasdf","SIGNTYPE":"asdfasdf","TYPE_NO":"asdfasdf","WDSERIALNO":"asdfasdf"}
+2019-05-05 16:58:37,725 main INFO  [StandardPackFlowImpl:41] b98f76c6-7f16-4699-959c-d5c077e8c5f3----加密之后的结果是：{d1=YF++6W5rAfP2EYycnu1879LBQ7pwJwfHLrRkoy2KtKNkLWEwhR7auUEDY7xTnz3ErThnh1JXOX1W
+1kh6W+oen87hQ2okwupfRF5Qbgf++XAZDoCwulxuwR9dYQobYcHgct89TXAXDeCu6HuH4qvN0Mx3
+pLwe/ncSxNtFJ9mdOfc=, d2=YpJPikc4vG85t7I3//ao4KzMy7O4dX8qVZj52eAECngte3PWjrgT0UYgYmC2c1Dn8/Y9gvgUMiYF
+xtjJosHhh6x3+SO7ChEojnGsw15oSKGQXN0pdKRuvMgmv/78KZ1ShSrseaw2JhLPxbI6Hhsy3I8a
+x4GpZlOOiNQNrK15oJEKMx6Cl53QtaZY/daN0gUTXvVzZcHF17LfDgcNhQoNymlLiksGfGDl8IQs
+1OgZ6/Nb8zf8CzlpHqFzePXAl0jjy7HZM2YVVhFPdAgRu/VWpYKwxatnQJLVQYehs3lO9zflGDcJ
+TTOl/7CJLn2UDtvbfahyspe1/UCphQKhQjPUSQ==}
+2019-05-05 16:58:37,726 main INFO  [StandardPackFlowImpl:53] b98f76c6-7f16-4699-959c-d5c077e8c5f3----发送请求到http://221.239.93.139:9080/HttpICSrecv/CTHJZBYH1/292002.hp请求参数是:{d1=YF++6W5rAfP2EYycnu1879LBQ7pwJwfHLrRkoy2KtKNkLWEwhR7auUEDY7xTnz3ErThnh1JXOX1W
+1kh6W+oen87hQ2okwupfRF5Qbgf++XAZDoCwulxuwR9dYQobYcHgct89TXAXDeCu6HuH4qvN0Mx3
+pLwe/ncSxNtFJ9mdOfc=, d2=YpJPikc4vG85t7I3//ao4KzMy7O4dX8qVZj52eAECngte3PWjrgT0UYgYmC2c1Dn8/Y9gvgUMiYF
+xtjJosHhh6x3+SO7ChEojnGsw15oSKGQXN0pdKRuvMgmv/78KZ1ShSrseaw2JhLPxbI6Hhsy3I8a
+x4GpZlOOiNQNrK15oJEKMx6Cl53QtaZY/daN0gUTXvVzZcHF17LfDgcNhQoNymlLiksGfGDl8IQs
+1OgZ6/Nb8zf8CzlpHqFzePXAl0jjy7HZM2YVVhFPdAgRu/VWpYKwxatnQJLVQYehs3lO9zflGDcJ
+TTOl/7CJLn2UDtvbfahyspe1/UCphQKhQjPUSQ==}
+2019-05-05 16:58:37,845 main INFO  [HttpClientUtil:149] 正在发送请求:http://221.239.93.139:9080/HttpICSrecv/CTHJZBYH1/292002.hp，参数：d1=YF++6W5rAfP2EYycnu1879LBQ7pwJwfHLrRkoy2KtKNkLWEwhR7auUEDY7xTnz3ErThnh1JXOX1W
+1kh6W+oen87hQ2okwupfRF5Qbgf++XAZDoCwulxuwR9dYQobYcHgct89TXAXDeCu6HuH4qvN0Mx3
+pLwe/ncSxNtFJ9mdOfc=&d2=YpJPikc4vG85t7I3//ao4KzMy7O4dX8qVZj52eAECngte3PWjrgT0UYgYmC2c1Dn8/Y9gvgUMiYF
+xtjJosHhh6x3+SO7ChEojnGsw15oSKGQXN0pdKRuvMgmv/78KZ1ShSrseaw2JhLPxbI6Hhsy3I8a
+x4GpZlOOiNQNrK15oJEKMx6Cl53QtaZY/daN0gUTXvVzZcHF17LfDgcNhQoNymlLiksGfGDl8IQs
+1OgZ6/Nb8zf8CzlpHqFzePXAl0jjy7HZM2YVVhFPdAgRu/VWpYKwxatnQJLVQYehs3lO9zflGDcJ
+TTOl/7CJLn2UDtvbfahyspe1/UCphQKhQjPUSQ==
+2019-05-05 16:58:38,392 main INFO  [HttpClientUtil:155] 获取响应成功:d1=Q/GKieUxIdWlMU7en1wJRY3MXy+eatj6srMtw4pWDSg8/4mAyc0CuRF/zBhbbgwjrMumXANXb0p3
+RdKnpO2WNqZh0kBBTDraxceJg2KT+Nr8gU1OmPBw4jME5xgQatQNx1QbK+b5SV8mr5Oh0nVDTea2
+4MmlfrQVRv3QGHUHR50=&d2=LzMliI8LHbT9oKpzEdaGWKKZJTRq3x/nlfP0S+wTf2H0KkAhoDxhu/ZtZa79aU6+3Ho7k4fZ8FVx
+X0l7TcIylZQwgza+84KMruZ5Kmc1oIoJKxWvddo7+xv8ZJD/GuZ8g2cxKTe3ey/8PzoEeK75spzS
+c3TcF/5f2aYo0MXu/Vc4223rIaZnTIb7dUpK4ecEog9yzIRXVkkdlmGeGcEkZYkYdA94nKiOT5WS
+zgi53FfFhnim/YDBrq0NlAtusUM8F1T/qIHc+7Hqlr3y3pliAAKzhDxjyTb2RLvAnkioH9HG8Sq+
+n3I+BBNzD+Mz8s9e8+3Y5Vgy9nb5aQ5iwuYL+UHQfAzuH3GrY8M2PNmS8UtJn/2w410ft97i19U5
+x+Sk9O5DJSosJf7rmRm+DsI1C8PBt+3aKk8QoCKg/RrwWFRxLh1uAHYQhioM6z+fW7VD5NtY9uO3
+fVlUwp3E+xiyQ/Wiel5ND/nuBxiIyv2hlEQS9wlV2MVcUQTQEqYvYko9PotNotBhpbsyDOCe98SH
+pkqP+Lpgbdg5LG4kS4mRIWfgOSg/C4688u02G9Ya4v+q6akPJc4QwuMltGgrzPT9oDgnHBy8UQXw
+HSovUW5AN+6FqQ2wdiV8o9Id3v89nwx+6LgE4yqnVM7UpzYjNH1Y0At4TpmBrlBrKWVg/3Vb2YI=
+2019-05-05 16:58:38,393 main INFO  [StandardPackFlowImpl:55] b98f76c6-7f16-4699-959c-d5c077e8c5f3----得到的响应是:d1=Q/GKieUxIdWlMU7en1wJRY3MXy+eatj6srMtw4pWDSg8/4mAyc0CuRF/zBhbbgwjrMumXANXb0p3
+RdKnpO2WNqZh0kBBTDraxceJg2KT+Nr8gU1OmPBw4jME5xgQatQNx1QbK+b5SV8mr5Oh0nVDTea2
+4MmlfrQVRv3QGHUHR50=&d2=LzMliI8LHbT9oKpzEdaGWKKZJTRq3x/nlfP0S+wTf2H0KkAhoDxhu/ZtZa79aU6+3Ho7k4fZ8FVx
+X0l7TcIylZQwgza+84KMruZ5Kmc1oIoJKxWvddo7+xv8ZJD/GuZ8g2cxKTe3ey/8PzoEeK75spzS
+c3TcF/5f2aYo0MXu/Vc4223rIaZnTIb7dUpK4ecEog9yzIRXVkkdlmGeGcEkZYkYdA94nKiOT5WS
+zgi53FfFhnim/YDBrq0NlAtusUM8F1T/qIHc+7Hqlr3y3pliAAKzhDxjyTb2RLvAnkioH9HG8Sq+
+n3I+BBNzD+Mz8s9e8+3Y5Vgy9nb5aQ5iwuYL+UHQfAzuH3GrY8M2PNmS8UtJn/2w410ft97i19U5
+x+Sk9O5DJSosJf7rmRm+DsI1C8PBt+3aKk8QoCKg/RrwWFRxLh1uAHYQhioM6z+fW7VD5NtY9uO3
+fVlUwp3E+xiyQ/Wiel5ND/nuBxiIyv2hlEQS9wlV2MVcUQTQEqYvYko9PotNotBhpbsyDOCe98SH
+pkqP+Lpgbdg5LG4kS4mRIWfgOSg/C4688u02G9Ya4v+q6akPJc4QwuMltGgrzPT9oDgnHBy8UQXw
+HSovUW5AN+6FqQ2wdiV8o9Id3v89nwx+6LgE4yqnVM7UpzYjNH1Y0At4TpmBrlBrKWVg/3Vb2YI=
+2019-05-05 16:58:38,404 main INFO  [StandardPackFlowImpl:58] b98f76c6-7f16-4699-959c-d5c077e8c5f3----解密后的结果是:{"RspCode":"000999","RspMsg":"程序异常：[java.lang.ClassNotFoundException: ]","OPERATETYPE":"","APPROVEOPINION":"","TYPENO":"","TYPENAME":"","WDSERIALNO":"asdfasdf","BUSINESSSUM":"","CURRENCY":"","CREDITSUM":"","BASERATE":"","CREDITBALANCE":"","LUSEMOD":"","LINETERM":"","TERMTYPE":"","MINLOANTERM":"","MAXLOANTERM":"","LEXP_DT":"","APPLYDATE":"","DUE_DAY":"","FINISHTIME":"","CUSTOMERNAME":"","CERTTYPE":"","CERTID":"","RESERVE1":"","RESERVE2":""}
+2019-05-05 16:58:38,431 main INFO  [StandardPackFlowImpl:63] b98f76c6-7f16-4699-959c-d5c077e8c5f3----转换成ESB XML的模型数据是:{model={"APPLYDATE":"","APPROVEOPINION":"","BASERATE":"","BUSINESSSUM":"","CERTID":"","CERTTYPE":"","CREDITBALANCE":"","CREDITSUM":"","CURRENCY":"","CUSTOMERNAME":"","DUE_DAY":"","FINISHTIME":"","LEXP_DT":"","LINETERM":"","LUSEMOD":"","MAXLOANTERM":"","MINLOANTERM":"","OPERATETYPE":"","RESERVE1":"","RESERVE2":"","RspCode":"000999","RspMsg":"程序异常：[java.lang.ClassNotFoundException: ]","TERMTYPE":"","TYPENAME":"","TYPENO":"","WDSERIALNO":"asdfasdf"}}
+2019-05-05 16:58:38,584 main INFO  [StandardPackFlowImpl:66] b98f76c6-7f16-4699-959c-d5c077e8c5f3----响应ESB XML报文是：
+<?xml version="1.0" encoding="UTF-8"?>
+<service>
+<sys-header>
+<data name="SYS_HEAD">
+<struct>
+<data name="MESSAGE_CODE">
+<field type="string" length="10">360010</field>
+</data>
+<data name="MESSAGE_TYPE">
+<field type="string" length="10">bohaibank</field>
+</data>
+<data name="RET">
+<array>
+<data name="RET_CODE">
+<field type="string" length="6">000999</field>
+</data>
+<data name="RET_MSG">
+<field type="string" length="7">程序异常：[java.lang.ClassNotFoundException: ]</field>
+</data>
+</array>
+</data>
+</struct>
+</data>
+</sys-header>
+<app-header />
+<local-header />
+<body>
+<data name="TranTime">
+<field type="string" length="1"></field>
+</data>
+<data name="OPERATETYPE">
+<field type="string" length="1"></field>
+</data>
+<data name="RET_CODE">
+<field type="string" length="6">000999</field>
+</data>
+<data name="RET_MSG">
+<field type="string" length="7">程序异常：[java.lang.ClassNotFoundException: ]</field>
+</data>
+<data name="OPERATETYPE">
+<field type="string" length="7"></field>
+</data>
+<data name="TYPENO">
+<field type="string" length="7"></field>
+</data>
+<data name="TYPENAME">
+<field type="string" length="7"></field>
+</data>
+<data name="WDSERIALNO">
+<field type="string" length="7">asdfasdf</field>
+</data>
+<data name="BUSINESSSUM">
+<field type="number" length="7"></field>
+</data>
+<data name="CURRENCY">
+<field type="string" length="7"></field>
+</data>
+<data name="CREDITSUM">
+<field type="number" length="7"></field>
+</data>
+<data name="BASERATE">
+<field type="number" length="7"></field>
+</data>
+<data name="CREDITBALANCE">
+<field type="number" length="7"></field>
+</data>
+<data name="LUSEMOD">
+<field type="string" length="7"></field>
+</data>
+<data name="LINETERM">
+<field type="number" length="7"></field>
+</data>
+<data name="APPROVEOPINION">
+<field type="string" length="7"></field>
+</data>
+<data name="TERMTYPE">
+<field type="string" length="7"></field>
+</data>
+<data name="MINLOANTERM">
+<field type="number" length="7"></field>
+</data>
+<data name="MAXLOANTERM">
+<field type="number" length="7"></field>
+</data>
+<data name="LEXP_DT">
+<field type="string" length="7"></field>
+</data>
+<data name="APPLYDATE">
+<field type="string" length="7"></field>
+</data>
+<data name="DUE_DAY">
+<field type="string" length="7"></field>
+</data>
+<data name="FINISHTIME">
+<field type="string" length="7"></field>
+</data>
+<data name="CUSTOMERNAME">
+<field type="string" length="7"></field>
+</data>
+<data name="CERTTYPE">
+<field type="string" length="7"></field>
+</data>
+<data name="CERTID">
+<field type="string" length="7"></field>
+</data>
+<data name="RESERVE1">
+<field type="string" length="7"></field>
+</data>
+<data name="RESERVE2">
+<field type="string" length="7"></field>
+</data>
+</body>
+</service>
+2019-05-05 16:58:38,584 main INFO  [PackProcessEngine:50] b98f76c6-7f16-4699-959c-d5c077e8c5f3----耗時：1319毫秒
+2019-05-05 16:58:38,586 main INFO  [PackProcessEngine:51] b98f76c6-7f16-4699-959c-d5c077e8c5f3----end----
+2019-05-05 17:34:57,244 main INFO  [PackProcessEngine:36] 7d62883e-f3f3-4ac9-855b-243aaf274622----begin----
+2019-05-05 17:34:57,246 main INFO  [PackProcessEngine:37] 7d62883e-f3f3-4ac9-855b-243aaf274622----ESB XML报文是：﻿<?xml version="1.0" encoding="UTF-8"?><service>	<sys-header>		<data name="SYS_HEAD">			<struct>				<data name="MESSAGE_CODE">					<field type="string" length="10">292002</field>				</data>				<data name="MESSAGE_TYPE">					<field type="string" length="10">bohaibank</field>				</data>				<data name="TRAN_FLOW">					<field type="string" length="10">API_OUT_NEW</field>				</data>			</struct>		</data>	</sys-header>	<app-header />	<local-header />	<body>		<data name="TYPE_NO">			<field type="string" length="32">asdfasdf</field>		</data>		<data name="CHANNEL_ID">			<field type="string" length="2">sdafasdf</field>		</data>		<data name="PARTNER_CODE">			<field type="string" length="5">asdfasdf</field>		</data>		<data name="PARTNER_NAME">			<field type="string" length="100">asdfasdf</field>		</data>		<data name="SIGNTYPE">			<field type="string" length="2">asdfasdf</field>		</data>		<data name="SIGNMESSAGE">			<field type="string" length="1000">asdfasdf</field>		</data>		<data name="POLICY_NO">			<field type="string" length="30">asdfasdf</field>		</data>		<data name="WDSERIALNO">			<field type="string" length="30">asdfasdf</field>		</data>		<data name="NOTICETYPE">			<field type="string" length="8">asdfasdf</field>		</data>	</body></service>
+2019-05-05 17:34:57,350 main INFO  [PackProcessEngine:43] 7d62883e-f3f3-4ac9-855b-243aaf274622----ESB XML转换成map之后的结果是：{sys-header={SYS_HEAD={MESSAGE_CODE=292002, MESSAGE_TYPE=bohaibank, TRAN_FLOW=API_OUT_NEW}}, body={WDSERIALNO=asdfasdf, NOTICETYPE=asdfasdf, CHANNEL_ID=sdafasdf, TYPE_NO=asdfasdf, SIGNTYPE=asdfasdf, PARTNER_CODE=asdfasdf, PARTNER_NAME=asdfasdf, POLICY_NO=asdfasdf, SIGNMESSAGE=asdfasdf}}
+2019-05-05 17:34:57,351 main INFO  [PackProcessEngine:47] 7d62883e-f3f3-4ac9-855b-243aaf274622渠道名称是：bohaibank，接口名称是：292002
+2019-05-05 17:34:57,351 main INFO  [StandardPackFlowImpl:27] 7d62883e-f3f3-4ac9-855b-243aaf274622----ESB转成Json的模板是：bohaibank_292002_req
+2019-05-05 17:34:57,353 main INFO  [StandardPackFlowImpl:30] 7d62883e-f3f3-4ac9-855b-243aaf274622----JSON转成ESB XML的模板是：bohaibank_292002_resp
+2019-05-05 17:34:57,459 main INFO  [StandardPackFlowImpl:34] 7d62883e-f3f3-4ac9-855b-243aaf274622----map转换成json之后的结果是：{"CHANNEL_ID":"sdafasdf","NOTICETYPE":"asdfasdf","PARTNER_CODE":"asdfasdf","PARTNER_NAME":"asdfasdf","POLICY_NO":"asdfasdf","SIGNMESSAGE":"asdfasdf","SIGNTYPE":"asdfasdf","TYPE_NO":"asdfasdf","WDSERIALNO":"asdfasdf"}
+2019-05-05 17:34:57,755 main INFO  [StandardPackFlowImpl:41] 7d62883e-f3f3-4ac9-855b-243aaf274622----加密之后的结果是：{d1=hhjzM6WeqTbRqwXZEhYoJnXfoVchJ6E/FtWt+KwrSeTtRFzlk/+Ew1/xvq0fXU4jA/b5gl2wPqqg
+R9gPaHil34QD0nRgvKPxWj27TYer4MkOwbIoIivo5GoZKy1777/JkL0XpWxD3+PJ3S80XWZgpTCe
+wGZLtjFyQ/WGiJPy+cA=, d2=DWaOi2Rb7OBwAVGbuffyuiazWZszvNLTwGRQXNsL5tZFi5lst3UW14DXfwof4eg4fdIF5+7dzW5D
+FKEyE+EOXKLVZPl5kQAQgOpdFB0iS0iPkHVNzDWSVYxEznwNvXvB4b0HbGd1uQNcoNrz6R5oJpGM
+RU223aJerUlwsFeZ3ZEG1bk9SsMrPF67kPkD8qUNfa8vO6vkiqEY5hZsG83B7zz4AMS9PygE1PSD
+mKnsy0Rkkchwf0uWYvmXKqdOmJVWgExr9lqM7tzaVPwW0X5dE1ugyyGZ/gOwh9SBqHCUIW/Xi1bN
+YF+zEsoyoZ60n6nVS+fija1zRV7d1UFeO90AnQ==}
+2019-05-05 17:34:57,755 main INFO  [StandardPackFlowImpl:53] 7d62883e-f3f3-4ac9-855b-243aaf274622----发送请求到http://221.239.93.139:9080/HttpICSrecv/CTHJZBYH1/292002.hp请求参数是:{d1=hhjzM6WeqTbRqwXZEhYoJnXfoVchJ6E/FtWt+KwrSeTtRFzlk/+Ew1/xvq0fXU4jA/b5gl2wPqqg
+R9gPaHil34QD0nRgvKPxWj27TYer4MkOwbIoIivo5GoZKy1777/JkL0XpWxD3+PJ3S80XWZgpTCe
+wGZLtjFyQ/WGiJPy+cA=, d2=DWaOi2Rb7OBwAVGbuffyuiazWZszvNLTwGRQXNsL5tZFi5lst3UW14DXfwof4eg4fdIF5+7dzW5D
+FKEyE+EOXKLVZPl5kQAQgOpdFB0iS0iPkHVNzDWSVYxEznwNvXvB4b0HbGd1uQNcoNrz6R5oJpGM
+RU223aJerUlwsFeZ3ZEG1bk9SsMrPF67kPkD8qUNfa8vO6vkiqEY5hZsG83B7zz4AMS9PygE1PSD
+mKnsy0Rkkchwf0uWYvmXKqdOmJVWgExr9lqM7tzaVPwW0X5dE1ugyyGZ/gOwh9SBqHCUIW/Xi1bN
+YF+zEsoyoZ60n6nVS+fija1zRV7d1UFeO90AnQ==}
+2019-05-05 17:34:57,875 main INFO  [HttpClientUtil:149] 正在发送请求:http://221.239.93.139:9080/HttpICSrecv/CTHJZBYH1/292002.hp，参数：d1=hhjzM6WeqTbRqwXZEhYoJnXfoVchJ6E/FtWt+KwrSeTtRFzlk/+Ew1/xvq0fXU4jA/b5gl2wPqqg
+R9gPaHil34QD0nRgvKPxWj27TYer4MkOwbIoIivo5GoZKy1777/JkL0XpWxD3+PJ3S80XWZgpTCe
+wGZLtjFyQ/WGiJPy+cA=&d2=DWaOi2Rb7OBwAVGbuffyuiazWZszvNLTwGRQXNsL5tZFi5lst3UW14DXfwof4eg4fdIF5+7dzW5D
+FKEyE+EOXKLVZPl5kQAQgOpdFB0iS0iPkHVNzDWSVYxEznwNvXvB4b0HbGd1uQNcoNrz6R5oJpGM
+RU223aJerUlwsFeZ3ZEG1bk9SsMrPF67kPkD8qUNfa8vO6vkiqEY5hZsG83B7zz4AMS9PygE1PSD
+mKnsy0Rkkchwf0uWYvmXKqdOmJVWgExr9lqM7tzaVPwW0X5dE1ugyyGZ/gOwh9SBqHCUIW/Xi1bN
+YF+zEsoyoZ60n6nVS+fija1zRV7d1UFeO90AnQ==
+2019-05-05 17:34:58,635 main INFO  [HttpClientUtil:155] 获取响应成功:d1=QymJD1DCkfGxTAgSmNduEDJSbHJNjt/IcxYrbVlPI5QpTedIh6T9DVFzdUlgxcVXj0+5kIFV4sZM
+2c9ysvQ7FxWZY4Wy+UTmm2VRRB8WJWZJC7TY85Q1sLGoIaGDaBnkIY5tON949cxdR7/XEJSctlYo
+PSQzwXivVSNrkPuwzxE=&d2=FoUSM7MOrsbtyUUJqTJM3KPgnFoScggQhbHGOxXe+WjnTsaNnMUbUhjtLC4LNNMeFeddNv9CoUxQ
+TZlGmv/DU5Gz9c1XQfcNF9BVTIpRRVYKn+PUVof2gno79zYk399X2TKfFC/p5dIHEunVhLTfWa6I
+Bd+BQHEIlcXCPRo0Pwp9XZBURQm7hwcilY7wv+Ke3RJvTkFKzu5cnd6RvbCCdsWIQnu6A+9zaIcg
+/i06L5OZ6XfPcXblgHPg8Xo0iBYasU8ln7QQ4VXCloEFb5C55Gd2SxacaRXLA/+Zxu0Uf0qdUDRH
+NK2s4iERCxfBskckMkkwVCGwLcii8a5Wx3Fpeo1xiSfss6lavt/qI6U7ZsUxRODR9L+mLEBQaNac
+HptU2+0OUXuD7ZOYvRqT0unJPJrJ0S1LmzeYHVbR4OgNcYtXm/OQI3ArmuypfZi2ftYpLv+bDgVl
+k8+OYJJ4KQhv6PBRQnT8N6yfd9IHgTENck6AlIHerbiJtbvaIKFWch5QDS97gy7wtOI3JuWLB9ep
+pWSK+2YWNDvX8bAWxo6iIWybDpiY/moGCPWenmxLh8lbF4lvv/RrBJpxq7oiATmW5lE6IaqR0tTF
+9v3hkVDMVEk8zywAnd2EEC43mEdNSFRY6G/BYMVpLF/ib3vDo7CEaZGhlL7bVeZjTUQWGN3oFNg=
+2019-05-05 17:34:58,636 main INFO  [StandardPackFlowImpl:55] 7d62883e-f3f3-4ac9-855b-243aaf274622----得到的响应是:d1=QymJD1DCkfGxTAgSmNduEDJSbHJNjt/IcxYrbVlPI5QpTedIh6T9DVFzdUlgxcVXj0+5kIFV4sZM
+2c9ysvQ7FxWZY4Wy+UTmm2VRRB8WJWZJC7TY85Q1sLGoIaGDaBnkIY5tON949cxdR7/XEJSctlYo
+PSQzwXivVSNrkPuwzxE=&d2=FoUSM7MOrsbtyUUJqTJM3KPgnFoScggQhbHGOxXe+WjnTsaNnMUbUhjtLC4LNNMeFeddNv9CoUxQ
+TZlGmv/DU5Gz9c1XQfcNF9BVTIpRRVYKn+PUVof2gno79zYk399X2TKfFC/p5dIHEunVhLTfWa6I
+Bd+BQHEIlcXCPRo0Pwp9XZBURQm7hwcilY7wv+Ke3RJvTkFKzu5cnd6RvbCCdsWIQnu6A+9zaIcg
+/i06L5OZ6XfPcXblgHPg8Xo0iBYasU8ln7QQ4VXCloEFb5C55Gd2SxacaRXLA/+Zxu0Uf0qdUDRH
+NK2s4iERCxfBskckMkkwVCGwLcii8a5Wx3Fpeo1xiSfss6lavt/qI6U7ZsUxRODR9L+mLEBQaNac
+HptU2+0OUXuD7ZOYvRqT0unJPJrJ0S1LmzeYHVbR4OgNcYtXm/OQI3ArmuypfZi2ftYpLv+bDgVl
+k8+OYJJ4KQhv6PBRQnT8N6yfd9IHgTENck6AlIHerbiJtbvaIKFWch5QDS97gy7wtOI3JuWLB9ep
+pWSK+2YWNDvX8bAWxo6iIWybDpiY/moGCPWenmxLh8lbF4lvv/RrBJpxq7oiATmW5lE6IaqR0tTF
+9v3hkVDMVEk8zywAnd2EEC43mEdNSFRY6G/BYMVpLF/ib3vDo7CEaZGhlL7bVeZjTUQWGN3oFNg=
+2019-05-05 17:34:58,644 main INFO  [StandardPackFlowImpl:58] 7d62883e-f3f3-4ac9-855b-243aaf274622----解密后的结果是:{"RspCode":"000999","RspMsg":"程序异常：[java.lang.ClassNotFoundException: ]","OPERATETYPE":"","APPROVEOPINION":"","TYPENO":"","TYPENAME":"","WDSERIALNO":"asdfasdf","BUSINESSSUM":"","CURRENCY":"","CREDITSUM":"","BASERATE":"","CREDITBALANCE":"","LUSEMOD":"","LINETERM":"","TERMTYPE":"","MINLOANTERM":"","MAXLOANTERM":"","LEXP_DT":"","APPLYDATE":"","DUE_DAY":"","FINISHTIME":"","CUSTOMERNAME":"","CERTTYPE":"","CERTID":"","RESERVE1":"","RESERVE2":""}
+2019-05-05 17:34:58,667 main INFO  [StandardPackFlowImpl:63] 7d62883e-f3f3-4ac9-855b-243aaf274622----转换成ESB XML的模型数据是:{model={"APPLYDATE":"","APPROVEOPINION":"","BASERATE":"","BUSINESSSUM":"","CERTID":"","CERTTYPE":"","CREDITBALANCE":"","CREDITSUM":"","CURRENCY":"","CUSTOMERNAME":"","DUE_DAY":"","FINISHTIME":"","LEXP_DT":"","LINETERM":"","LUSEMOD":"","MAXLOANTERM":"","MINLOANTERM":"","OPERATETYPE":"","RESERVE1":"","RESERVE2":"","RspCode":"000999","RspMsg":"程序异常：[java.lang.ClassNotFoundException: ]","TERMTYPE":"","TYPENAME":"","TYPENO":"","WDSERIALNO":"asdfasdf"}}
+2019-05-05 17:34:58,811 main INFO  [StandardPackFlowImpl:66] 7d62883e-f3f3-4ac9-855b-243aaf274622----响应ESB XML报文是：
+<?xml version="1.0" encoding="UTF-8"?>
+<service>
+<sys-header>
+<data name="SYS_HEAD">
+<struct>
+<data name="MESSAGE_CODE">
+<field type="string" length="10">360010</field>
+</data>
+<data name="MESSAGE_TYPE">
+<field type="string" length="10">bohaibank</field>
+</data>
+<data name="RET">
+<array>
+<data name="RET_CODE">
+<field type="string" length="6">000999</field>
+</data>
+<data name="RET_MSG">
+<field type="string" length="7">程序异常：[java.lang.ClassNotFoundException: ]</field>
+</data>
+</array>
+</data>
+</struct>
+</data>
+</sys-header>
+<app-header />
+<local-header />
+<body>
+<data name="TranTime">
+<field type="string" length="1"></field>
+</data>
+<data name="OPERATETYPE">
+<field type="string" length="1"></field>
+</data>
+<data name="RET_CODE">
+<field type="string" length="6">000999</field>
+</data>
+<data name="RET_MSG">
+<field type="string" length="7">程序异常：[java.lang.ClassNotFoundException: ]</field>
+</data>
+<data name="OPERATETYPE">
+<field type="string" length="7"></field>
+</data>
+<data name="TYPENO">
+<field type="string" length="7"></field>
+</data>
+<data name="TYPENAME">
+<field type="string" length="7"></field>
+</data>
+<data name="WDSERIALNO">
+<field type="string" length="7">asdfasdf</field>
+</data>
+<data name="BUSINESSSUM">
+<field type="number" length="7"></field>
+</data>
+<data name="CURRENCY">
+<field type="string" length="7"></field>
+</data>
+<data name="CREDITSUM">
+<field type="number" length="7"></field>
+</data>
+<data name="BASERATE">
+<field type="number" length="7"></field>
+</data>
+<data name="CREDITBALANCE">
+<field type="number" length="7"></field>
+</data>
+<data name="LUSEMOD">
+<field type="string" length="7"></field>
+</data>
+<data name="LINETERM">
+<field type="number" length="7"></field>
+</data>
+<data name="APPROVEOPINION">
+<field type="string" length="7"></field>
+</data>
+<data name="TERMTYPE">
+<field type="string" length="7"></field>
+</data>
+<data name="MINLOANTERM">
+<field type="number" length="7"></field>
+</data>
+<data name="MAXLOANTERM">
+<field type="number" length="7"></field>
+</data>
+<data name="LEXP_DT">
+<field type="string" length="7"></field>
+</data>
+<data name="APPLYDATE">
+<field type="string" length="7"></field>
+</data>
+<data name="DUE_DAY">
+<field type="string" length="7"></field>
+</data>
+<data name="FINISHTIME">
+<field type="string" length="7"></field>
+</data>
+<data name="CUSTOMERNAME">
+<field type="string" length="7"></field>
+</data>
+<data name="CERTTYPE">
+<field type="string" length="7"></field>
+</data>
+<data name="CERTID">
+<field type="string" length="7"></field>
+</data>
+<data name="RESERVE1">
+<field type="string" length="7"></field>
+</data>
+<data name="RESERVE2">
+<field type="string" length="7"></field>
+</data>
+</body>
+</service>
+2019-05-05 17:34:58,812 main INFO  [PackProcessEngine:50] 7d62883e-f3f3-4ac9-855b-243aaf274622----耗時：1565毫秒
+2019-05-05 17:34:58,813 main INFO  [PackProcessEngine:51] 7d62883e-f3f3-4ac9-855b-243aaf274622----end----
+2019-05-05 17:35:38,920 main INFO  [PackProcessEngine:36] dbf64fbd-a184-4b78-90e9-677b4fb36293----begin----
+2019-05-05 17:35:38,922 main INFO  [PackProcessEngine:37] dbf64fbd-a184-4b78-90e9-677b4fb36293----ESB XML报文是：﻿<?xml version="1.0" encoding="UTF-8"?><service>	<sys-header>		<data name="SYS_HEAD">			<struct>				<data name="MESSAGE_CODE">					<field type="string" length="10">360010</field>				</data>				<data name="MESSAGE_TYPE">					<field type="string" length="10">bohaibank</field>				</data>				<data name="FLOW_NEWTYPE">					<field type="string" length="10">APIOUT</field>				</data>			</struct>		</data>	</sys-header>	<app-header />	<local-header />	<body>		<data name="messageLength">			<field type="string" length="10">6			</field>		</data>		<data name="msgBodyLength">			<field type="string" length="10">3245			</field>		</data>		<data name="exchangeCode">			<field type="string" length="10">360010			</field>		</data>		<data name="msgType">			<field type="string" length="10">RQ			</field>		</data>		<data name="fileFlag">			<field type="string" length="10">0			</field>		</data>		<data name="msgHash">			<field type="string" length="10">VOST0001			</field>		</data>		<data name="serviceName">			<field type="string" length="10">tp292001			</field>		</data>		<data name="msgPotocol">			<field type="string" length="10">http			</field>		</data>		<data name="POLICY_NO">			<field type="string" length="10">123042194871283			</field>		</data>		<data name="ID_TYPE">			<field type="string" length="10">01			</field>		</data>		<data name="PARTNER_CODE">			<field type="string" length="5">asdfasdf</field>		</data>		<data name="PARTNER_NAME">			<field type="string" length="100">asdfasdf</field>		</data>		<data name="SIGNTYPE">			<field type="string" length="2">asdfasdf</field>		</data>		<data name="SIGNMESSAGE">			<field type="string" length="1000">asdfasdf</field>		</data>		<data name="POLICY_NO">			<field type="string" length="30">asdfasdf</field>		</data>		<data name="WDSERIALNO">			<field type="string" length="30">asdfasdf</field>		</data>		<data name="NOTICETYPE">			<field type="string" length="8">asdfasdf</field>		</data>	</body></service>
+2019-05-05 17:35:39,018 main INFO  [PackProcessEngine:43] dbf64fbd-a184-4b78-90e9-677b4fb36293----ESB XML转换成map之后的结果是：{sys-header={SYS_HEAD={FLOW_NEWTYPE=APIOUT, MESSAGE_CODE=360010, MESSAGE_TYPE=bohaibank}}, body={WDSERIALNO=asdfasdf, NOTICETYPE=asdfasdf, msgType=RQ			, messageLength=6			, PARTNER_CODE=asdfasdf, PARTNER_NAME=asdfasdf, fileFlag=0			, msgPotocol=http			, POLICY_NO=asdfasdf, serviceName=tp292001			, ID_TYPE=01			, SIGNMESSAGE=asdfasdf, SIGNTYPE=asdfasdf, msgBodyLength=3245			, msgHash=VOST0001			, exchangeCode=360010			}}
+2019-05-05 17:35:39,018 main INFO  [PackProcessEngine:47] dbf64fbd-a184-4b78-90e9-677b4fb36293渠道名称是：bohaibank，接口名称是：360010
+2019-05-05 17:35:39,018 main INFO  [StandardPackFlowImpl:27] dbf64fbd-a184-4b78-90e9-677b4fb36293----ESB转成Json的模板是：bohaibank_360010_req
+2019-05-05 17:35:39,020 main INFO  [StandardPackFlowImpl:30] dbf64fbd-a184-4b78-90e9-677b4fb36293----JSON转成ESB XML的模板是：bohaibank_360010_resp
+2019-05-05 17:35:39,021 main ERROR [StandardPackFlowImpl:69] dbf64fbd-a184-4b78-90e9-677b4fb36293----D:\testtemp\reqtemplate\bohaibank_360010_req.xml (系统找不到指定的文件。) Nested exception: D:\testtemp\reqtemplate\bohaibank_360010_req.xml (系统找不到指定的文件。)
+org.dom4j.DocumentException: D:\testtemp\reqtemplate\bohaibank_360010_req.xml (系统找不到指定的文件。) Nested exception: D:\testtemp\reqtemplate\bohaibank_360010_req.xml (系统找不到指定的文件。)
+	at org.dom4j.io.SAXReader.read(SAXReader.java:266)
+	at com.z_bank.pack.frame.map2Json.Map2JsonUseXmlImpl.parse2Map(Map2JsonUseXmlImpl.java:56)
+	at com.z_bank.pack.frame.map2Json.Map2JsonUseXmlImpl.parse2JsonString(Map2JsonUseXmlImpl.java:38)
+	at com.z_bank.pack.frame.flow.StandardPackFlowImpl.parse(StandardPackFlowImpl.java:33)
+	at com.z_bank.pack.frame.PackProcessEngine.packProcess(PackProcessEngine.java:49)
+	at com.z_bank.pack.frame.PackProcessEngine.main(PackProcessEngine.java:72)
+Nested exception: 
+java.io.FileNotFoundException: D:\testtemp\reqtemplate\bohaibank_360010_req.xml (系统找不到指定的文件。)
+	at java.io.FileInputStream.open0(Native Method)
+	at java.io.FileInputStream.open(FileInputStream.java:195)
+	at java.io.FileInputStream.<init>(FileInputStream.java:138)
+	at org.dom4j.io.SAXReader.read(SAXReader.java:243)
+	at com.z_bank.pack.frame.map2Json.Map2JsonUseXmlImpl.parse2Map(Map2JsonUseXmlImpl.java:56)
+	at com.z_bank.pack.frame.map2Json.Map2JsonUseXmlImpl.parse2JsonString(Map2JsonUseXmlImpl.java:38)
+	at com.z_bank.pack.frame.flow.StandardPackFlowImpl.parse(StandardPackFlowImpl.java:33)
+	at com.z_bank.pack.frame.PackProcessEngine.packProcess(PackProcessEngine.java:49)
+	at com.z_bank.pack.frame.PackProcessEngine.main(PackProcessEngine.java:72)
+2019-05-05 17:35:39,058 main ERROR [PackProcessEngine:54] dbf64fbd-a184-4b78-90e9-677b4fb36293----D:\testtemp\reqtemplate\bohaibank_360010_req.xml (系统找不到指定的文件。) Nested exception: D:\testtemp\reqtemplate\bohaibank_360010_req.xml (系统找不到指定的文件。)
+org.dom4j.DocumentException: D:\testtemp\reqtemplate\bohaibank_360010_req.xml (系统找不到指定的文件。) Nested exception: D:\testtemp\reqtemplate\bohaibank_360010_req.xml (系统找不到指定的文件。)
+	at org.dom4j.io.SAXReader.read(SAXReader.java:266)
+	at com.z_bank.pack.frame.map2Json.Map2JsonUseXmlImpl.parse2Map(Map2JsonUseXmlImpl.java:56)
+	at com.z_bank.pack.frame.map2Json.Map2JsonUseXmlImpl.parse2JsonString(Map2JsonUseXmlImpl.java:38)
+	at com.z_bank.pack.frame.flow.StandardPackFlowImpl.parse(StandardPackFlowImpl.java:33)
+	at com.z_bank.pack.frame.PackProcessEngine.packProcess(PackProcessEngine.java:49)
+	at com.z_bank.pack.frame.PackProcessEngine.main(PackProcessEngine.java:72)
+Nested exception: 
+java.io.FileNotFoundException: D:\testtemp\reqtemplate\bohaibank_360010_req.xml (系统找不到指定的文件。)
+	at java.io.FileInputStream.open0(Native Method)
+	at java.io.FileInputStream.open(FileInputStream.java:195)
+	at java.io.FileInputStream.<init>(FileInputStream.java:138)
+	at org.dom4j.io.SAXReader.read(SAXReader.java:243)
+	at com.z_bank.pack.frame.map2Json.Map2JsonUseXmlImpl.parse2Map(Map2JsonUseXmlImpl.java:56)
+	at com.z_bank.pack.frame.map2Json.Map2JsonUseXmlImpl.parse2JsonString(Map2JsonUseXmlImpl.java:38)
+	at com.z_bank.pack.frame.flow.StandardPackFlowImpl.parse(StandardPackFlowImpl.java:33)
+	at com.z_bank.pack.frame.PackProcessEngine.packProcess(PackProcessEngine.java:49)
+	at com.z_bank.pack.frame.PackProcessEngine.main(PackProcessEngine.java:72)
+2019-05-05 17:35:39,058 main INFO  [PackProcessEngine:55] dbf64fbd-a184-4b78-90e9-677b4fb36293----耗時：136毫秒
+2019-05-05 17:35:39,059 main INFO  [PackProcessEngine:56] dbf64fbd-a184-4b78-90e9-677b4fb36293----end----
+2019-05-05 17:43:15,733 main INFO  [PackProcessEngine:36] fdf19bd9-adec-4ebf-a019-551e96f6709e----begin----
+2019-05-05 17:43:15,735 main INFO  [PackProcessEngine:37] fdf19bd9-adec-4ebf-a019-551e96f6709e----ESB XML报文是：﻿<?xml version="1.0" encoding="UTF-8"?><service>	<sys-header>		<data name="SYS_HEAD">			<struct>				<data name="MESSAGE_CODE">					<field type="string" length="10">292001</field>				</data>				<data name="MESSAGE_TYPE">					<field type="string" length="10">bohaibank</field>				</data>				<data name="FLOW_NEWTYPE">					<field type="string" length="10">APIOUT</field>				</data>			</struct>		</data>	</sys-header>	<app-header />	<local-header />	<body>		<data name="messageLength">			<field type="string" length="10">6			</field>		</data>		<data name="msgBodyLength">			<field type="string" length="10">3245			</field>		</data>		<data name="exchangeCode">			<field type="string" length="10">360010			</field>		</data>		<data name="msgType">			<field type="string" length="10">RQ			</field>		</data>		<data name="fileFlag">			<field type="string" length="10">0			</field>		</data>		<data name="msgHash">			<field type="string" length="10">VOST0001			</field>		</data>		<data name="serviceName">			<field type="string" length="10">tp292001			</field>		</data>		<data name="msgPotocol">			<field type="string" length="10">http			</field>		</data>		<data name="POLICY_NO">			<field type="string" length="10">123042194871283			</field>		</data>		<data name="ID_TYPE">			<field type="string" length="10">01			</field>		</data>		<data name="PARTNER_CODE">			<field type="string" length="5">asdfasdf</field>		</data>		<data name="PARTNER_NAME">			<field type="string" length="100">asdfasdf</field>		</data>		<data name="SIGNTYPE">			<field type="string" length="2">asdfasdf</field>		</data>		<data name="SIGNMESSAGE">			<field type="string" length="1000">asdfasdf</field>		</data>		<data name="POLICY_NO">			<field type="string" length="30">asdfasdf</field>		</data>		<data name="WDSERIALNO">			<field type="string" length="30">asdfasdf</field>		</data>		<data name="NOTICETYPE">			<field type="string" length="8">asdfasdf</field>		</data>	</body></service>
+2019-05-05 17:43:15,831 main INFO  [PackProcessEngine:43] fdf19bd9-adec-4ebf-a019-551e96f6709e----ESB XML转换成map之后的结果是：{sys-header={SYS_HEAD={FLOW_NEWTYPE=APIOUT, MESSAGE_CODE=292001, MESSAGE_TYPE=bohaibank}}, body={WDSERIALNO=asdfasdf, NOTICETYPE=asdfasdf, msgType=RQ			, messageLength=6			, PARTNER_CODE=asdfasdf, PARTNER_NAME=asdfasdf, fileFlag=0			, msgPotocol=http			, POLICY_NO=asdfasdf, serviceName=tp292001			, ID_TYPE=01			, SIGNMESSAGE=asdfasdf, SIGNTYPE=asdfasdf, msgBodyLength=3245			, msgHash=VOST0001			, exchangeCode=360010			}}
+2019-05-05 17:43:15,832 main INFO  [PackProcessEngine:47] fdf19bd9-adec-4ebf-a019-551e96f6709e渠道名称是：bohaibank，接口名称是：292001
+2019-05-05 17:43:15,832 main INFO  [StandardPackFlowImpl:27] fdf19bd9-adec-4ebf-a019-551e96f6709e----ESB转成Json的模板是：bohaibank_292001_req
+2019-05-05 17:43:15,833 main INFO  [StandardPackFlowImpl:30] fdf19bd9-adec-4ebf-a019-551e96f6709e----JSON转成ESB XML的模板是：bohaibank_292001_resp
+2019-05-05 17:43:15,918 main INFO  [StandardPackFlowImpl:34] fdf19bd9-adec-4ebf-a019-551e96f6709e----map转换成json之后的结果是：{"ID_TYPE":"01\t\t\t","PARTNER_CODE":"asdfasdf","PARTNER_NAME":"asdfasdf","POLICY_NO":"asdfasdf","SIGNMESSAGE":"asdfasdf","SIGNTYPE":"asdfasdf","exchangeCode":"360010\t\t\t","fileFlag":"0\t\t\t","messageLength":"6\t\t\t","msgBodyLength":"3245\t\t\t","msgHash":"VOST0001\t\t\t","msgPotocol":"http\t\t\t","msgType":"RQ\t\t\t","serviceName":"tp292001\t\t\t"}
+2019-05-05 17:43:16,199 main INFO  [StandardPackFlowImpl:41] fdf19bd9-adec-4ebf-a019-551e96f6709e----加密之后的结果是：{d1=XZ2AZ1LOwXTC/pbXAAqAYNSbkneQjy1tOblspKj3NfzTzQ8KxMj38b3AcfZfNPyKdpxPYqT0LY5l
+SnNUUHiakJCOHc5HNF0Bo2+rMOdTqZFVjVif38MW+KTzA2sM/IR2NFnzJladVGQbDoJ8ZHQAqjw9
+5qYe8JkvGGIsT1+pm0k=, d2=L+3foQebg7t3c5YCAzy8oevwuWFbV4dLwU/Mm1nxWJbKQvTKgqYjaG39VSi4f5qNNF9c1t/hV2H2
+re7ujak2+49BHV+Kmo3m0VuXG8k4AV9ZUxGmZ+pjp6vHOLhhCjBFjTR5YoRWZLRPffh22zueWXve
+XmANeAnOdc4zPNu6GCcxw71tl5rDpyzcTdyHLodGVZLEEoSyoCQ80LFk/rps0VD2onfmAGR3lGpj
+oCdrJw4tT9qBv3x/2J88yF6Z4PCb0eCWXm7hWQQd+MV66De8Vac1tLk7g3MfVM3ar+EeoWF8ht9r
+A56u+DhBnQ3uWNr3afvcX/mtMPa7SYfl7xk3CVLsx9e8eNITEQgVsTzA2Apt4fikjzOVm9VujbQr
+rYZWE3KUgFVj+RhLT/emAKFpPxvmJqlzGxLtPnyO/98Bj6wsueOFjFmL84B1SRR53+fapWPI0wkc
+UwmvO0/WuWAxBSWsZh0tYa0fHjccMXJmJDc3pRlTF7QjB1wBZCXFrkHfB78rS054tjtnZn6QaBBR
+eCY2BN+P/sSDDmv6paLGdEXyeX6stPT/qyamSqoCmraeLl+vNZYTt0VZrlF2E4ALcy3GXwjfK+dJ
+2kUF0Fsnl5LoI1rbcvqRCJj2kfOoapfDNyHWpY0x56JcQHvHl07zek90k7bw2u81l0NmRlxT2sY=}
+2019-05-05 17:43:16,200 main INFO  [StandardPackFlowImpl:53] fdf19bd9-adec-4ebf-a019-551e96f6709e----发送请求到http://221.239.93.139:9080/HttpICSrecv/CTHJZBYH1/292001.hp请求参数是:{d1=XZ2AZ1LOwXTC/pbXAAqAYNSbkneQjy1tOblspKj3NfzTzQ8KxMj38b3AcfZfNPyKdpxPYqT0LY5l
+SnNUUHiakJCOHc5HNF0Bo2+rMOdTqZFVjVif38MW+KTzA2sM/IR2NFnzJladVGQbDoJ8ZHQAqjw9
+5qYe8JkvGGIsT1+pm0k=, d2=L+3foQebg7t3c5YCAzy8oevwuWFbV4dLwU/Mm1nxWJbKQvTKgqYjaG39VSi4f5qNNF9c1t/hV2H2
+re7ujak2+49BHV+Kmo3m0VuXG8k4AV9ZUxGmZ+pjp6vHOLhhCjBFjTR5YoRWZLRPffh22zueWXve
+XmANeAnOdc4zPNu6GCcxw71tl5rDpyzcTdyHLodGVZLEEoSyoCQ80LFk/rps0VD2onfmAGR3lGpj
+oCdrJw4tT9qBv3x/2J88yF6Z4PCb0eCWXm7hWQQd+MV66De8Vac1tLk7g3MfVM3ar+EeoWF8ht9r
+A56u+DhBnQ3uWNr3afvcX/mtMPa7SYfl7xk3CVLsx9e8eNITEQgVsTzA2Apt4fikjzOVm9VujbQr
+rYZWE3KUgFVj+RhLT/emAKFpPxvmJqlzGxLtPnyO/98Bj6wsueOFjFmL84B1SRR53+fapWPI0wkc
+UwmvO0/WuWAxBSWsZh0tYa0fHjccMXJmJDc3pRlTF7QjB1wBZCXFrkHfB78rS054tjtnZn6QaBBR
+eCY2BN+P/sSDDmv6paLGdEXyeX6stPT/qyamSqoCmraeLl+vNZYTt0VZrlF2E4ALcy3GXwjfK+dJ
+2kUF0Fsnl5LoI1rbcvqRCJj2kfOoapfDNyHWpY0x56JcQHvHl07zek90k7bw2u81l0NmRlxT2sY=}
+2019-05-05 17:43:16,320 main INFO  [HttpClientUtil:149] 正在发送请求:http://221.239.93.139:9080/HttpICSrecv/CTHJZBYH1/292001.hp，参数：d1=XZ2AZ1LOwXTC/pbXAAqAYNSbkneQjy1tOblspKj3NfzTzQ8KxMj38b3AcfZfNPyKdpxPYqT0LY5l
+SnNUUHiakJCOHc5HNF0Bo2+rMOdTqZFVjVif38MW+KTzA2sM/IR2NFnzJladVGQbDoJ8ZHQAqjw9
+5qYe8JkvGGIsT1+pm0k=&d2=L+3foQebg7t3c5YCAzy8oevwuWFbV4dLwU/Mm1nxWJbKQvTKgqYjaG39VSi4f5qNNF9c1t/hV2H2
+re7ujak2+49BHV+Kmo3m0VuXG8k4AV9ZUxGmZ+pjp6vHOLhhCjBFjTR5YoRWZLRPffh22zueWXve
+XmANeAnOdc4zPNu6GCcxw71tl5rDpyzcTdyHLodGVZLEEoSyoCQ80LFk/rps0VD2onfmAGR3lGpj
+oCdrJw4tT9qBv3x/2J88yF6Z4PCb0eCWXm7hWQQd+MV66De8Vac1tLk7g3MfVM3ar+EeoWF8ht9r
+A56u+DhBnQ3uWNr3afvcX/mtMPa7SYfl7xk3CVLsx9e8eNITEQgVsTzA2Apt4fikjzOVm9VujbQr
+rYZWE3KUgFVj+RhLT/emAKFpPxvmJqlzGxLtPnyO/98Bj6wsueOFjFmL84B1SRR53+fapWPI0wkc
+UwmvO0/WuWAxBSWsZh0tYa0fHjccMXJmJDc3pRlTF7QjB1wBZCXFrkHfB78rS054tjtnZn6QaBBR
+eCY2BN+P/sSDDmv6paLGdEXyeX6stPT/qyamSqoCmraeLl+vNZYTt0VZrlF2E4ALcy3GXwjfK+dJ
+2kUF0Fsnl5LoI1rbcvqRCJj2kfOoapfDNyHWpY0x56JcQHvHl07zek90k7bw2u81l0NmRlxT2sY=
+2019-05-05 17:43:16,943 main INFO  [HttpClientUtil:155] 获取响应成功:d1=S01IApjIFfVjIoQRFfKN94wgv9GrJxeJmxFWX05gKN5MJA0Wk7Bwg15lskdHUoWtj4EtNrHIO/YU
+w+vLc1CkuUOw4j6yguMmTPLZq6o0Ydsb8aEDl82rwKUQya/gLMH0ANaev7vf3YtSpw++/NtTV8XE
+538dNzmM/wnh1EcECr4=&d2=SlfnX0oMP5JVq/twld+U6uN8BiPgG+qKUIJ0GPd+Pa9DS6z3mczfnTatZLYU3IBNasJHwt2LUsyi
+rtvLUTO7r/s8ZEkW2ZFwaiHVSHHqHJiOdMclXvB3y1sL3TtZFw0UYlXuRGIgdtruNxDOoUnE6QKg
+LjHXLefoHzFBEfpGzhU8/q1tvcKogSy4NVoosYFf+m4iF/4udywPY5uaPa+JTC9JR2ZT5TvOQr6n
+ZtblrD/iOxgYTZ28lst/19WBXY+manXGm6FvCu4NCdZmtWqsQgYweC+h7LtfKvTi1TveACTpJ+oB
+d5GCOunZnicLNSNiDW1CG/8HldIJXLBqaeZsCQ==
+2019-05-05 17:43:16,944 main INFO  [StandardPackFlowImpl:55] fdf19bd9-adec-4ebf-a019-551e96f6709e----得到的响应是:d1=S01IApjIFfVjIoQRFfKN94wgv9GrJxeJmxFWX05gKN5MJA0Wk7Bwg15lskdHUoWtj4EtNrHIO/YU
+w+vLc1CkuUOw4j6yguMmTPLZq6o0Ydsb8aEDl82rwKUQya/gLMH0ANaev7vf3YtSpw++/NtTV8XE
+538dNzmM/wnh1EcECr4=&d2=SlfnX0oMP5JVq/twld+U6uN8BiPgG+qKUIJ0GPd+Pa9DS6z3mczfnTatZLYU3IBNasJHwt2LUsyi
+rtvLUTO7r/s8ZEkW2ZFwaiHVSHHqHJiOdMclXvB3y1sL3TtZFw0UYlXuRGIgdtruNxDOoUnE6QKg
+LjHXLefoHzFBEfpGzhU8/q1tvcKogSy4NVoosYFf+m4iF/4udywPY5uaPa+JTC9JR2ZT5TvOQr6n
+ZtblrD/iOxgYTZ28lst/19WBXY+manXGm6FvCu4NCdZmtWqsQgYweC+h7LtfKvTi1TveACTpJ+oB
+d5GCOunZnicLNSNiDW1CG/8HldIJXLBqaeZsCQ==
+2019-05-05 17:43:16,949 main INFO  [StandardPackFlowImpl:58] fdf19bd9-adec-4ebf-a019-551e96f6709e----解密后的结果是:{"RspCode":"000999","RspMsg":"程序异常：[java.lang.ClassNotFoundException: ]","APPV_STATUS":"","APPV_OPINION":"","WDSERIALNO":""}
+2019-05-05 17:43:16,975 main INFO  [StandardPackFlowImpl:63] fdf19bd9-adec-4ebf-a019-551e96f6709e----转换成ESB XML的模型数据是:{model={"APPV_OPINION":"","APPV_STATUS":"","RspCode":"000999","RspMsg":"程序异常：[java.lang.ClassNotFoundException: ]","WDSERIALNO":""}}
+2019-05-05 17:43:17,122 main INFO  [StandardPackFlowImpl:66] fdf19bd9-adec-4ebf-a019-551e96f6709e----响应ESB XML报文是：
+<?xml version="1.0" encoding="UTF-8"?>
+<service>
+<sys-header>
+<data name="SYS_HEAD">
+<struct>
+<data name="MESSAGE_CODE">
+<field type="string" length="10">292001</field>
+</data>
+<data name="MESSAGE_TYPE">
+<field type="string" length="10">bohaibank</field>
+</data>
+<data name="RET">
+<array>
+<data name="RET_CODE">
+<field type="string" length="6">000999</field>
+</data>
+<data name="RET_MSG">
+<field type="string" length="7">程序异常：[java.lang.ClassNotFoundException: ]</field>
+</data>
+</array>
+</data>
+</struct>
+</data>
+</sys-header>
+<app-header />
+<local-header />
+<body>
+<data name="TranTime">
+<field type="string" length="1"></field>
+</data>
+<data name="loanReqStatus">
+<field type="string" length="1"></field>
+</data>
+<data name="loanReqDesc">
+<field type="string" length="6"></field>
+</data>
+<data name="trdLoanReqNo">
+<field type="string" length="7"></field>
+</data>
+</body>
+</service>
+2019-05-05 17:43:17,122 main INFO  [PackProcessEngine:50] fdf19bd9-adec-4ebf-a019-551e96f6709e----耗時：1387毫秒
+2019-05-05 17:43:17,123 main INFO  [PackProcessEngine:51] fdf19bd9-adec-4ebf-a019-551e96f6709e----end----
+2019-05-05 17:45:41,776 main INFO  [PackProcessEngine:36] d1e4261c-e384-45ba-9176-eba89652662f----begin----
+2019-05-05 17:45:41,778 main INFO  [PackProcessEngine:37] d1e4261c-e384-45ba-9176-eba89652662f----ESB XML报文是：﻿<?xml version="1.0" encoding="UTF-8"?><service>	<sys-header>		<data name="SYS_HEAD">			<struct>				<data name="MESSAGE_CODE">					<field type="string" length="10">292001</field>				</data>				<data name="MESSAGE_TYPE">					<field type="string" length="10">bohaibank</field>				</data>				<data name="FLOW_NEWTYPE">					<field type="string" length="10">APIOUT</field>				</data>			</struct>		</data>	</sys-header>	<app-header />	<local-header />	<body>		<data name="messageLength">			<field type="string" length="10">6			</field>		</data>		<data name="msgBodyLength">			<field type="string" length="10">3245			</field>		</data>		<data name="exchangeCode">			<field type="string" length="10">360010			</field>		</data>		<data name="msgType">			<field type="string" length="10">RQ			</field>		</data>		<data name="fileFlag">			<field type="string" length="10">0			</field>		</data>		<data name="msgHash">			<field type="string" length="10">VOST0001			</field>		</data>		<data name="serviceName">			<field type="string" length="10">tp292001			</field>		</data>		<data name="msgPotocol">			<field type="string" length="10">http			</field>		</data>		<data name="POLICY_NO">			<field type="string" length="10">123042194871283			</field>		</data>		<data name="ID_TYPE">			<field type="string" length="10">01			</field>		</data>		<data name="PARTNER_CODE">			<field type="string" length="5">asdfasdf</field>		</data>		<data name="PARTNER_NAME">			<field type="string" length="100">asdfasdf</field>		</data>		<data name="SIGNTYPE">			<field type="string" length="2">asdfasdf</field>		</data>		<data name="SIGNMESSAGE">			<field type="string" length="1000">asdfasdf</field>		</data>		<data name="POLICY_NO">			<field type="string" length="30">asdfasdf</field>		</data>		<data name="WDSERIALNO">			<field type="string" length="30">asdfasdf</field>		</data>		<data name="NOTICETYPE">			<field type="string" length="8">asdfasdf</field>		</data>	</body></service>
+2019-05-05 17:45:41,880 main INFO  [PackProcessEngine:43] d1e4261c-e384-45ba-9176-eba89652662f----ESB XML转换成map之后的结果是：{sys-header={SYS_HEAD={FLOW_NEWTYPE=APIOUT, MESSAGE_CODE=292001, MESSAGE_TYPE=bohaibank}}, body={WDSERIALNO=asdfasdf, NOTICETYPE=asdfasdf, msgType=RQ			, messageLength=6			, PARTNER_CODE=asdfasdf, PARTNER_NAME=asdfasdf, fileFlag=0			, msgPotocol=http			, POLICY_NO=asdfasdf, serviceName=tp292001			, ID_TYPE=01			, SIGNMESSAGE=asdfasdf, SIGNTYPE=asdfasdf, msgBodyLength=3245			, msgHash=VOST0001			, exchangeCode=360010			}}
+2019-05-05 17:45:41,880 main INFO  [PackProcessEngine:47] d1e4261c-e384-45ba-9176-eba89652662f渠道名称是：bohaibank，接口名称是：292001
+2019-05-05 17:45:41,880 main INFO  [StandardPackFlowImpl:27] d1e4261c-e384-45ba-9176-eba89652662f----ESB转成Json的模板是：bohaibank_292001_req
+2019-05-05 17:45:41,882 main INFO  [StandardPackFlowImpl:30] d1e4261c-e384-45ba-9176-eba89652662f----JSON转成ESB XML的模板是：bohaibank_292001_resp
+2019-05-05 17:45:41,965 main INFO  [StandardPackFlowImpl:34] d1e4261c-e384-45ba-9176-eba89652662f----map转换成json之后的结果是：{"ID_TYPE":"01\t\t\t","PARTNER_CODE":"asdfasdf","PARTNER_NAME":"asdfasdf","POLICY_NO":"asdfasdf","SIGNMESSAGE":"asdfasdf","SIGNTYPE":"asdfasdf","exchangeCode":"360010\t\t\t","fileFlag":"0\t\t\t","messageLength":"6\t\t\t","msgBodyLength":"3245\t\t\t","msgHash":"VOST0001\t\t\t","msgPotocol":"http\t\t\t","msgType":"RQ\t\t\t","serviceName":"tp292001\t\t\t"}
+2019-05-05 17:45:42,233 main INFO  [StandardPackFlowImpl:41] d1e4261c-e384-45ba-9176-eba89652662f----加密之后的结果是：{d1=Jq5/lve9/Z1+3eNrvBNSTdX1gGcdnM6mXR8mfynuBh9QWYpvVGLsxg61nG7O/Unq2ifKAW5w9waK
+cip666XJQZPmqZ3/ISPLRXpLeGQJcn47REK1LcB6r5HQNDSVN7Dn0nrLoBgqjDXKYkbwcTrnLkgP
+JXKNPNnbQiVfYVQkjVk=, d2=OFid+pm1uMeEEWetalguJqPBkOYJKUtlcdA+ncCdTKpxjX4vlp3yJmCCrOHLqd3z2NUasHmekVOB
+oly4US39OHim+rN0CTnCa20cmo6NBCEwTSpQKP5SxdwKGQgiBTwPEtVuL9w/NyEmAb/XubUr+rUv
+rheE+6pKQA77WSYlUoIhl2cE79cgQo+Ny6Gr/R0QKGO/N1LeTmEJAWnIx3xZvL/Ry+JJjgLVCKfR
+rgYgFelwULnE+zgt+0LEdpw/IG3Ru2is/gxDgJj507CPgapkJY88s0TBXKLOLLYrrQ3w+j6yf51Q
+fSLLxiKz831ksnBaLv/yfIBqfQbN/5sTOS6yt0bKi1RmslHsNDhJ13xBJBuZPuU5gHgaok5kKgQj
+Gyfu3zw0DIvjzXO0m8SvJkptIA88quLhG613GeYFmbT3M2GJWjaIR/P4JJo4xzs9xkB6Nqxb/lzb
+q3GXjmn8IleSOWvlO21g+8UGLdl9MiPPWBwzTDqS3RKQlaG9GRR2pp7HLZIm0mEWCsW2aKCf88xW
+vyVTNHNC/k150a8sj7VxPDuQbaS0wD6sIsE8GX6YCb9fnpDuxVux32x2uPtFtVDsqHdQcTHBcGSI
+TCzJ8e8dftM0RPPEmeYfeqQDKvZdQ+V//XKNGOZEJzfpqm7FWHQZ0LpI35oUL3y0NmCGllhJ93Y=}
+2019-05-05 17:45:42,234 main INFO  [StandardPackFlowImpl:53] d1e4261c-e384-45ba-9176-eba89652662f----发送请求到http://221.239.93.139:9080/HttpICSrecv/CTHJZBYH1/292001.hp请求参数是:{d1=Jq5/lve9/Z1+3eNrvBNSTdX1gGcdnM6mXR8mfynuBh9QWYpvVGLsxg61nG7O/Unq2ifKAW5w9waK
+cip666XJQZPmqZ3/ISPLRXpLeGQJcn47REK1LcB6r5HQNDSVN7Dn0nrLoBgqjDXKYkbwcTrnLkgP
+JXKNPNnbQiVfYVQkjVk=, d2=OFid+pm1uMeEEWetalguJqPBkOYJKUtlcdA+ncCdTKpxjX4vlp3yJmCCrOHLqd3z2NUasHmekVOB
+oly4US39OHim+rN0CTnCa20cmo6NBCEwTSpQKP5SxdwKGQgiBTwPEtVuL9w/NyEmAb/XubUr+rUv
+rheE+6pKQA77WSYlUoIhl2cE79cgQo+Ny6Gr/R0QKGO/N1LeTmEJAWnIx3xZvL/Ry+JJjgLVCKfR
+rgYgFelwULnE+zgt+0LEdpw/IG3Ru2is/gxDgJj507CPgapkJY88s0TBXKLOLLYrrQ3w+j6yf51Q
+fSLLxiKz831ksnBaLv/yfIBqfQbN/5sTOS6yt0bKi1RmslHsNDhJ13xBJBuZPuU5gHgaok5kKgQj
+Gyfu3zw0DIvjzXO0m8SvJkptIA88quLhG613GeYFmbT3M2GJWjaIR/P4JJo4xzs9xkB6Nqxb/lzb
+q3GXjmn8IleSOWvlO21g+8UGLdl9MiPPWBwzTDqS3RKQlaG9GRR2pp7HLZIm0mEWCsW2aKCf88xW
+vyVTNHNC/k150a8sj7VxPDuQbaS0wD6sIsE8GX6YCb9fnpDuxVux32x2uPtFtVDsqHdQcTHBcGSI
+TCzJ8e8dftM0RPPEmeYfeqQDKvZdQ+V//XKNGOZEJzfpqm7FWHQZ0LpI35oUL3y0NmCGllhJ93Y=}
+2019-05-05 17:45:42,355 main INFO  [HttpClientUtil:149] 正在发送请求:http://221.239.93.139:9080/HttpICSrecv/CTHJZBYH1/292001.hp，参数：d1=Jq5/lve9/Z1+3eNrvBNSTdX1gGcdnM6mXR8mfynuBh9QWYpvVGLsxg61nG7O/Unq2ifKAW5w9waK
+cip666XJQZPmqZ3/ISPLRXpLeGQJcn47REK1LcB6r5HQNDSVN7Dn0nrLoBgqjDXKYkbwcTrnLkgP
+JXKNPNnbQiVfYVQkjVk=&d2=OFid+pm1uMeEEWetalguJqPBkOYJKUtlcdA+ncCdTKpxjX4vlp3yJmCCrOHLqd3z2NUasHmekVOB
+oly4US39OHim+rN0CTnCa20cmo6NBCEwTSpQKP5SxdwKGQgiBTwPEtVuL9w/NyEmAb/XubUr+rUv
+rheE+6pKQA77WSYlUoIhl2cE79cgQo+Ny6Gr/R0QKGO/N1LeTmEJAWnIx3xZvL/Ry+JJjgLVCKfR
+rgYgFelwULnE+zgt+0LEdpw/IG3Ru2is/gxDgJj507CPgapkJY88s0TBXKLOLLYrrQ3w+j6yf51Q
+fSLLxiKz831ksnBaLv/yfIBqfQbN/5sTOS6yt0bKi1RmslHsNDhJ13xBJBuZPuU5gHgaok5kKgQj
+Gyfu3zw0DIvjzXO0m8SvJkptIA88quLhG613GeYFmbT3M2GJWjaIR/P4JJo4xzs9xkB6Nqxb/lzb
+q3GXjmn8IleSOWvlO21g+8UGLdl9MiPPWBwzTDqS3RKQlaG9GRR2pp7HLZIm0mEWCsW2aKCf88xW
+vyVTNHNC/k150a8sj7VxPDuQbaS0wD6sIsE8GX6YCb9fnpDuxVux32x2uPtFtVDsqHdQcTHBcGSI
+TCzJ8e8dftM0RPPEmeYfeqQDKvZdQ+V//XKNGOZEJzfpqm7FWHQZ0LpI35oUL3y0NmCGllhJ93Y=
+2019-05-05 17:45:42,799 main INFO  [HttpClientUtil:155] 获取响应成功:d1=VY5078FiTNktISZ7F/X7z6BaclHwaVxWjUqTpak7ccCnF65OMYb/91Ywapc0eAV+otuEbEKWWN1Z
+sS1yAr80mhjlhzIOMna+5dZsqSwt71En8Ab0+55YBzgpuQG6GqRMLZ/9JxaCSxr155fi1o7kzzje
+Kfw66fYZMwmx8MxnHlk=&d2=WulNbQNMYRYr0WEFWkvSGqh3XfSDEYX1JH3/Q5ZcW3oLoGK0f6UvoxuXIKyIcun17g76N3CyjzR6
+6WolBR6cuoF5qORs1Bxc1la41GIM6H1Z9hiidX54ANg8nzcLS/heRVyryUWnFftRyijtL36WgQJB
+D6raPQzf1T+nTzodFBAabPX+gggOhEjRUqXIez6nSp6tmr0bCXhoO2/8w22x6uWskQ4zyJtiR9EM
+3CDeWwlOOhvCm2mz6YF///++fcUfQ5cgyo6ZrnelxE8x6TxO1RpkcRTkqClBEe76W+kRqOob4BAP
+wYtt8KN4B0XDzBpC5BGr9/E3Qq1Zz3Heg+athA==
+2019-05-05 17:45:42,800 main INFO  [StandardPackFlowImpl:55] d1e4261c-e384-45ba-9176-eba89652662f----得到的响应是:d1=VY5078FiTNktISZ7F/X7z6BaclHwaVxWjUqTpak7ccCnF65OMYb/91Ywapc0eAV+otuEbEKWWN1Z
+sS1yAr80mhjlhzIOMna+5dZsqSwt71En8Ab0+55YBzgpuQG6GqRMLZ/9JxaCSxr155fi1o7kzzje
+Kfw66fYZMwmx8MxnHlk=&d2=WulNbQNMYRYr0WEFWkvSGqh3XfSDEYX1JH3/Q5ZcW3oLoGK0f6UvoxuXIKyIcun17g76N3CyjzR6
+6WolBR6cuoF5qORs1Bxc1la41GIM6H1Z9hiidX54ANg8nzcLS/heRVyryUWnFftRyijtL36WgQJB
+D6raPQzf1T+nTzodFBAabPX+gggOhEjRUqXIez6nSp6tmr0bCXhoO2/8w22x6uWskQ4zyJtiR9EM
+3CDeWwlOOhvCm2mz6YF///++fcUfQ5cgyo6ZrnelxE8x6TxO1RpkcRTkqClBEe76W+kRqOob4BAP
+wYtt8KN4B0XDzBpC5BGr9/E3Qq1Zz3Heg+athA==
+2019-05-05 17:45:42,805 main INFO  [StandardPackFlowImpl:58] d1e4261c-e384-45ba-9176-eba89652662f----解密后的结果是:{"RspCode":"000999","RspMsg":"程序异常：[java.lang.ClassNotFoundException: ]","APPV_STATUS":"","APPV_OPINION":"","WDSERIALNO":""}
+2019-05-05 17:45:42,831 main INFO  [StandardPackFlowImpl:63] d1e4261c-e384-45ba-9176-eba89652662f----转换成ESB XML的模型数据是:{model={"APPV_OPINION":"","APPV_STATUS":"","RspCode":"000999","RspMsg":"程序异常：[java.lang.ClassNotFoundException: ]","WDSERIALNO":""}}
+2019-05-05 17:45:42,966 main INFO  [StandardPackFlowImpl:66] d1e4261c-e384-45ba-9176-eba89652662f----响应ESB XML报文是：
+<?xml version="1.0" encoding="UTF-8"?>
+<service>
+<sys-header>
+<data name="SYS_HEAD">
+<struct>
+<data name="MESSAGE_CODE">
+<field type="string" length="10">292001</field>
+</data>
+<data name="MESSAGE_TYPE">
+<field type="string" length="10">bohaibank</field>
+</data>
+<data name="RET">
+<array>
+<data name="RET_CODE">
+<field type="string" length="6">000999</field>
+</data>
+<data name="RET_MSG">
+<field type="string" length="7">程序异常：[java.lang.ClassNotFoundException: ]</field>
+</data>
+</array>
+</data>
+</struct>
+</data>
+</sys-header>
+<app-header />
+<local-header />
+<body>
+<data name="TranTime">
+<field type="string" length="1"></field>
+</data>
+<data name="loanReqStatus">
+<field type="string" length="1"></field>
+</data>
+<data name="loanReqDesc">
+<field type="string" length="6"></field>
+</data>
+<data name="trdLoanReqNo">
+<field type="string" length="7"></field>
+</data>
+</body>
+</service>
+2019-05-05 17:45:42,966 main INFO  [PackProcessEngine:50] d1e4261c-e384-45ba-9176-eba89652662f----耗時：1187毫秒
+2019-05-05 17:45:42,967 main INFO  [PackProcessEngine:51] d1e4261c-e384-45ba-9176-eba89652662f----end----

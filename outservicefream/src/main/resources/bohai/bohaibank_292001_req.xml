@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<response type="map">
+	<map>
+		<key name="messageLength" value="body.messageLength" type="string" />
+		<key name="msgBodyLength" value="body.msgBodyLength" type="string" />
+		<key name="exchangeCode" value="body.exchangeCode" type="string" />
+		<key name="msgType" value="body.msgType" type="string" />
+		<key name="fileFlag" value="body.fileFlag" type="string" />
+		<key name="msgHash" value="body.msgHash" type="string" />
+		<key name="serviceName" value="body.serviceName" type="string" />
+		<key name="msgPotocol" value="body.msgPotocol" type="string" />
+		<key name="POLICY_NO" value="body.POLICY_NO" type="string" />
+		<key name="ID_TYPE" value="body.ID_TYPE" type="string" />
+		<key name="ID_NO" value="body.ID_NO" type="string" />
+		<key name="CUST_NAME" value="body.CUST_NAME" type="string" />
+		<key name="SEX" value="body.SEX" type="string" />
+		<key name="DT_OF_BIRTH" value="body.DT_OF_BIRTH" type="string" />
+		<key name="MATRL_STS" value="body.MATRL_STS" type="string" />
+		<key name="EDUCAT_LVL" value="body.EDUCAT_LVL" type="string" />
+		<key name="MONTHLY_INCOME" value="body.MONTHLY_INCOME" type="string" />
+		<key name="FAMILY_STATUS" value="body.FAMILY_STATUS" type="string" />
+		<key name="FAMILY_YEAR" value="body.FAMILY_YEAR" type="string" />
+		<key name="HOME_ADDR" value="body.HOME_ADDR" type="string" />
+		<key name="HOME_ZIP_CDE" value="body.HOME_ZIP_CDE" type="string" />
+		<key name="EMPR_PROP" value="body.EMPR_PROP" type="string" />
+		<key name="INDUSTRY" value="body.INDUSTRY" type="string" />
+		<key name="EMPR" value="body.EMPR" type="string" />
+		<key name="POS" value="body.POS" type="string" />
+		<key name="EMPR_ADDR" value="body.EMPR_ADDR" type="string" />
+		<key name="COMPANY_ZIP" value="body.COMPANY_ZIP" type="string" />
+		<key name="PHONE_NO" value="body.PHONE_NO" type="string" />
+		<key name="HOME_PHONE_AREA" value="body.HOME_PHONE_AREA" type="string" />
+		<key name="HOME_PHONE_NO" value="body.HOME_PHONE_NO" type="string" />
+		<key name="WORK_PHONR_AREA" value="body.WORK_PHONR_AREA" type="string" />
+		<key name="WORK_PHONE_NO" value="body.WORK_PHONE_NO" type="string" />
+		<key name="APPLY_CURRENCY" value="body.APPLY_CURRENCY" type="string" />
+		<key name="APPLY_AMT" value="body.APPLY_AMT" type="string" />
+		<key name="APPL_NOS_INST" value="body.APPL_NOS_INST" type="string" />
+		<key name="APPL_DATE" value="body.APPL_DATE" type="string" />
+		<key name="REPAY_MTHD" value="body.REPAY_MTHD" type="string" />
+		<key name="RATE_MODE" value="body.RATE_MODE" type="string" />
+		<key name="FIX_RATE_IND" value="body.FIX_RATE_IND" type="string" />
+		<key name="FLOATRATE" value="body.FLOATRATE" type="string" />
+		<key name="LOANRATE" value="body.LOANRATE" type="string" />
+		<key name="LOAN_PURPOSE" value="body.LOAN_PURPOSE" type="string" />
+		<key name="LOAN_PURPOSENAME" value="body.LOAN_PURPOSENAME" type="string" />
+		<key name="TYPE_NO" value="body.TYPE_NO" type="string" />
+		<key name="CHANNEL_ID" value="body.CHANNEL_ID" type="string" />
+		<key name="PARTNER_CODE" value="body.PARTNER_CODE" type="string" />
+		<key name="PARTNER_NAME" value="body.PARTNER_NAME" type="string" />
+		<key name="OPEARTE_TYPE" value="body.OPEARTE_TYPE" type="string" />
+		<key name="BIND_CARD" value="body.BIND_CARD" type="string" />
+		<key name="BIND_NO" value="body.BIND_NO" type="string" />
+		<key name="BIND_PHONE" value="body.BIND_PHONE" type="string" />
+		<key name="ID_VALID_START" value="body.ID_VALID_START" type="string" />
+		<key name="ID_VALID_END" value="body.ID_VALID_END" type="string" />
+		<key name="SIGNTYPE" value="body.SIGNTYPE" type="string" />
+		<key name="SIGNMESSAGE" value="body.SIGNMESSAGE" type="string" />
+		<key name="ADDRESS_SELECT" value="body.ADDRESS_SELECT" type="string" />
+		<key name="APPLYAREA" value="body.APPLYAREA" type="string" />
+		<key name="PartnerLoanAmt" value="body.PartnerLoanAmt" type="string" />
+		<key name="BankLoanAmt" value="body.BankLoanAmt" type="string" />
+		<key name="PURPOSEDETAIL" value="body.PURPOSEDETAIL" type="string" />
+		<key name="PURPOSEAREA" value="body.PURPOSEAREA" type="string" />
+		<key name="CAR_SUM" value="body.CAR_SUM" type="string" />
+		<key name="CAR_FPAY" value="body.CAR_FPAY" type="string" />
+		<key name="PROVINCE" value="body.PROVINCE" type="string" />
+		<key name="CITY" value="body.CITY" type="string" />
+		<key name="SPOUSE_NAME" value="body.SPOUSE_NAME" type="string" />
+		<key name="CAR_BRAND" value="body.CAR_BRAND" type="string" />
+		<key name="CAR_BELOGE" value="body.CAR_BELOGE" type="string" />
+		<key name="CAR_COL" value="body.CAR_COL" type="string" />
+		<key name="CAR_VIN" value="body.CAR_VIN" type="string" />
+		<key name="CAR_ENGINE_NO" value="body.CAR_ENGINE_NO" type="string" />
+		<key name="CAR_IDENT" value="body.CAR_IDENT" type="string" />
+		<key name="CAR_DIS" value="body.CAR_DIS" type="string" />
+		<key name="FACE_COMPANY" value="body.FACE_COMPANY" type="string" />
+		<key name="FACE_SCORE" value="body.FACE_SCORE" type="string" />
+		<key name="Procession" value="body.Procession" type="string" />
+		<key name="JOBTITLE" value="body.JOBTITLE" type="string" />
+		<key name="AGENCY_A" value="body.AGENCY_A" type="string" />
+		<key name="AGENCY_A_PRICE" value="body.AGENCY_A_PRICE" type="string" />
+		<key name="AGENCY_B" value="body.AGENCY_B" type="string" />
+		<key name="AGENCY_B_PRICE" value="body.AGENCY_B_PRICE" type="string" />
+		<key name="AGENCY_C" value="body.AGENCY_C" type="string" />
+		<key name="AGENCY_C_PRICE" value="body.AGENCY_C_PRICE" type="string" />
+		<key name="AGENCY_D" value="body.AGENCY_D" type="string" />
+		<key name="AGENCY_D_PRICE" value="body.AGENCY_D_PRICE" type="string" />
+
+	</map>
+
+</response>

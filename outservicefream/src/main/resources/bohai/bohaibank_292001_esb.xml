@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<service>
+	<sys-header>
+		<data name="SYS_HEAD">
+			<struct>
+
+				<data name="MESSAGE_CODE">
+					<field type="string" length="10">292001</field>
+				</data>
+				<data name="MESSAGE_TYPE">
+					<field type="string" length="10">bohaibank</field>
+				</data>
+				<data name="FLOW_NEWTYPE">
+					<field type="string" length="10">APIOUT</field>
+				</data>
+			</struct>
+		</data>
+	</sys-header>
+	<app-header />
+	<local-header />
+	<body>
+		<data name="messageLength">
+			<field type="string" length="10">6
+			</field>
+		</data>
+		<data name="msgBodyLength">
+			<field type="string" length="10">3245
+			</field>
+		</data>
+		<data name="exchangeCode">
+			<field type="string" length="10">360010
+			</field>
+		</data>
+		<data name="msgType">
+			<field type="string" length="10">RQ
+			</field>
+		</data>
+		<data name="fileFlag">
+			<field type="string" length="10">0
+			</field>
+		</data>
+		<data name="msgHash">
+			<field type="string" length="10">VOST0001
+			</field>
+		</data>
+		<data name="serviceName">
+			<field type="string" length="10">tp292001
+			</field>
+		</data>
+		<data name="msgPotocol">
+			<field type="string" length="10">http
+			</field>
+		</data>
+		<data name="POLICY_NO">
+			<field type="string" length="10">123042194871283
+			</field>
+		</data>
+		<data name="ID_TYPE">
+			<field type="string" length="10">01
+			</field>
+		</data>
+		<data name="PARTNER_CODE">
+			<field type="string" length="5">asdfasdf</field>
+		</data>
+		<data name="PARTNER_NAME">
+			<field type="string" length="100">asdfasdf</field>
+		</data>
+		<data name="SIGNTYPE">
+			<field type="string" length="2">asdfasdf</field>
+		</data>
+		<data name="SIGNMESSAGE">
+			<field type="string" length="1000">asdfasdf</field>
+		</data>
+		<data name="POLICY_NO">
+			<field type="string" length="30">asdfasdf</field>
+		</data>
+		<data name="WDSERIALNO">
+			<field type="string" length="30">asdfasdf</field>
+		</data>
+		<data name="NOTICETYPE">
+			<field type="string" length="8">asdfasdf</field>
+		</data>
+	</body>
+</service>

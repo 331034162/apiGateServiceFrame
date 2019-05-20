@@ -1,0 +1,106 @@
+2019-04-29 19:56:59,133 main INFO  [PackProcessEngine:36] 57fa1232-bd54-4f37-a165-c0f121bbf340----begin----
+2019-04-29 19:56:59,137 main INFO  [PackProcessEngine:37] 57fa1232-bd54-4f37-a165-c0f121bbf340----ESB XML报文是：﻿<?xml version="1.0" encoding="UTF-8"?><service>	<sys-header>		<data name="SYS_HEAD">			<struct>				<data name="MESSAGE_CODE">					<field type="string" length="10">360010</field>				</data>				<data name="MESSAGE_TYPE">					<field type="string" length="10">bohaibank</field>				</data>				<data name="TRAN_FLOW">					<field type="string" length="10">API_OUT_NEW</field>				</data>			</struct>		</data>	</sys-header>	<app-header />	<local-header />	<body>		<data name="TYPE_NO">			<field type="string" length="32">asdfasdf</field>		</data>		<data name="CHANNEL_ID">			<field type="string" length="2">sdafasdf</field>		</data>		<data name="PARTNER_CODE">			<field type="string" length="5">asdfasdf</field>		</data>		<data name="PARTNER_NAME">			<field type="string" length="100">asdfasdf</field>		</data>		<data name="SIGNTYPE">			<field type="string" length="2">asdfasdf</field>		</data>		<data name="SIGNMESSAGE">			<field type="string" length="1000">asdfasdf</field>		</data>		<data name="POLICY_NO">			<field type="string" length="30">asdfasdf</field>		</data>		<data name="WDSERIALNO">			<field type="string" length="30">asdfasdf</field>		</data>		<data name="NOTICETYPE">			<field type="string" length="8">asdfasdf</field>		</data>	</body></service>
+2019-04-29 19:56:59,691 main INFO  [PackProcessEngine:43] 57fa1232-bd54-4f37-a165-c0f121bbf340----ESB XML转换成map之后的结果是：{sys-header={SYS_HEAD={MESSAGE_CODE=360010, MESSAGE_TYPE=bohaibank, TRAN_FLOW=API_OUT_NEW}}, body={WDSERIALNO=asdfasdf, NOTICETYPE=asdfasdf, CHANNEL_ID=sdafasdf, TYPE_NO=asdfasdf, SIGNTYPE=asdfasdf, PARTNER_CODE=asdfasdf, PARTNER_NAME=asdfasdf, POLICY_NO=asdfasdf, SIGNMESSAGE=asdfasdf}}
+2019-04-29 19:56:59,691 main INFO  [PackProcessEngine:47] 57fa1232-bd54-4f37-a165-c0f121bbf340渠道名称是：bohaibank，接口名称是：{sys-header={SYS_HEAD={MESSAGE_CODE=360010, MESSAGE_TYPE=bohaibank, TRAN_FLOW=API_OUT_NEW}}, body={WDSERIALNO=asdfasdf, NOTICETYPE=asdfasdf, CHANNEL_ID=sdafasdf, TYPE_NO=asdfasdf, SIGNTYPE=asdfasdf, PARTNER_CODE=asdfasdf, PARTNER_NAME=asdfasdf, POLICY_NO=asdfasdf, SIGNMESSAGE=asdfasdf}}
+2019-04-29 19:56:59,691 main INFO  [StandardPackFlowImpl:27] 57fa1232-bd54-4f37-a165-c0f121bbf340----ESB转成Json的模板是：bohaibank_360010_req
+2019-04-29 19:56:59,693 main INFO  [StandardPackFlowImpl:30] 57fa1232-bd54-4f37-a165-c0f121bbf340----JSON转成ESB XML的模板是：bohaibank_360010_resp
+2019-04-29 19:56:59,804 main INFO  [StandardPackFlowImpl:34] 57fa1232-bd54-4f37-a165-c0f121bbf340----map转换成json之后的结果是：{"CHANNEL_ID":"sdafasdf","NOTICETYPE":"asdfasdf","PARTNER_CODE":"asdfasdf","PARTNER_NAME":"asdfasdf","POLICY_NO":"asdfasdf","SIGNMESSAGE":"asdfasdf","SIGNTYPE":"asdfasdf","TYPE_NO":"asdfasdf","WDSERIALNO":"asdfasdf"}
+2019-04-29 19:57:00,091 main INFO  [StandardPackFlowImpl:41] 57fa1232-bd54-4f37-a165-c0f121bbf340----加密之后的结果是：{d1=FRIk5tlSlalxWNhy8rV4qnBRKN/g3mVhnXHnYuUAyaSG80f4niaN8/hv8wiwtrss0gXqN97+Omcp
+V4yuZzbAQpXeJZaBsuCbZDxrc9dn9GPxXMW/XEsm2CJvEFQTt6A8QXUM2ejZUNvV6q1PNOny5zaM
+KQFLxQnvil//4yexi+0=, d2=Yk0AUguG/NFJCAhqTBzc0+/5wzk7ILEy8TyhP/de2yilaaLwS+NQkGgddBI6aYQsZsPHuCnn2PaA
+rUN5AtbRzQVEUWnGKH82Ryn/E6cO++RnPdroilguI3UNSbZx3ZBn46Fxgfiilb7smnx6F7EYCGGI
+JzUBohH6AEpc0e6Fsld3M1I6ZGpxVjoaA7R47fWL826DovFAE5NM66xoQD6HT2dLtap0aroaVy1i
+O7IGGUfsfcRzr/axTsPfZpmcXC9gWoD07TYQpkDNcXYRKqIm3DgFpj6QV5YZ/Pq7iodP9PxS3+pQ
+5GqggO4RbQBqQG/NM2WDKyiuq4xLjsq/m/B/gg==}
+2019-04-29 19:57:00,092 main INFO  [StandardPackFlowImpl:53] 57fa1232-bd54-4f37-a165-c0f121bbf340----发送请求到到http://221.239.93.139:9080/HttpICSrecv/CTHJZBYH1/360010.hp请求参数是:{d1=FRIk5tlSlalxWNhy8rV4qnBRKN/g3mVhnXHnYuUAyaSG80f4niaN8/hv8wiwtrss0gXqN97+Omcp
+V4yuZzbAQpXeJZaBsuCbZDxrc9dn9GPxXMW/XEsm2CJvEFQTt6A8QXUM2ejZUNvV6q1PNOny5zaM
+KQFLxQnvil//4yexi+0=, d2=Yk0AUguG/NFJCAhqTBzc0+/5wzk7ILEy8TyhP/de2yilaaLwS+NQkGgddBI6aYQsZsPHuCnn2PaA
+rUN5AtbRzQVEUWnGKH82Ryn/E6cO++RnPdroilguI3UNSbZx3ZBn46Fxgfiilb7smnx6F7EYCGGI
+JzUBohH6AEpc0e6Fsld3M1I6ZGpxVjoaA7R47fWL826DovFAE5NM66xoQD6HT2dLtap0aroaVy1i
+O7IGGUfsfcRzr/axTsPfZpmcXC9gWoD07TYQpkDNcXYRKqIm3DgFpj6QV5YZ/Pq7iodP9PxS3+pQ
+5GqggO4RbQBqQG/NM2WDKyiuq4xLjsq/m/B/gg==}
+2019-04-29 19:57:00,332 main INFO  [HttpClientUtil:148] 正在发送请求:http://221.239.93.139:9080/HttpICSrecv/CTHJZBYH1/360010.hp，参数：d1=FRIk5tlSlalxWNhy8rV4qnBRKN/g3mVhnXHnYuUAyaSG80f4niaN8/hv8wiwtrss0gXqN97+Omcp
+V4yuZzbAQpXeJZaBsuCbZDxrc9dn9GPxXMW/XEsm2CJvEFQTt6A8QXUM2ejZUNvV6q1PNOny5zaM
+KQFLxQnvil//4yexi+0=&d2=Yk0AUguG/NFJCAhqTBzc0+/5wzk7ILEy8TyhP/de2yilaaLwS+NQkGgddBI6aYQsZsPHuCnn2PaA
+rUN5AtbRzQVEUWnGKH82Ryn/E6cO++RnPdroilguI3UNSbZx3ZBn46Fxgfiilb7smnx6F7EYCGGI
+JzUBohH6AEpc0e6Fsld3M1I6ZGpxVjoaA7R47fWL826DovFAE5NM66xoQD6HT2dLtap0aroaVy1i
+O7IGGUfsfcRzr/axTsPfZpmcXC9gWoD07TYQpkDNcXYRKqIm3DgFpj6QV5YZ/Pq7iodP9PxS3+pQ
+5GqggO4RbQBqQG/NM2WDKyiuq4xLjsq/m/B/gg==
+2019-04-29 19:57:14,110 main INFO  [HttpClientUtil:154] 获取响应成功:
+2019-04-29 19:57:14,112 main INFO  [StandardPackFlowImpl:55] 57fa1232-bd54-4f37-a165-c0f121bbf340----得到的响应是:
+2019-04-29 19:57:14,112 main ERROR [SafeConTrolUtil:90] 返回报文解密验签失败----返回报文格式错误
+java.lang.Exception: 返回报文格式错误
+	at com.z_bank.pack.frame.encrypt.SafeConTrolUtil.DecryptA(SafeConTrolUtil.java:77)
+	at com.z_bank.pack.frame.packscure.PackeSecureImpl.decrytAndSignCheck(PackeSecureImpl.java:31)
+	at com.z_bank.pack.frame.flow.StandardPackFlowImpl.parse(StandardPackFlowImpl.java:57)
+	at com.z_bank.pack.frame.PackProcessEngine.packProcess(PackProcessEngine.java:49)
+	at com.z_bank.pack.frame.PackProcessEngine.main(PackProcessEngine.java:72)
+2019-04-29 19:57:14,141 main ERROR [StandardPackFlowImpl:69] 57fa1232-bd54-4f37-a165-c0f121bbf340----返回报文格式错误
+java.lang.Exception: 返回报文格式错误
+	at com.z_bank.pack.frame.encrypt.SafeConTrolUtil.DecryptA(SafeConTrolUtil.java:77)
+	at com.z_bank.pack.frame.packscure.PackeSecureImpl.decrytAndSignCheck(PackeSecureImpl.java:31)
+	at com.z_bank.pack.frame.flow.StandardPackFlowImpl.parse(StandardPackFlowImpl.java:57)
+	at com.z_bank.pack.frame.PackProcessEngine.packProcess(PackProcessEngine.java:49)
+	at com.z_bank.pack.frame.PackProcessEngine.main(PackProcessEngine.java:72)
+2019-04-29 19:57:14,142 main ERROR [PackProcessEngine:54] 57fa1232-bd54-4f37-a165-c0f121bbf340----返回报文格式错误
+java.lang.Exception: 返回报文格式错误
+	at com.z_bank.pack.frame.encrypt.SafeConTrolUtil.DecryptA(SafeConTrolUtil.java:77)
+	at com.z_bank.pack.frame.packscure.PackeSecureImpl.decrytAndSignCheck(PackeSecureImpl.java:31)
+	at com.z_bank.pack.frame.flow.StandardPackFlowImpl.parse(StandardPackFlowImpl.java:57)
+	at com.z_bank.pack.frame.PackProcessEngine.packProcess(PackProcessEngine.java:49)
+	at com.z_bank.pack.frame.PackProcessEngine.main(PackProcessEngine.java:72)
+2019-04-29 19:57:14,142 main INFO  [PackProcessEngine:55] 57fa1232-bd54-4f37-a165-c0f121bbf340----耗時：15005毫秒
+2019-04-29 19:57:14,144 main INFO  [PackProcessEngine:56] 57fa1232-bd54-4f37-a165-c0f121bbf340----end----
+2019-04-29 19:58:07,337 main INFO  [PackProcessEngine:36] 42ad5402-ff81-4dbd-8880-e366b96c2727----begin----
+2019-04-29 19:58:07,339 main INFO  [PackProcessEngine:37] 42ad5402-ff81-4dbd-8880-e366b96c2727----ESB XML报文是：﻿<?xml version="1.0" encoding="UTF-8"?><service>	<sys-header>		<data name="SYS_HEAD">			<struct>				<data name="MESSAGE_CODE">					<field type="string" length="10">360010</field>				</data>				<data name="MESSAGE_TYPE">					<field type="string" length="10">bohaibank</field>				</data>				<data name="TRAN_FLOW">					<field type="string" length="10">API_OUT_NEW</field>				</data>			</struct>		</data>	</sys-header>	<app-header />	<local-header />	<body>		<data name="TYPE_NO">			<field type="string" length="32">asdfasdf</field>		</data>		<data name="CHANNEL_ID">			<field type="string" length="2">sdafasdf</field>		</data>		<data name="PARTNER_CODE">			<field type="string" length="5">asdfasdf</field>		</data>		<data name="PARTNER_NAME">			<field type="string" length="100">asdfasdf</field>		</data>		<data name="SIGNTYPE">			<field type="string" length="2">asdfasdf</field>		</data>		<data name="SIGNMESSAGE">			<field type="string" length="1000">asdfasdf</field>		</data>		<data name="POLICY_NO">			<field type="string" length="30">asdfasdf</field>		</data>		<data name="WDSERIALNO">			<field type="string" length="30">asdfasdf</field>		</data>		<data name="NOTICETYPE">			<field type="string" length="8">asdfasdf</field>		</data>	</body></service>
+2019-04-29 19:58:07,445 main INFO  [PackProcessEngine:43] 42ad5402-ff81-4dbd-8880-e366b96c2727----ESB XML转换成map之后的结果是：{sys-header={SYS_HEAD={MESSAGE_CODE=360010, MESSAGE_TYPE=bohaibank, TRAN_FLOW=API_OUT_NEW}}, body={WDSERIALNO=asdfasdf, NOTICETYPE=asdfasdf, CHANNEL_ID=sdafasdf, TYPE_NO=asdfasdf, SIGNTYPE=asdfasdf, PARTNER_CODE=asdfasdf, PARTNER_NAME=asdfasdf, POLICY_NO=asdfasdf, SIGNMESSAGE=asdfasdf}}
+2019-04-29 19:58:07,445 main INFO  [PackProcessEngine:47] 42ad5402-ff81-4dbd-8880-e366b96c2727渠道名称是：bohaibank，接口名称是：360010
+2019-04-29 19:58:07,445 main INFO  [StandardPackFlowImpl:27] 42ad5402-ff81-4dbd-8880-e366b96c2727----ESB转成Json的模板是：bohaibank_360010_req
+2019-04-29 19:58:07,447 main INFO  [StandardPackFlowImpl:30] 42ad5402-ff81-4dbd-8880-e366b96c2727----JSON转成ESB XML的模板是：bohaibank_360010_resp
+2019-04-29 19:58:07,528 main INFO  [StandardPackFlowImpl:34] 42ad5402-ff81-4dbd-8880-e366b96c2727----map转换成json之后的结果是：{"CHANNEL_ID":"sdafasdf","NOTICETYPE":"asdfasdf","PARTNER_CODE":"asdfasdf","PARTNER_NAME":"asdfasdf","POLICY_NO":"asdfasdf","SIGNMESSAGE":"asdfasdf","SIGNTYPE":"asdfasdf","TYPE_NO":"asdfasdf","WDSERIALNO":"asdfasdf"}
+2019-04-29 19:58:07,820 main INFO  [StandardPackFlowImpl:41] 42ad5402-ff81-4dbd-8880-e366b96c2727----加密之后的结果是：{d1=TyV6vUL9Cbr2vz0d17ZXJMLhw6Jymq95G4psNnW79bU5cjaFdLZg7zveE7SpNOEYbGaoCUb6betP
+r9911tZE5KiGtzoLHlnUK4v5kR948iL5uLtaFBD/W4Fz9cRZcb2QUm/OFxo7ruyLr8xTK0BAblZf
+f9qTPOEiLNgHIoeuJAs=, d2=M40PO2YNubkAk/69sMf9luF5Urokq+sxa8r62xHYkPRSmICzBkKMtrKY6OL9ZvFV+u89t1Q8EpQ1
+mArxpYoerHdklQaap4IZNAXPfdA1fMUrnXmTs+N/s83Q+4cl1I8NHVjuavmyaaAIJLAo/FYFcYLO
+8iBn+/esUY1pUqXOJPB+R9db7P2wMSCjIYTbfv8ptiRorzR5s2jPFxBNhWqQ2g+RQk6+iACXHuok
+ObUHEXtUBo096yvY5ryXE8k78muqxzlgnvhd2LywGZUjDbg0eeOS11DjUay3kPFIqxXZ25auxcoS
+zvuVBehyP0MdLtHHjyC4+BAQPfiqGEslsqnBvA==}
+2019-04-29 19:58:07,821 main INFO  [StandardPackFlowImpl:53] 42ad5402-ff81-4dbd-8880-e366b96c2727----发送请求到到http://221.239.93.139:9080/HttpICSrecv/CTHJZBYH1/360010.hp请求参数是:{d1=TyV6vUL9Cbr2vz0d17ZXJMLhw6Jymq95G4psNnW79bU5cjaFdLZg7zveE7SpNOEYbGaoCUb6betP
+r9911tZE5KiGtzoLHlnUK4v5kR948iL5uLtaFBD/W4Fz9cRZcb2QUm/OFxo7ruyLr8xTK0BAblZf
+f9qTPOEiLNgHIoeuJAs=, d2=M40PO2YNubkAk/69sMf9luF5Urokq+sxa8r62xHYkPRSmICzBkKMtrKY6OL9ZvFV+u89t1Q8EpQ1
+mArxpYoerHdklQaap4IZNAXPfdA1fMUrnXmTs+N/s83Q+4cl1I8NHVjuavmyaaAIJLAo/FYFcYLO
+8iBn+/esUY1pUqXOJPB+R9db7P2wMSCjIYTbfv8ptiRorzR5s2jPFxBNhWqQ2g+RQk6+iACXHuok
+ObUHEXtUBo096yvY5ryXE8k78muqxzlgnvhd2LywGZUjDbg0eeOS11DjUay3kPFIqxXZ25auxcoS
+zvuVBehyP0MdLtHHjyC4+BAQPfiqGEslsqnBvA==}
+2019-04-29 19:58:07,953 main INFO  [HttpClientUtil:148] 正在发送请求:http://221.239.93.139:9080/HttpICSrecv/CTHJZBYH1/360010.hp，参数：d1=TyV6vUL9Cbr2vz0d17ZXJMLhw6Jymq95G4psNnW79bU5cjaFdLZg7zveE7SpNOEYbGaoCUb6betP
+r9911tZE5KiGtzoLHlnUK4v5kR948iL5uLtaFBD/W4Fz9cRZcb2QUm/OFxo7ruyLr8xTK0BAblZf
+f9qTPOEiLNgHIoeuJAs=&d2=M40PO2YNubkAk/69sMf9luF5Urokq+sxa8r62xHYkPRSmICzBkKMtrKY6OL9ZvFV+u89t1Q8EpQ1
+mArxpYoerHdklQaap4IZNAXPfdA1fMUrnXmTs+N/s83Q+4cl1I8NHVjuavmyaaAIJLAo/FYFcYLO
+8iBn+/esUY1pUqXOJPB+R9db7P2wMSCjIYTbfv8ptiRorzR5s2jPFxBNhWqQ2g+RQk6+iACXHuok
+ObUHEXtUBo096yvY5ryXE8k78muqxzlgnvhd2LywGZUjDbg0eeOS11DjUay3kPFIqxXZ25auxcoS
+zvuVBehyP0MdLtHHjyC4+BAQPfiqGEslsqnBvA==
+2019-04-29 19:58:08,081 main INFO  [HttpClientUtil:154] 获取响应成功:
+2019-04-29 19:58:08,082 main INFO  [StandardPackFlowImpl:55] 42ad5402-ff81-4dbd-8880-e366b96c2727----得到的响应是:
+2019-04-29 19:58:08,082 main ERROR [SafeConTrolUtil:90] 返回报文解密验签失败----返回报文格式错误
+java.lang.Exception: 返回报文格式错误
+	at com.z_bank.pack.frame.encrypt.SafeConTrolUtil.DecryptA(SafeConTrolUtil.java:77)
+	at com.z_bank.pack.frame.packscure.PackeSecureImpl.decrytAndSignCheck(PackeSecureImpl.java:31)
+	at com.z_bank.pack.frame.flow.StandardPackFlowImpl.parse(StandardPackFlowImpl.java:57)
+	at com.z_bank.pack.frame.PackProcessEngine.packProcess(PackProcessEngine.java:49)
+	at com.z_bank.pack.frame.PackProcessEngine.main(PackProcessEngine.java:72)
+2019-04-29 19:58:08,084 main ERROR [StandardPackFlowImpl:69] 42ad5402-ff81-4dbd-8880-e366b96c2727----返回报文格式错误
+java.lang.Exception: 返回报文格式错误
+	at com.z_bank.pack.frame.encrypt.SafeConTrolUtil.DecryptA(SafeConTrolUtil.java:77)
+	at com.z_bank.pack.frame.packscure.PackeSecureImpl.decrytAndSignCheck(PackeSecureImpl.java:31)
+	at com.z_bank.pack.frame.flow.StandardPackFlowImpl.parse(StandardPackFlowImpl.java:57)
+	at com.z_bank.pack.frame.PackProcessEngine.packProcess(PackProcessEngine.java:49)
+	at com.z_bank.pack.frame.PackProcessEngine.main(PackProcessEngine.java:72)
+2019-04-29 19:58:08,084 main ERROR [PackProcessEngine:54] 42ad5402-ff81-4dbd-8880-e366b96c2727----返回报文格式错误
+java.lang.Exception: 返回报文格式错误
+	at com.z_bank.pack.frame.encrypt.SafeConTrolUtil.DecryptA(SafeConTrolUtil.java:77)
+	at com.z_bank.pack.frame.packscure.PackeSecureImpl.decrytAndSignCheck(PackeSecureImpl.java:31)
+	at com.z_bank.pack.frame.flow.StandardPackFlowImpl.parse(StandardPackFlowImpl.java:57)
+	at com.z_bank.pack.frame.PackProcessEngine.packProcess(PackProcessEngine.java:49)
+	at com.z_bank.pack.frame.PackProcessEngine.main(PackProcessEngine.java:72)
+2019-04-29 19:58:08,084 main INFO  [PackProcessEngine:55] 42ad5402-ff81-4dbd-8880-e366b96c2727----耗時：745毫秒
+2019-04-29 19:58:08,085 main INFO  [PackProcessEngine:56] 42ad5402-ff81-4dbd-8880-e366b96c2727----end----

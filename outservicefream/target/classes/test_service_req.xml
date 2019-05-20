@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+{
+	"result": {
+		"retCode": "000000",
+		"retMsg": "SUCCESS",
+		"data": {
+			"limit": "9999.0",
+			"tranDate": "20190419",
+			"listDetail": [{
+				"totalNum": "-1",
+				"bankName": "中国农业银行",
+				"bankId": "103100000026"
+			}, {
+				"totalNum": "-1",
+				"bankName": "中国银行",
+				"bankId": "104100000004"
+			}, {
+				"totalNum": "-1",
+				"bankName": "中国工商银行",
+				"bankId": "102100099996"
+			}, {
+				"totalNum": "-1",
+				"bankName": "中国建设银行",
+				"bankId": "105100000017"
+			}, {
+				"totalNum": "-1",
+				"bankName": "招商银行",
+				"bankId": "308584000013"
+			}]
+		}
+	}
+}
+ -->
+
+<response type="map">
+	<map>
+		<!-- key 的type属性可取值的范围有: string int long float double bigInteger bigDecimal -->
+		<key name="retCode" value="sys-header.SYS_HEAD.RET#0.RET_CODE" type="string" />
+		<key name="retMsg" value="sys-header.SYS_HEAD.RET#0.RET_OTHER#0.RET_MSG" type="string" />
+		<key name="data" value="body" type="map">
+			<map>
+				<key name="retMsg" value="sys-header.SYS_HEAD.COMPANY" type="string" />
+				<key name="tranDate" type="int" value="sys-header.SYS_HEAD.TRAN_DATE" />
+				<key name="limit" type="double" value="body.LIST_DETAIL#0.LIMIT" />
+		   <!-- <key name="listDetail" type="array" value="body.LIST_DETAIL" deep-parse="false">
+					 deep-parse="false" :表示不需要对数组进行深度解析 body.LIST_DETAIL的值将直接赋值给listDetail-->
+				<key name="listDetail" type="array" value="body.LIST_DETAIL" deep-parse="false">
+					<array>
+						<element type="map">
+							<map>
+								<key name="bankId" type="string" value="$BANK_ID" />
+								<key name="bankName" type="string" value="$BANK_NAME" />
+								<key name="totalNum" type="string" value="app-header.APP_HEAD.TOTAL_NUM" />
+							</map>
+						</element>
+					</array>
+				</key>
+				
+				<key name="listDetail2" type="array" value="body.LIST_DETAIL2" >
+					<array>
+						<element type="map">
+							<map>
+								<key name="arrayData" type="array" value="$arrayData">
+									<array>
+										<element type="map">
+											<map>
+												<key name="bankId" type="string" value="$BANK_ID" />
+												<key name="bankName" type="string" value="$BANK_NAME" />
+												<key name="totalNum" type="string" value="app-header.APP_HEAD.TOTAL_NUM" />
+											</map>
+										</element>
+									</array>
+								</key>
+								
+								<key name="arrayData2" type="array" value="$arrayData2">
+									<array>
+										<element type="map">
+											<map>
+												<key name="bankId" type="string" value="$BANK_ID" />
+												<key name="bankName" type="string" value="$BANK_NAME" />
+												<key name="totalNum" type="string" value="app-header.APP_HEAD.TOTAL_NUM" />
+											</map>
+										</element>
+									</array>
+								</key>
+							</map>
+						</element>
+					</array>
+				</key>
+			</map>
+		</key>
+	</map>
+
+</response>

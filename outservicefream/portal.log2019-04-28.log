@@ -1,0 +1,1420 @@
+2019-04-28 11:30:54,024 main INFO  [PackProcessEngine:51] 02ec3c96-3602-4877-ac90-da7b1df6ed95----ESB XML报文是：﻿<?xml version="1.0" encoding="UTF-8"?><service>	<sys-header>		<data name="SYS_HEAD">			<struct>				<data name="COMPANY">					<field type="string" length="4">BODC</field>				</data>				<data name="CONSUMER_BUSI_NO">					<field type="string" length="14">10112323435556</field>				</data>				<data name="CONSUMER_ID">					<field type="string" length="3">143</field>				</data>				<data name="EC_NO">					<field type="string" length="6">100430</field>				</data>				<data name="MESSAGE_CODE">					<field type="string" length="4">0020</field>				</data>				<data name="MESSAGE_TYPE">					<field type="string" length="4">1400</field>				</data>				<data name="REFERENCE">					<field type="string" length="16">1904190000003247</field>				</data>				<data name="SEQ_NO">					<field type="string" length="17">39385991538409472</field>				</data>				<data name="SERVICE_CODE">					<field type="string" length="11">MBSD_IFP_TP</field>				</data>				<data name="SOURCE_TYPE">					<field type="string" length="2">43</field>				</data>				<data name="THIRD_ID">					<field type="string" length="32">7b581155a0664bbab9c53d307f9ec847					</field>				</data>				<data name="TRAN_CODE">					<field type="string" length="8">88888888</field>				</data>				<data name="TRAN_DATE">					<field type="string" length="8">20190419</field>				</data>				<data name="TRAN_TIMESTAMP">					<field type="string" length="9">162552139</field>				</data>				<data name="RET_STATUS">					<field type="string" length="1">S</field>				</data>				<data name="RET">					<array>						<struct>							<data name="RET_CODE">								<field type="string" length="6">000000</field>							</data>							<data name="RET_MSG">								<field type="string" length="7">SUCCESS</field>							</data>						</struct>					</array>				</data>			</struct>		</data>	</sys-header>	<app-header>		<data name="APP_HEAD">			<struct>				<data name="CURRENT_NUM">					<field type="string" length="1">0</field>				</data>				<data name="PGUP_OR_PGDN">					<field type="string" length="1">1</field>				</data>				<data name="TOTAL_FLAG">					<field type="string" length="1">E</field>				</data>				<data name="TOTAL_NUM">					<field type="string" length="2">-1</field>				</data>			</struct>		</data>	</app-header>	<local-header />	<body>		<data name="LIST_DETAIL">			<array>				<struct>					<data name="BANK_ID">						<field type="string" length="12">2013-09-10</field>					</data>					<data name="BANK_NAME">						<field type="string" length="6">中国农业银行</field>					</data>					<data name="CARD_DAY_LIMIT">						<field type="double" length="128">999999.0</field>					</data>					<data name="CARD_TYPE">						<field type="string" length="2">01</field>					</data>					<data name="LIMIT">						<field type="double" length="128">9999.0</field>					</data>				</struct>				<struct>					<data name="BANK_ID">						<field type="string" length="12">104100000004</field>					</data>					<data name="BANK_NAME">						<field type="string" length="4">中国银行</field>					</data>					<data name="CARD_DAY_LIMIT">						<field type="double" length="128">999999.0</field>					</data>					<data name="CARD_TYPE">						<field type="string" length="2">01</field>					</data>					<data name="LIMIT">						<field type="double" length="128">9999.0</field>					</data>				</struct>				<struct>					<data name="BANK_ID">						<field type="string" length="12">102100099996</field>					</data>					<data name="BANK_NAME">						<field type="string" length="6">中国工商银行</field>					</data>					<data name="CARD_DAY_LIMIT">						<field type="double" length="128">999999.0</field>					</data>					<data name="CARD_TYPE">						<field type="string" length="2">01</field>					</data>					<data name="LIMIT">						<field type="double" length="128">9999.0</field>					</data>				</struct>				<struct>					<data name="BANK_ID">						<field type="string" length="12">105100000017</field>					</data>					<data name="BANK_NAME">						<field type="string" length="6">中国建设银行</field>					</data>					<data name="CARD_DAY_LIMIT">						<field type="double" length="128">999999.0</field>					</data>					<data name="CARD_TYPE">						<field type="string" length="2">01</field>					</data>					<data name="LIMIT">						<field type="double" length="128">9999.0</field>					</data>				</struct>				<struct>					<data name="BANK_ID">						<field type="string" length="12">308584000013</field>					</data>					<data name="BANK_NAME">						<field type="string" length="4">招商银行</field>					</data>					<data name="CARD_DAY_LIMIT">						<field type="double" length="128">999999.0</field>					</data>					<data name="CARD_TYPE">						<field type="string" length="2">01</field>					</data>					<data name="LIMIT">						<field type="double" length="128">9999.0</field>					</data>				</struct>			</array>		</data>		<data name="STATUS">			<field type="string" length="1">S</field>		</data>	</body></service>，渠道名称是：test
+2019-04-28 11:30:54,024 main INFO  [PackProcessEngine:54] 02ec3c96-3602-4877-ac90-da7b1df6ed95----ESB转成Json的模板是：test_service_req
+2019-04-28 11:30:54,024 main INFO  [PackProcessEngine:57] 02ec3c96-3602-4877-ac90-da7b1df6ed95----JSON转成ESB XML的模板是：test_service_resp
+2019-04-28 11:30:54,124 main INFO  [PackProcessEngine:61] 02ec3c96-3602-4877-ac90-da7b1df6ed95----ESB XML转换成map之后的结果是：{sys-header={SYS_HEAD={RET=[{RET_CODE=000000, RET_MSG=SUCCESS}], SERVICE_CODE=MBSD_IFP_TP, MESSAGE_TYPE=1400, THIRD_ID=7b581155a0664bbab9c53d307f9ec847					, TRAN_TIMESTAMP=162552139, CONSUMER_ID=143, EC_NO=100430, COMPANY=BODC, SEQ_NO=39385991538409472, SOURCE_TYPE=43, CONSUMER_BUSI_NO=10112323435556, MESSAGE_CODE=0020, REFERENCE=1904190000003247, RET_STATUS=S, TRAN_DATE=20190419, TRAN_CODE=88888888}}, app-header={APP_HEAD={TOTAL_NUM=-1, TOTAL_FLAG=E, CURRENT_NUM=0, PGUP_OR_PGDN=1}}, body={STATUS=S, LIST_DETAIL=[{CARD_DAY_LIMIT=999999.0, CARD_TYPE=01, BANK_ID=2013-09-10, LIMIT=9999.0, BANK_NAME=中国农业银行}, {CARD_DAY_LIMIT=999999.0, CARD_TYPE=01, BANK_ID=104100000004, LIMIT=9999.0, BANK_NAME=中国银行}, {CARD_DAY_LIMIT=999999.0, CARD_TYPE=01, BANK_ID=102100099996, LIMIT=9999.0, BANK_NAME=中国工商银行}, {CARD_DAY_LIMIT=999999.0, CARD_TYPE=01, BANK_ID=105100000017, LIMIT=9999.0, BANK_NAME=中国建设银行}, {CARD_DAY_LIMIT=999999.0, CARD_TYPE=01, BANK_ID=308584000013, LIMIT=9999.0, BANK_NAME=招商银行}]}}
+2019-04-28 11:30:54,264 main INFO  [PackProcessEngine:65] 02ec3c96-3602-4877-ac90-da7b1df6ed95----map转换成json之后的结果是：{"data":{"limit":9999,"listDetail":[{"BANK_ID":"2013-09-10","BANK_NAME":"中国农业银行","CARD_DAY_LIMIT":"999999.0","CARD_TYPE":"01","LIMIT":"9999.0"},{"BANK_ID":"104100000004","BANK_NAME":"中国银行","CARD_DAY_LIMIT":"999999.0","CARD_TYPE":"01","LIMIT":"9999.0"},{"BANK_ID":"102100099996","BANK_NAME":"中国工商银行","CARD_DAY_LIMIT":"999999.0","CARD_TYPE":"01","LIMIT":"9999.0"},{"BANK_ID":"105100000017","BANK_NAME":"中国建设银行","CARD_DAY_LIMIT":"999999.0","CARD_TYPE":"01","LIMIT":"9999.0"},{"BANK_ID":"308584000013","BANK_NAME":"招商银行","CARD_DAY_LIMIT":"999999.0","CARD_TYPE":"01","LIMIT":"9999.0"}],"retMsg":"BODC","tranDate":20190419},"retCode":"000000"}
+2019-04-28 11:30:54,264 main INFO  [PackProcessEngine:72] 02ec3c96-3602-4877-ac90-da7b1df6ed95----加密之后的结果是：{"data":{"limit":9999,"listDetail":[{"BANK_ID":"2013-09-10","BANK_NAME":"中国农业银行","CARD_DAY_LIMIT":"999999.0","CARD_TYPE":"01","LIMIT":"9999.0"},{"BANK_ID":"104100000004","BANK_NAME":"中国银行","CARD_DAY_LIMIT":"999999.0","CARD_TYPE":"01","LIMIT":"9999.0"},{"BANK_ID":"102100099996","BANK_NAME":"中国工商银行","CARD_DAY_LIMIT":"999999.0","CARD_TYPE":"01","LIMIT":"9999.0"},{"BANK_ID":"105100000017","BANK_NAME":"中国建设银行","CARD_DAY_LIMIT":"999999.0","CARD_TYPE":"01","LIMIT":"9999.0"},{"BANK_ID":"308584000013","BANK_NAME":"招商银行","CARD_DAY_LIMIT":"999999.0","CARD_TYPE":"01","LIMIT":"9999.0"}],"retMsg":"BODC","tranDate":20190419},"retCode":"000000"}
+2019-04-28 11:30:54,274 main INFO  [PackProcessEngine:75] 02ec3c96-3602-4877-ac90-da7b1df6ed95----发送请求到到null请求参数是:{data={"data":{"limit":9999,"listDetail":[{"BANK_ID":"2013-09-10","BANK_NAME":"中国农业银行","CARD_DAY_LIMIT":"999999.0","CARD_TYPE":"01","LIMIT":"9999.0"},{"BANK_ID":"104100000004","BANK_NAME":"中国银行","CARD_DAY_LIMIT":"999999.0","CARD_TYPE":"01","LIMIT":"9999.0"},{"BANK_ID":"102100099996","BANK_NAME":"中国工商银行","CARD_DAY_LIMIT":"999999.0","CARD_TYPE":"01","LIMIT":"9999.0"},{"BANK_ID":"105100000017","BANK_NAME":"中国建设银行","CARD_DAY_LIMIT":"999999.0","CARD_TYPE":"01","LIMIT":"9999.0"},{"BANK_ID":"308584000013","BANK_NAME":"招商银行","CARD_DAY_LIMIT":"999999.0","CARD_TYPE":"01","LIMIT":"9999.0"}],"retMsg":"BODC","tranDate":20190419},"retCode":"000000"}, aeskey=@#$%@#$%$@#%}
+2019-04-28 11:30:54,274 main INFO  [PackProcessEngine:77] 02ec3c96-3602-4877-ac90-da7b1df6ed95----得到的响应是:{"data":{"limit":9999,"listDetail":[{"BANK_ID":"2013-09-10","BANK_NAME":"中国农业银行","CARD_DAY_LIMIT":"999999.0","CARD_TYPE":"01","LIMIT":"9999.0"},{"BANK_ID":"104100000004","BANK_NAME":"中国银行","CARD_DAY_LIMIT":"999999.0","CARD_TYPE":"01","LIMIT":"9999.0"},{"BANK_ID":"102100099996","BANK_NAME":"中国工商银行","CARD_DAY_LIMIT":"999999.0","CARD_TYPE":"01","LIMIT":"9999.0"},{"BANK_ID":"105100000017","BANK_NAME":"中国建设银行","CARD_DAY_LIMIT":"999999.0","CARD_TYPE":"01","LIMIT":"9999.0"},{"BANK_ID":"308584000013","BANK_NAME":"招商银行","CARD_DAY_LIMIT":"999999.0","CARD_TYPE":"01","LIMIT":"9999.0"}],"retMsg":"BODC","tranDate":20190419},"retCode":"000000"}
+2019-04-28 11:30:54,274 main INFO  [PackProcessEngine:80] 02ec3c96-3602-4877-ac90-da7b1df6ed95----解密后的结果是:{"data":{"limit":9999,"listDetail":[{"BANK_ID":"2013-09-10","BANK_NAME":"中国农业银行","CARD_DAY_LIMIT":"999999.0","CARD_TYPE":"01","LIMIT":"9999.0"},{"BANK_ID":"104100000004","BANK_NAME":"中国银行","CARD_DAY_LIMIT":"999999.0","CARD_TYPE":"01","LIMIT":"9999.0"},{"BANK_ID":"102100099996","BANK_NAME":"中国工商银行","CARD_DAY_LIMIT":"999999.0","CARD_TYPE":"01","LIMIT":"9999.0"},{"BANK_ID":"105100000017","BANK_NAME":"中国建设银行","CARD_DAY_LIMIT":"999999.0","CARD_TYPE":"01","LIMIT":"9999.0"},{"BANK_ID":"308584000013","BANK_NAME":"招商银行","CARD_DAY_LIMIT":"999999.0","CARD_TYPE":"01","LIMIT":"9999.0"}],"retMsg":"BODC","tranDate":20190419},"retCode":"000000"}
+2019-04-28 11:30:54,294 main INFO  [PackProcessEngine:85] 02ec3c96-3602-4877-ac90-da7b1df6ed95----转换成ESB XML的模型数据是:{model={"data":{"limit":9999,"listDetail":[{"BANK_ID":"2013-09-10","BANK_NAME":"中国农业银行","CARD_DAY_LIMIT":"999999.0","CARD_TYPE":"01","LIMIT":"9999.0"},{"BANK_ID":"104100000004","BANK_NAME":"中国银行","CARD_DAY_LIMIT":"999999.0","CARD_TYPE":"01","LIMIT":"9999.0"},{"BANK_ID":"102100099996","BANK_NAME":"中国工商银行","CARD_DAY_LIMIT":"999999.0","CARD_TYPE":"01","LIMIT":"9999.0"},{"BANK_ID":"105100000017","BANK_NAME":"中国建设银行","CARD_DAY_LIMIT":"999999.0","CARD_TYPE":"01","LIMIT":"9999.0"},{"BANK_ID":"308584000013","BANK_NAME":"招商银行","CARD_DAY_LIMIT":"999999.0","CARD_TYPE":"01","LIMIT":"9999.0"}],"retMsg":"BODC","tranDate":20190419},"retCode":"000000"}}
+2019-04-28 11:30:54,524 main INFO  [PackProcessEngine:88] 02ec3c96-3602-4877-ac90-da7b1df6ed95----响应ESB XML报文是：<?xml version="1.0" encoding="UTF-8"?>
+<!--
+{
+"model": {
+"retCode": "000000",
+"retMsg": "SUCCESS",
+"data": {
+"limit": "9999.0",
+"tranDate": "20190419",
+"listDetail": [{
+"totalNum": "-1",
+"bankName": "中国农业银行",
+"bankId": "103100000026"
+}, {
+"totalNum": "-1",
+"bankName": "中国银行",
+"bankId": "104100000004"
+}, {
+"totalNum": "-1",
+"bankName": "中国工商银行",
+"bankId": "102100099996"
+}, {
+"totalNum": "-1",
+"bankName": "中国建设银行",
+"bankId": "105100000017"
+}, {
+"totalNum": "-1",
+"bankName": "招商银行",
+"bankId": "308584000013"
+}]
+}
+}
+}
+-->
+<service>
+<sys-header>
+<data name="SYS_HEAD">
+<struct>
+<data name="COMPANY">
+<field type="string" length="4">BODC</field>
+</data>
+<data name="CONSUMER_BUSI_NO">
+<field type="string" length="14">10112323435556</field>
+</data>
+<data name="CONSUMER_ID">
+<field type="string" length="3">143</field>
+</data>
+<data name="EC_NO">
+<field type="string" length="6">100430</field>
+</data>
+<data name="MESSAGE_CODE">
+<field type="string" length="4">0020</field>
+</data>
+<data name="MESSAGE_TYPE">
+<field type="string" length="4">1400</field>
+</data>
+<data name="REFERENCE">
+<field type="string" length="16">1904190000003247</field>
+</data>
+<data name="SEQ_NO">
+<field type="string" length="17">39385991538409472</field>
+</data>
+<data name="SERVICE_CODE">
+<field type="string" length="11">MBSD_IFP_TP</field>
+</data>
+<data name="SOURCE_TYPE">
+<field type="string" length="2">43</field>
+</data>
+<data name="THIRD_ID">
+<field type="string" length="32">7b581155a0664bbab9c53d307f9ec847
+</field>
+</data>
+<data name="TRAN_CODE">
+<field type="string" length="8">88888888</field>
+</data>
+<data name="TRAN_DATE">
+<field type="string" length="8">20190419</field>
+</data>
+<data name="TRAN_TIMESTAMP">
+<field type="string" length="9">162552139</field>
+</data>
+<data name="RET_STATUS">
+<field type="string" length="1">S</field>
+</data>
+<data name="RET">
+<array>
+<data name="RET_CODE">
+<field type="string" length="6">000000</field>
+</data>
+<data name="RET_MSG">
+<field type="string" length="7"></field>
+</data>
+</array>
+</data>
+</struct>
+</data>
+</sys-header>
+<app-header>
+<data name="APP_HEAD">
+<struct>
+<data name="CURRENT_NUM">
+<field type="string" length="1">0</field>
+</data>
+<data name="PGUP_OR_PGDN">
+<field type="string" length="1">1</field>
+</data>
+<data name="TOTAL_FLAG">
+<field type="string" length="1">E</field>
+</data>
+<data name="TOTAL_NUM">
+<field type="string" length="2">
+-1
+</field>
+</data>
+</struct>
+</data>
+</app-header>
+<local-header />
+<body>
+<data name="LIST_DETAIL">
+<array>
+<struct>
+<data name="BANK_ID">
+<field type="string" length="12"></field>
+</data>
+<data name="BANK_NAME">
+<field type="string" length="6"></field>
+</data>
+<data name="CARD_DAY_LIMIT">
+<field type="double" length="128">999999.0</field>
+</data>
+<data name="CARD_TYPE">
+<field type="string" length="2">01</field>
+</data>
+<data name="LIMIT">
+<!-- 如果mode中的数据是数字类型，为避免数据超过四位之后自动用逗号分隔就采用 加?c的的方式-->
+<field type="double" length="128">9999</field>
+</data>
+</struct>
+<struct>
+<data name="BANK_ID">
+<field type="string" length="12"></field>
+</data>
+<data name="BANK_NAME">
+<field type="string" length="6"></field>
+</data>
+<data name="CARD_DAY_LIMIT">
+<field type="double" length="128">999999.0</field>
+</data>
+<data name="CARD_TYPE">
+<field type="string" length="2">01</field>
+</data>
+<data name="LIMIT">
+<!-- 如果mode中的数据是数字类型，为避免数据超过四位之后自动用逗号分隔就采用 加?c的的方式-->
+<field type="double" length="128">9999</field>
+</data>
+</struct>
+<struct>
+<data name="BANK_ID">
+<field type="string" length="12"></field>
+</data>
+<data name="BANK_NAME">
+<field type="string" length="6"></field>
+</data>
+<data name="CARD_DAY_LIMIT">
+<field type="double" length="128">999999.0</field>
+</data>
+<data name="CARD_TYPE">
+<field type="string" length="2">01</field>
+</data>
+<data name="LIMIT">
+<!-- 如果mode中的数据是数字类型，为避免数据超过四位之后自动用逗号分隔就采用 加?c的的方式-->
+<field type="double" length="128">9999</field>
+</data>
+</struct>
+<struct>
+<data name="BANK_ID">
+<field type="string" length="12"></field>
+</data>
+<data name="BANK_NAME">
+<field type="string" length="6"></field>
+</data>
+<data name="CARD_DAY_LIMIT">
+<field type="double" length="128">999999.0</field>
+</data>
+<data name="CARD_TYPE">
+<field type="string" length="2">01</field>
+</data>
+<data name="LIMIT">
+<!-- 如果mode中的数据是数字类型，为避免数据超过四位之后自动用逗号分隔就采用 加?c的的方式-->
+<field type="double" length="128">9999</field>
+</data>
+</struct>
+<struct>
+<data name="BANK_ID">
+<field type="string" length="12"></field>
+</data>
+<data name="BANK_NAME">
+<field type="string" length="6"></field>
+</data>
+<data name="CARD_DAY_LIMIT">
+<field type="double" length="128">999999.0</field>
+</data>
+<data name="CARD_TYPE">
+<field type="string" length="2">01</field>
+</data>
+<data name="LIMIT">
+<!-- 如果mode中的数据是数字类型，为避免数据超过四位之后自动用逗号分隔就采用 加?c的的方式-->
+<field type="double" length="128">9999</field>
+</data>
+</struct>
+</array>
+</data>
+<data name="STATUS">
+<field type="string" length="1">S</field>
+</data>
+</body>
+</service>
+2019-04-28 11:53:47,964 main INFO  [PackProcessEngine:62] 2f476249-30ba-47f1-ac8b-339c8e6df688----ESB XML报文是：﻿<?xml version="1.0" encoding="UTF-8"?><service>	<sys-header>		<data name="SYS_HEAD">			<struct>				<data name="COMPANY">					<field type="string" length="4">BODC</field>				</data>				<data name="CONSUMER_BUSI_NO">					<field type="string" length="14">10112323435556</field>				</data>				<data name="CONSUMER_ID">					<field type="string" length="3">143</field>				</data>				<data name="EC_NO">					<field type="string" length="6">100430</field>				</data>				<data name="MESSAGE_CODE">					<field type="string" length="4">0020</field>				</data>				<data name="MESSAGE_TYPE">					<field type="string" length="4">1400</field>				</data>				<data name="REFERENCE">					<field type="string" length="16">1904190000003247</field>				</data>				<data name="SEQ_NO">					<field type="string" length="17">39385991538409472</field>				</data>				<data name="SERVICE_CODE">					<field type="string" length="11">MBSD_IFP_TP</field>				</data>				<data name="SOURCE_TYPE">					<field type="string" length="2">43</field>				</data>				<data name="THIRD_ID">					<field type="string" length="32">7b581155a0664bbab9c53d307f9ec847					</field>				</data>				<data name="TRAN_CODE">					<field type="string" length="8">88888888</field>				</data>				<data name="TRAN_DATE">					<field type="string" length="8">20190419</field>				</data>				<data name="TRAN_TIMESTAMP">					<field type="string" length="9">162552139</field>				</data>				<data name="RET_STATUS">					<field type="string" length="1">S</field>				</data>				<data name="RET">					<array>						<struct>							<data name="RET_CODE">								<field type="string" length="6">000000</field>							</data>							<data name="RET_MSG">								<field type="string" length="7">SUCCESS</field>							</data>						</struct>					</array>				</data>			</struct>		</data>	</sys-header>	<app-header>		<data name="APP_HEAD">			<struct>				<data name="CURRENT_NUM">					<field type="string" length="1">0</field>				</data>				<data name="PGUP_OR_PGDN">					<field type="string" length="1">1</field>				</data>				<data name="TOTAL_FLAG">					<field type="string" length="1">E</field>				</data>				<data name="TOTAL_NUM">					<field type="string" length="2">-1</field>				</data>			</struct>		</data>	</app-header>	<local-header />	<body>		<data name="LIST_DETAIL">			<array>				<struct>					<data name="BANK_ID">						<field type="string" length="12">2013-09-10</field>					</data>					<data name="BANK_NAME">						<field type="string" length="6">中国农业银行</field>					</data>					<data name="CARD_DAY_LIMIT">						<field type="double" length="128">999999.0</field>					</data>					<data name="CARD_TYPE">						<field type="string" length="2">01</field>					</data>					<data name="LIMIT">						<field type="double" length="128">9999.0</field>					</data>				</struct>				<struct>					<data name="BANK_ID">						<field type="string" length="12">104100000004</field>					</data>					<data name="BANK_NAME">						<field type="string" length="4">中国银行</field>					</data>					<data name="CARD_DAY_LIMIT">						<field type="double" length="128">999999.0</field>					</data>					<data name="CARD_TYPE">						<field type="string" length="2">01</field>					</data>					<data name="LIMIT">						<field type="double" length="128">9999.0</field>					</data>				</struct>				<struct>					<data name="BANK_ID">						<field type="string" length="12">102100099996</field>					</data>					<data name="BANK_NAME">						<field type="string" length="6">中国工商银行</field>					</data>					<data name="CARD_DAY_LIMIT">						<field type="double" length="128">999999.0</field>					</data>					<data name="CARD_TYPE">						<field type="string" length="2">01</field>					</data>					<data name="LIMIT">						<field type="double" length="128">9999.0</field>					</data>				</struct>				<struct>					<data name="BANK_ID">						<field type="string" length="12">105100000017</field>					</data>					<data name="BANK_NAME">						<field type="string" length="6">中国建设银行</field>					</data>					<data name="CARD_DAY_LIMIT">						<field type="double" length="128">999999.0</field>					</data>					<data name="CARD_TYPE">						<field type="string" length="2">01</field>					</data>					<data name="LIMIT">						<field type="double" length="128">9999.0</field>					</data>				</struct>				<struct>					<data name="BANK_ID">						<field type="string" length="12">308584000013</field>					</data>					<data name="BANK_NAME">						<field type="string" length="4">招商银行</field>					</data>					<data name="CARD_DAY_LIMIT">						<field type="double" length="128">999999.0</field>					</data>					<data name="CARD_TYPE">						<field type="string" length="2">01</field>					</data>					<data name="LIMIT">						<field type="double" length="128">9999.0</field>					</data>				</struct>			</array>		</data>		<data name="STATUS">			<field type="string" length="1">S</field>		</data>	</body></service>，渠道名称是：test
+2019-04-28 11:53:47,964 main INFO  [PackProcessEngine:65] 2f476249-30ba-47f1-ac8b-339c8e6df688----ESB转成Json的模板是：test_service_req
+2019-04-28 11:53:47,964 main INFO  [PackProcessEngine:68] 2f476249-30ba-47f1-ac8b-339c8e6df688----JSON转成ESB XML的模板是：test_service_resp
+2019-04-28 11:53:48,024 main INFO  [PackProcessEngine:72] 2f476249-30ba-47f1-ac8b-339c8e6df688----ESB XML转换成map之后的结果是：{sys-header={SYS_HEAD={RET=[{RET_CODE=000000, RET_MSG=SUCCESS}], SERVICE_CODE=MBSD_IFP_TP, MESSAGE_TYPE=1400, THIRD_ID=7b581155a0664bbab9c53d307f9ec847					, TRAN_TIMESTAMP=162552139, CONSUMER_ID=143, EC_NO=100430, COMPANY=BODC, SEQ_NO=39385991538409472, SOURCE_TYPE=43, CONSUMER_BUSI_NO=10112323435556, MESSAGE_CODE=0020, REFERENCE=1904190000003247, RET_STATUS=S, TRAN_DATE=20190419, TRAN_CODE=88888888}}, app-header={APP_HEAD={TOTAL_NUM=-1, TOTAL_FLAG=E, CURRENT_NUM=0, PGUP_OR_PGDN=1}}, body={STATUS=S, LIST_DETAIL=[{CARD_DAY_LIMIT=999999.0, CARD_TYPE=01, BANK_ID=2013-09-10, LIMIT=9999.0, BANK_NAME=中国农业银行}, {CARD_DAY_LIMIT=999999.0, CARD_TYPE=01, BANK_ID=104100000004, LIMIT=9999.0, BANK_NAME=中国银行}, {CARD_DAY_LIMIT=999999.0, CARD_TYPE=01, BANK_ID=102100099996, LIMIT=9999.0, BANK_NAME=中国工商银行}, {CARD_DAY_LIMIT=999999.0, CARD_TYPE=01, BANK_ID=105100000017, LIMIT=9999.0, BANK_NAME=中国建设银行}, {CARD_DAY_LIMIT=999999.0, CARD_TYPE=01, BANK_ID=308584000013, LIMIT=9999.0, BANK_NAME=招商银行}]}}
+2019-04-28 11:53:48,095 main INFO  [PackProcessEngine:76] 2f476249-30ba-47f1-ac8b-339c8e6df688----map转换成json之后的结果是：{"data":{"limit":9999,"listDetail":[{"BANK_ID":"2013-09-10","BANK_NAME":"中国农业银行","CARD_DAY_LIMIT":"999999.0","CARD_TYPE":"01","LIMIT":"9999.0"},{"BANK_ID":"104100000004","BANK_NAME":"中国银行","CARD_DAY_LIMIT":"999999.0","CARD_TYPE":"01","LIMIT":"9999.0"},{"BANK_ID":"102100099996","BANK_NAME":"中国工商银行","CARD_DAY_LIMIT":"999999.0","CARD_TYPE":"01","LIMIT":"9999.0"},{"BANK_ID":"105100000017","BANK_NAME":"中国建设银行","CARD_DAY_LIMIT":"999999.0","CARD_TYPE":"01","LIMIT":"9999.0"},{"BANK_ID":"308584000013","BANK_NAME":"招商银行","CARD_DAY_LIMIT":"999999.0","CARD_TYPE":"01","LIMIT":"9999.0"}],"retMsg":"BODC","tranDate":20190419},"retCode":"000000"}
+2019-04-28 11:53:48,095 main INFO  [PackProcessEngine:83] 2f476249-30ba-47f1-ac8b-339c8e6df688----加密之后的结果是：{"data":{"limit":9999,"listDetail":[{"BANK_ID":"2013-09-10","BANK_NAME":"中国农业银行","CARD_DAY_LIMIT":"999999.0","CARD_TYPE":"01","LIMIT":"9999.0"},{"BANK_ID":"104100000004","BANK_NAME":"中国银行","CARD_DAY_LIMIT":"999999.0","CARD_TYPE":"01","LIMIT":"9999.0"},{"BANK_ID":"102100099996","BANK_NAME":"中国工商银行","CARD_DAY_LIMIT":"999999.0","CARD_TYPE":"01","LIMIT":"9999.0"},{"BANK_ID":"105100000017","BANK_NAME":"中国建设银行","CARD_DAY_LIMIT":"999999.0","CARD_TYPE":"01","LIMIT":"9999.0"},{"BANK_ID":"308584000013","BANK_NAME":"招商银行","CARD_DAY_LIMIT":"999999.0","CARD_TYPE":"01","LIMIT":"9999.0"}],"retMsg":"BODC","tranDate":20190419},"retCode":"000000"}
+2019-04-28 11:53:48,095 main INFO  [PackProcessEngine:86] 2f476249-30ba-47f1-ac8b-339c8e6df688----发送请求到到null请求参数是:{data={"data":{"limit":9999,"listDetail":[{"BANK_ID":"2013-09-10","BANK_NAME":"中国农业银行","CARD_DAY_LIMIT":"999999.0","CARD_TYPE":"01","LIMIT":"9999.0"},{"BANK_ID":"104100000004","BANK_NAME":"中国银行","CARD_DAY_LIMIT":"999999.0","CARD_TYPE":"01","LIMIT":"9999.0"},{"BANK_ID":"102100099996","BANK_NAME":"中国工商银行","CARD_DAY_LIMIT":"999999.0","CARD_TYPE":"01","LIMIT":"9999.0"},{"BANK_ID":"105100000017","BANK_NAME":"中国建设银行","CARD_DAY_LIMIT":"999999.0","CARD_TYPE":"01","LIMIT":"9999.0"},{"BANK_ID":"308584000013","BANK_NAME":"招商银行","CARD_DAY_LIMIT":"999999.0","CARD_TYPE":"01","LIMIT":"9999.0"}],"retMsg":"BODC","tranDate":20190419},"retCode":"000000"}, aeskey=@#$%@#$%$@#%}
+2019-04-28 11:53:48,095 main INFO  [PackProcessEngine:88] 2f476249-30ba-47f1-ac8b-339c8e6df688----得到的响应是:{"data":{"limit":9999,"listDetail":[{"BANK_ID":"2013-09-10","BANK_NAME":"中国农业银行","CARD_DAY_LIMIT":"999999.0","CARD_TYPE":"01","LIMIT":"9999.0"},{"BANK_ID":"104100000004","BANK_NAME":"中国银行","CARD_DAY_LIMIT":"999999.0","CARD_TYPE":"01","LIMIT":"9999.0"},{"BANK_ID":"102100099996","BANK_NAME":"中国工商银行","CARD_DAY_LIMIT":"999999.0","CARD_TYPE":"01","LIMIT":"9999.0"},{"BANK_ID":"105100000017","BANK_NAME":"中国建设银行","CARD_DAY_LIMIT":"999999.0","CARD_TYPE":"01","LIMIT":"9999.0"},{"BANK_ID":"308584000013","BANK_NAME":"招商银行","CARD_DAY_LIMIT":"999999.0","CARD_TYPE":"01","LIMIT":"9999.0"}],"retMsg":"BODC","tranDate":20190419},"retCode":"000000"}
+2019-04-28 11:53:48,095 main INFO  [PackProcessEngine:91] 2f476249-30ba-47f1-ac8b-339c8e6df688----解密后的结果是:{"data":{"limit":9999,"listDetail":[{"BANK_ID":"2013-09-10","BANK_NAME":"中国农业银行","CARD_DAY_LIMIT":"999999.0","CARD_TYPE":"01","LIMIT":"9999.0"},{"BANK_ID":"104100000004","BANK_NAME":"中国银行","CARD_DAY_LIMIT":"999999.0","CARD_TYPE":"01","LIMIT":"9999.0"},{"BANK_ID":"102100099996","BANK_NAME":"中国工商银行","CARD_DAY_LIMIT":"999999.0","CARD_TYPE":"01","LIMIT":"9999.0"},{"BANK_ID":"105100000017","BANK_NAME":"中国建设银行","CARD_DAY_LIMIT":"999999.0","CARD_TYPE":"01","LIMIT":"9999.0"},{"BANK_ID":"308584000013","BANK_NAME":"招商银行","CARD_DAY_LIMIT":"999999.0","CARD_TYPE":"01","LIMIT":"9999.0"}],"retMsg":"BODC","tranDate":20190419},"retCode":"000000"}
+2019-04-28 11:53:48,129 main INFO  [PackProcessEngine:96] 2f476249-30ba-47f1-ac8b-339c8e6df688----转换成ESB XML的模型数据是:{model={"data":{"limit":9999,"listDetail":[{"BANK_ID":"2013-09-10","BANK_NAME":"中国农业银行","CARD_DAY_LIMIT":"999999.0","CARD_TYPE":"01","LIMIT":"9999.0"},{"BANK_ID":"104100000004","BANK_NAME":"中国银行","CARD_DAY_LIMIT":"999999.0","CARD_TYPE":"01","LIMIT":"9999.0"},{"BANK_ID":"102100099996","BANK_NAME":"中国工商银行","CARD_DAY_LIMIT":"999999.0","CARD_TYPE":"01","LIMIT":"9999.0"},{"BANK_ID":"105100000017","BANK_NAME":"中国建设银行","CARD_DAY_LIMIT":"999999.0","CARD_TYPE":"01","LIMIT":"9999.0"},{"BANK_ID":"308584000013","BANK_NAME":"招商银行","CARD_DAY_LIMIT":"999999.0","CARD_TYPE":"01","LIMIT":"9999.0"}],"retMsg":"BODC","tranDate":20190419},"retCode":"000000"}}
+2019-04-28 11:53:48,272 main INFO  [PackProcessEngine:99] 2f476249-30ba-47f1-ac8b-339c8e6df688----响应ESB XML报文是：<?xml version="1.0" encoding="UTF-8"?>
+<!--
+{
+"model": {
+"retCode": "000000",
+"retMsg": "SUCCESS",
+"data": {
+"limit": "9999.0",
+"tranDate": "20190419",
+"listDetail": [{
+"totalNum": "-1",
+"bankName": "中国农业银行",
+"bankId": "103100000026"
+}, {
+"totalNum": "-1",
+"bankName": "中国银行",
+"bankId": "104100000004"
+}, {
+"totalNum": "-1",
+"bankName": "中国工商银行",
+"bankId": "102100099996"
+}, {
+"totalNum": "-1",
+"bankName": "中国建设银行",
+"bankId": "105100000017"
+}, {
+"totalNum": "-1",
+"bankName": "招商银行",
+"bankId": "308584000013"
+}]
+}
+}
+}
+-->
+<service>
+<sys-header>
+<data name="SYS_HEAD">
+<struct>
+<data name="COMPANY">
+<field type="string" length="4">BODC</field>
+</data>
+<data name="CONSUMER_BUSI_NO">
+<field type="string" length="14">10112323435556</field>
+</data>
+<data name="CONSUMER_ID">
+<field type="string" length="3">143</field>
+</data>
+<data name="EC_NO">
+<field type="string" length="6">100430</field>
+</data>
+<data name="MESSAGE_CODE">
+<field type="string" length="4">0020</field>
+</data>
+<data name="MESSAGE_TYPE">
+<field type="string" length="4">1400</field>
+</data>
+<data name="REFERENCE">
+<field type="string" length="16">1904190000003247</field>
+</data>
+<data name="SEQ_NO">
+<field type="string" length="17">39385991538409472</field>
+</data>
+<data name="SERVICE_CODE">
+<field type="string" length="11">MBSD_IFP_TP</field>
+</data>
+<data name="SOURCE_TYPE">
+<field type="string" length="2">43</field>
+</data>
+<data name="THIRD_ID">
+<field type="string" length="32">7b581155a0664bbab9c53d307f9ec847
+</field>
+</data>
+<data name="TRAN_CODE">
+<field type="string" length="8">88888888</field>
+</data>
+<data name="TRAN_DATE">
+<field type="string" length="8">20190419</field>
+</data>
+<data name="TRAN_TIMESTAMP">
+<field type="string" length="9">162552139</field>
+</data>
+<data name="RET_STATUS">
+<field type="string" length="1">S</field>
+</data>
+<data name="RET">
+<array>
+<data name="RET_CODE">
+<field type="string" length="6">000000</field>
+</data>
+<data name="RET_MSG">
+<field type="string" length="7"></field>
+</data>
+</array>
+</data>
+</struct>
+</data>
+</sys-header>
+<app-header>
+<data name="APP_HEAD">
+<struct>
+<data name="CURRENT_NUM">
+<field type="string" length="1">0</field>
+</data>
+<data name="PGUP_OR_PGDN">
+<field type="string" length="1">1</field>
+</data>
+<data name="TOTAL_FLAG">
+<field type="string" length="1">E</field>
+</data>
+<data name="TOTAL_NUM">
+<field type="string" length="2">
+-1
+</field>
+</data>
+</struct>
+</data>
+</app-header>
+<local-header />
+<body>
+<data name="LIST_DETAIL">
+<array>
+<struct>
+<data name="BANK_ID">
+<field type="string" length="12"></field>
+</data>
+<data name="BANK_NAME">
+<field type="string" length="6"></field>
+</data>
+<data name="CARD_DAY_LIMIT">
+<field type="double" length="128">999999.0</field>
+</data>
+<data name="CARD_TYPE">
+<field type="string" length="2">01</field>
+</data>
+<data name="LIMIT">
+<!-- 如果mode中的数据是数字类型，为避免数据超过四位之后自动用逗号分隔就采用 加?c的的方式-->
+<field type="double" length="128">9999</field>
+</data>
+</struct>
+<struct>
+<data name="BANK_ID">
+<field type="string" length="12"></field>
+</data>
+<data name="BANK_NAME">
+<field type="string" length="6"></field>
+</data>
+<data name="CARD_DAY_LIMIT">
+<field type="double" length="128">999999.0</field>
+</data>
+<data name="CARD_TYPE">
+<field type="string" length="2">01</field>
+</data>
+<data name="LIMIT">
+<!-- 如果mode中的数据是数字类型，为避免数据超过四位之后自动用逗号分隔就采用 加?c的的方式-->
+<field type="double" length="128">9999</field>
+</data>
+</struct>
+<struct>
+<data name="BANK_ID">
+<field type="string" length="12"></field>
+</data>
+<data name="BANK_NAME">
+<field type="string" length="6"></field>
+</data>
+<data name="CARD_DAY_LIMIT">
+<field type="double" length="128">999999.0</field>
+</data>
+<data name="CARD_TYPE">
+<field type="string" length="2">01</field>
+</data>
+<data name="LIMIT">
+<!-- 如果mode中的数据是数字类型，为避免数据超过四位之后自动用逗号分隔就采用 加?c的的方式-->
+<field type="double" length="128">9999</field>
+</data>
+</struct>
+<struct>
+<data name="BANK_ID">
+<field type="string" length="12"></field>
+</data>
+<data name="BANK_NAME">
+<field type="string" length="6"></field>
+</data>
+<data name="CARD_DAY_LIMIT">
+<field type="double" length="128">999999.0</field>
+</data>
+<data name="CARD_TYPE">
+<field type="string" length="2">01</field>
+</data>
+<data name="LIMIT">
+<!-- 如果mode中的数据是数字类型，为避免数据超过四位之后自动用逗号分隔就采用 加?c的的方式-->
+<field type="double" length="128">9999</field>
+</data>
+</struct>
+<struct>
+<data name="BANK_ID">
+<field type="string" length="12"></field>
+</data>
+<data name="BANK_NAME">
+<field type="string" length="6"></field>
+</data>
+<data name="CARD_DAY_LIMIT">
+<field type="double" length="128">999999.0</field>
+</data>
+<data name="CARD_TYPE">
+<field type="string" length="2">01</field>
+</data>
+<data name="LIMIT">
+<!-- 如果mode中的数据是数字类型，为避免数据超过四位之后自动用逗号分隔就采用 加?c的的方式-->
+<field type="double" length="128">9999</field>
+</data>
+</struct>
+</array>
+</data>
+<data name="STATUS">
+<field type="string" length="1">S</field>
+</data>
+</body>
+</service>
+2019-04-28 11:53:59,056 main INFO  [PackProcessEngine:62] d44061f3-f06a-4ffd-9f72-d146d6c19d9b----ESB XML报文是：﻿<?xml version="1.0" encoding="UTF-8"?><service>	<sys-header>		<data name="SYS_HEAD">			<struct>				<data name="COMPANY">					<field type="string" length="4">BODC</field>				</data>				<data name="CONSUMER_BUSI_NO">					<field type="string" length="14">10112323435556</field>				</data>				<data name="CONSUMER_ID">					<field type="string" length="3">143</field>				</data>				<data name="EC_NO">					<field type="string" length="6">100430</field>				</data>				<data name="MESSAGE_CODE">					<field type="string" length="4">0020</field>				</data>				<data name="MESSAGE_TYPE">					<field type="string" length="4">1400</field>				</data>				<data name="REFERENCE">					<field type="string" length="16">1904190000003247</field>				</data>				<data name="SEQ_NO">					<field type="string" length="17">39385991538409472</field>				</data>				<data name="SERVICE_CODE">					<field type="string" length="11">MBSD_IFP_TP</field>				</data>				<data name="SOURCE_TYPE">					<field type="string" length="2">43</field>				</data>				<data name="THIRD_ID">					<field type="string" length="32">7b581155a0664bbab9c53d307f9ec847					</field>				</data>				<data name="TRAN_CODE">					<field type="string" length="8">88888888</field>				</data>				<data name="TRAN_DATE">					<field type="string" length="8">20190419</field>				</data>				<data name="TRAN_TIMESTAMP">					<field type="string" length="9">162552139</field>				</data>				<data name="RET_STATUS">					<field type="string" length="1">S</field>				</data>				<data name="RET">					<array>						<struct>							<data name="RET_CODE">								<field type="string" length="6">000000</field>							</data>							<data name="RET_MSG">								<field type="string" length="7">SUCCESS</field>							</data>						</struct>					</array>				</data>			</struct>		</data>	</sys-header>	<app-header>		<data name="APP_HEAD">			<struct>				<data name="CURRENT_NUM">					<field type="string" length="1">0</field>				</data>				<data name="PGUP_OR_PGDN">					<field type="string" length="1">1</field>				</data>				<data name="TOTAL_FLAG">					<field type="string" length="1">E</field>				</data>				<data name="TOTAL_NUM">					<field type="string" length="2">-1</field>				</data>			</struct>		</data>	</app-header>	<local-header />	<body>		<data name="LIST_DETAIL">			<array>				<struct>					<data name="BANK_ID">						<field type="string" length="12">2013-09-10</field>					</data>					<data name="BANK_NAME">						<field type="string" length="6">中国农业银行</field>					</data>					<data name="CARD_DAY_LIMIT">						<field type="double" length="128">999999.0</field>					</data>					<data name="CARD_TYPE">						<field type="string" length="2">01</field>					</data>					<data name="LIMIT">						<field type="double" length="128">9999.0</field>					</data>				</struct>				<struct>					<data name="BANK_ID">						<field type="string" length="12">104100000004</field>					</data>					<data name="BANK_NAME">						<field type="string" length="4">中国银行</field>					</data>					<data name="CARD_DAY_LIMIT">						<field type="double" length="128">999999.0</field>					</data>					<data name="CARD_TYPE">						<field type="string" length="2">01</field>					</data>					<data name="LIMIT">						<field type="double" length="128">9999.0</field>					</data>				</struct>				<struct>					<data name="BANK_ID">						<field type="string" length="12">102100099996</field>					</data>					<data name="BANK_NAME">						<field type="string" length="6">中国工商银行</field>					</data>					<data name="CARD_DAY_LIMIT">						<field type="double" length="128">999999.0</field>					</data>					<data name="CARD_TYPE">						<field type="string" length="2">01</field>					</data>					<data name="LIMIT">						<field type="double" length="128">9999.0</field>					</data>				</struct>				<struct>					<data name="BANK_ID">						<field type="string" length="12">105100000017</field>					</data>					<data name="BANK_NAME">						<field type="string" length="6">中国建设银行</field>					</data>					<data name="CARD_DAY_LIMIT">						<field type="double" length="128">999999.0</field>					</data>					<data name="CARD_TYPE">						<field type="string" length="2">01</field>					</data>					<data name="LIMIT">						<field type="double" length="128">9999.0</field>					</data>				</struct>				<struct>					<data name="BANK_ID">						<field type="string" length="12">308584000013</field>					</data>					<data name="BANK_NAME">						<field type="string" length="4">招商银行</field>					</data>					<data name="CARD_DAY_LIMIT">						<field type="double" length="128">999999.0</field>					</data>					<data name="CARD_TYPE">						<field type="string" length="2">01</field>					</data>					<data name="LIMIT">						<field type="double" length="128">9999.0</field>					</data>				</struct>			</array>		</data>		<data name="STATUS">			<field type="string" length="1">S</field>		</data>	</body></service>，渠道名称是：test
+2019-04-28 11:53:59,059 main INFO  [PackProcessEngine:65] d44061f3-f06a-4ffd-9f72-d146d6c19d9b----ESB转成Json的模板是：test_service_req
+2019-04-28 11:53:59,059 main INFO  [PackProcessEngine:68] d44061f3-f06a-4ffd-9f72-d146d6c19d9b----JSON转成ESB XML的模板是：test_service_resp
+2019-04-28 11:53:59,114 main INFO  [PackProcessEngine:72] d44061f3-f06a-4ffd-9f72-d146d6c19d9b----ESB XML转换成map之后的结果是：{sys-header={SYS_HEAD={RET=[{RET_CODE=000000, RET_MSG=SUCCESS}], SERVICE_CODE=MBSD_IFP_TP, MESSAGE_TYPE=1400, THIRD_ID=7b581155a0664bbab9c53d307f9ec847					, TRAN_TIMESTAMP=162552139, CONSUMER_ID=143, EC_NO=100430, COMPANY=BODC, SEQ_NO=39385991538409472, SOURCE_TYPE=43, CONSUMER_BUSI_NO=10112323435556, MESSAGE_CODE=0020, REFERENCE=1904190000003247, RET_STATUS=S, TRAN_DATE=20190419, TRAN_CODE=88888888}}, app-header={APP_HEAD={TOTAL_NUM=-1, TOTAL_FLAG=E, CURRENT_NUM=0, PGUP_OR_PGDN=1}}, body={STATUS=S, LIST_DETAIL=[{CARD_DAY_LIMIT=999999.0, CARD_TYPE=01, BANK_ID=2013-09-10, LIMIT=9999.0, BANK_NAME=中国农业银行}, {CARD_DAY_LIMIT=999999.0, CARD_TYPE=01, BANK_ID=104100000004, LIMIT=9999.0, BANK_NAME=中国银行}, {CARD_DAY_LIMIT=999999.0, CARD_TYPE=01, BANK_ID=102100099996, LIMIT=9999.0, BANK_NAME=中国工商银行}, {CARD_DAY_LIMIT=999999.0, CARD_TYPE=01, BANK_ID=105100000017, LIMIT=9999.0, BANK_NAME=中国建设银行}, {CARD_DAY_LIMIT=999999.0, CARD_TYPE=01, BANK_ID=308584000013, LIMIT=9999.0, BANK_NAME=招商银行}]}}
+2019-04-28 11:53:59,187 main INFO  [PackProcessEngine:76] d44061f3-f06a-4ffd-9f72-d146d6c19d9b----map转换成json之后的结果是：{"data":{"limit":9999,"listDetail":[{"BANK_ID":"2013-09-10","BANK_NAME":"中国农业银行","CARD_DAY_LIMIT":"999999.0","CARD_TYPE":"01","LIMIT":"9999.0"},{"BANK_ID":"104100000004","BANK_NAME":"中国银行","CARD_DAY_LIMIT":"999999.0","CARD_TYPE":"01","LIMIT":"9999.0"},{"BANK_ID":"102100099996","BANK_NAME":"中国工商银行","CARD_DAY_LIMIT":"999999.0","CARD_TYPE":"01","LIMIT":"9999.0"},{"BANK_ID":"105100000017","BANK_NAME":"中国建设银行","CARD_DAY_LIMIT":"999999.0","CARD_TYPE":"01","LIMIT":"9999.0"},{"BANK_ID":"308584000013","BANK_NAME":"招商银行","CARD_DAY_LIMIT":"999999.0","CARD_TYPE":"01","LIMIT":"9999.0"}],"retMsg":"BODC","tranDate":20190419},"retCode":"000000"}
+2019-04-28 11:53:59,187 main INFO  [PackProcessEngine:83] d44061f3-f06a-4ffd-9f72-d146d6c19d9b----加密之后的结果是：{"data":{"limit":9999,"listDetail":[{"BANK_ID":"2013-09-10","BANK_NAME":"中国农业银行","CARD_DAY_LIMIT":"999999.0","CARD_TYPE":"01","LIMIT":"9999.0"},{"BANK_ID":"104100000004","BANK_NAME":"中国银行","CARD_DAY_LIMIT":"999999.0","CARD_TYPE":"01","LIMIT":"9999.0"},{"BANK_ID":"102100099996","BANK_NAME":"中国工商银行","CARD_DAY_LIMIT":"999999.0","CARD_TYPE":"01","LIMIT":"9999.0"},{"BANK_ID":"105100000017","BANK_NAME":"中国建设银行","CARD_DAY_LIMIT":"999999.0","CARD_TYPE":"01","LIMIT":"9999.0"},{"BANK_ID":"308584000013","BANK_NAME":"招商银行","CARD_DAY_LIMIT":"999999.0","CARD_TYPE":"01","LIMIT":"9999.0"}],"retMsg":"BODC","tranDate":20190419},"retCode":"000000"}
+2019-04-28 11:53:59,191 main INFO  [PackProcessEngine:86] d44061f3-f06a-4ffd-9f72-d146d6c19d9b----发送请求到到null请求参数是:{data={"data":{"limit":9999,"listDetail":[{"BANK_ID":"2013-09-10","BANK_NAME":"中国农业银行","CARD_DAY_LIMIT":"999999.0","CARD_TYPE":"01","LIMIT":"9999.0"},{"BANK_ID":"104100000004","BANK_NAME":"中国银行","CARD_DAY_LIMIT":"999999.0","CARD_TYPE":"01","LIMIT":"9999.0"},{"BANK_ID":"102100099996","BANK_NAME":"中国工商银行","CARD_DAY_LIMIT":"999999.0","CARD_TYPE":"01","LIMIT":"9999.0"},{"BANK_ID":"105100000017","BANK_NAME":"中国建设银行","CARD_DAY_LIMIT":"999999.0","CARD_TYPE":"01","LIMIT":"9999.0"},{"BANK_ID":"308584000013","BANK_NAME":"招商银行","CARD_DAY_LIMIT":"999999.0","CARD_TYPE":"01","LIMIT":"9999.0"}],"retMsg":"BODC","tranDate":20190419},"retCode":"000000"}, aeskey=@#$%@#$%$@#%}
+2019-04-28 11:53:59,191 main INFO  [PackProcessEngine:88] d44061f3-f06a-4ffd-9f72-d146d6c19d9b----得到的响应是:{"data":{"limit":9999,"listDetail":[{"BANK_ID":"2013-09-10","BANK_NAME":"中国农业银行","CARD_DAY_LIMIT":"999999.0","CARD_TYPE":"01","LIMIT":"9999.0"},{"BANK_ID":"104100000004","BANK_NAME":"中国银行","CARD_DAY_LIMIT":"999999.0","CARD_TYPE":"01","LIMIT":"9999.0"},{"BANK_ID":"102100099996","BANK_NAME":"中国工商银行","CARD_DAY_LIMIT":"999999.0","CARD_TYPE":"01","LIMIT":"9999.0"},{"BANK_ID":"105100000017","BANK_NAME":"中国建设银行","CARD_DAY_LIMIT":"999999.0","CARD_TYPE":"01","LIMIT":"9999.0"},{"BANK_ID":"308584000013","BANK_NAME":"招商银行","CARD_DAY_LIMIT":"999999.0","CARD_TYPE":"01","LIMIT":"9999.0"}],"retMsg":"BODC","tranDate":20190419},"retCode":"000000"}
+2019-04-28 11:53:59,191 main INFO  [PackProcessEngine:91] d44061f3-f06a-4ffd-9f72-d146d6c19d9b----解密后的结果是:{"data":{"limit":9999,"listDetail":[{"BANK_ID":"2013-09-10","BANK_NAME":"中国农业银行","CARD_DAY_LIMIT":"999999.0","CARD_TYPE":"01","LIMIT":"9999.0"},{"BANK_ID":"104100000004","BANK_NAME":"中国银行","CARD_DAY_LIMIT":"999999.0","CARD_TYPE":"01","LIMIT":"9999.0"},{"BANK_ID":"102100099996","BANK_NAME":"中国工商银行","CARD_DAY_LIMIT":"999999.0","CARD_TYPE":"01","LIMIT":"9999.0"},{"BANK_ID":"105100000017","BANK_NAME":"中国建设银行","CARD_DAY_LIMIT":"999999.0","CARD_TYPE":"01","LIMIT":"9999.0"},{"BANK_ID":"308584000013","BANK_NAME":"招商银行","CARD_DAY_LIMIT":"999999.0","CARD_TYPE":"01","LIMIT":"9999.0"}],"retMsg":"BODC","tranDate":20190419},"retCode":"000000"}
+2019-04-28 11:53:59,219 main INFO  [PackProcessEngine:96] d44061f3-f06a-4ffd-9f72-d146d6c19d9b----转换成ESB XML的模型数据是:{model={"data":{"limit":9999,"listDetail":[{"BANK_ID":"2013-09-10","BANK_NAME":"中国农业银行","CARD_DAY_LIMIT":"999999.0","CARD_TYPE":"01","LIMIT":"9999.0"},{"BANK_ID":"104100000004","BANK_NAME":"中国银行","CARD_DAY_LIMIT":"999999.0","CARD_TYPE":"01","LIMIT":"9999.0"},{"BANK_ID":"102100099996","BANK_NAME":"中国工商银行","CARD_DAY_LIMIT":"999999.0","CARD_TYPE":"01","LIMIT":"9999.0"},{"BANK_ID":"105100000017","BANK_NAME":"中国建设银行","CARD_DAY_LIMIT":"999999.0","CARD_TYPE":"01","LIMIT":"9999.0"},{"BANK_ID":"308584000013","BANK_NAME":"招商银行","CARD_DAY_LIMIT":"999999.0","CARD_TYPE":"01","LIMIT":"9999.0"}],"retMsg":"BODC","tranDate":20190419},"retCode":"000000"}}
+2019-04-28 11:53:59,372 main INFO  [PackProcessEngine:99] d44061f3-f06a-4ffd-9f72-d146d6c19d9b----响应ESB XML报文是：<?xml version="1.0" encoding="UTF-8"?>
+<!--
+{
+"model": {
+"retCode": "000000",
+"retMsg": "SUCCESS",
+"data": {
+"limit": "9999.0",
+"tranDate": "20190419",
+"listDetail": [{
+"totalNum": "-1",
+"bankName": "中国农业银行",
+"bankId": "103100000026"
+}, {
+"totalNum": "-1",
+"bankName": "中国银行",
+"bankId": "104100000004"
+}, {
+"totalNum": "-1",
+"bankName": "中国工商银行",
+"bankId": "102100099996"
+}, {
+"totalNum": "-1",
+"bankName": "中国建设银行",
+"bankId": "105100000017"
+}, {
+"totalNum": "-1",
+"bankName": "招商银行",
+"bankId": "308584000013"
+}]
+}
+}
+}
+-->
+<service>
+<sys-header>
+<data name="SYS_HEAD">
+<struct>
+<data name="COMPANY">
+<field type="string" length="4">BODC</field>
+</data>
+<data name="CONSUMER_BUSI_NO">
+<field type="string" length="14">10112323435556</field>
+</data>
+<data name="CONSUMER_ID">
+<field type="string" length="3">143</field>
+</data>
+<data name="EC_NO">
+<field type="string" length="6">100430</field>
+</data>
+<data name="MESSAGE_CODE">
+<field type="string" length="4">0020</field>
+</data>
+<data name="MESSAGE_TYPE">
+<field type="string" length="4">1400</field>
+</data>
+<data name="REFERENCE">
+<field type="string" length="16">1904190000003247</field>
+</data>
+<data name="SEQ_NO">
+<field type="string" length="17">39385991538409472</field>
+</data>
+<data name="SERVICE_CODE">
+<field type="string" length="11">MBSD_IFP_TP</field>
+</data>
+<data name="SOURCE_TYPE">
+<field type="string" length="2">43</field>
+</data>
+<data name="THIRD_ID">
+<field type="string" length="32">7b581155a0664bbab9c53d307f9ec847
+</field>
+</data>
+<data name="TRAN_CODE">
+<field type="string" length="8">88888888</field>
+</data>
+<data name="TRAN_DATE">
+<field type="string" length="8">20190419</field>
+</data>
+<data name="TRAN_TIMESTAMP">
+<field type="string" length="9">162552139</field>
+</data>
+<data name="RET_STATUS">
+<field type="string" length="1">S</field>
+</data>
+<data name="RET">
+<array>
+<data name="RET_CODE">
+<field type="string" length="6">000000</field>
+</data>
+<data name="RET_MSG">
+<field type="string" length="7"></field>
+</data>
+</array>
+</data>
+</struct>
+</data>
+</sys-header>
+<app-header>
+<data name="APP_HEAD">
+<struct>
+<data name="CURRENT_NUM">
+<field type="string" length="1">0</field>
+</data>
+<data name="PGUP_OR_PGDN">
+<field type="string" length="1">1</field>
+</data>
+<data name="TOTAL_FLAG">
+<field type="string" length="1">E</field>
+</data>
+<data name="TOTAL_NUM">
+<field type="string" length="2">
+-1
+</field>
+</data>
+</struct>
+</data>
+</app-header>
+<local-header />
+<body>
+<data name="LIST_DETAIL">
+<array>
+<struct>
+<data name="BANK_ID">
+<field type="string" length="12"></field>
+</data>
+<data name="BANK_NAME">
+<field type="string" length="6"></field>
+</data>
+<data name="CARD_DAY_LIMIT">
+<field type="double" length="128">999999.0</field>
+</data>
+<data name="CARD_TYPE">
+<field type="string" length="2">01</field>
+</data>
+<data name="LIMIT">
+<!-- 如果mode中的数据是数字类型，为避免数据超过四位之后自动用逗号分隔就采用 加?c的的方式-->
+<field type="double" length="128">9999</field>
+</data>
+</struct>
+<struct>
+<data name="BANK_ID">
+<field type="string" length="12"></field>
+</data>
+<data name="BANK_NAME">
+<field type="string" length="6"></field>
+</data>
+<data name="CARD_DAY_LIMIT">
+<field type="double" length="128">999999.0</field>
+</data>
+<data name="CARD_TYPE">
+<field type="string" length="2">01</field>
+</data>
+<data name="LIMIT">
+<!-- 如果mode中的数据是数字类型，为避免数据超过四位之后自动用逗号分隔就采用 加?c的的方式-->
+<field type="double" length="128">9999</field>
+</data>
+</struct>
+<struct>
+<data name="BANK_ID">
+<field type="string" length="12"></field>
+</data>
+<data name="BANK_NAME">
+<field type="string" length="6"></field>
+</data>
+<data name="CARD_DAY_LIMIT">
+<field type="double" length="128">999999.0</field>
+</data>
+<data name="CARD_TYPE">
+<field type="string" length="2">01</field>
+</data>
+<data name="LIMIT">
+<!-- 如果mode中的数据是数字类型，为避免数据超过四位之后自动用逗号分隔就采用 加?c的的方式-->
+<field type="double" length="128">9999</field>
+</data>
+</struct>
+<struct>
+<data name="BANK_ID">
+<field type="string" length="12"></field>
+</data>
+<data name="BANK_NAME">
+<field type="string" length="6"></field>
+</data>
+<data name="CARD_DAY_LIMIT">
+<field type="double" length="128">999999.0</field>
+</data>
+<data name="CARD_TYPE">
+<field type="string" length="2">01</field>
+</data>
+<data name="LIMIT">
+<!-- 如果mode中的数据是数字类型，为避免数据超过四位之后自动用逗号分隔就采用 加?c的的方式-->
+<field type="double" length="128">9999</field>
+</data>
+</struct>
+<struct>
+<data name="BANK_ID">
+<field type="string" length="12"></field>
+</data>
+<data name="BANK_NAME">
+<field type="string" length="6"></field>
+</data>
+<data name="CARD_DAY_LIMIT">
+<field type="double" length="128">999999.0</field>
+</data>
+<data name="CARD_TYPE">
+<field type="string" length="2">01</field>
+</data>
+<data name="LIMIT">
+<!-- 如果mode中的数据是数字类型，为避免数据超过四位之后自动用逗号分隔就采用 加?c的的方式-->
+<field type="double" length="128">9999</field>
+</data>
+</struct>
+</array>
+</data>
+<data name="STATUS">
+<field type="string" length="1">S</field>
+</data>
+</body>
+</service>
+2019-04-28 11:54:44,250 main INFO  [PackProcessEngine:62] 8819b347-8e45-4cbf-8782-42e8c3cd9606----ESB XML报文是：﻿<?xml version="1.0" encoding="UTF-8"?><service>	<sys-header>		<data name="SYS_HEAD">			<struct>				<data name="COMPANY">					<field type="string" length="4">BODC</field>				</data>				<data name="CONSUMER_BUSI_NO">					<field type="string" length="14">10112323435556</field>				</data>				<data name="CONSUMER_ID">					<field type="string" length="3">143</field>				</data>				<data name="EC_NO">					<field type="string" length="6">100430</field>				</data>				<data name="MESSAGE_CODE">					<field type="string" length="4">0020</field>				</data>				<data name="MESSAGE_TYPE">					<field type="string" length="4">1400</field>				</data>				<data name="REFERENCE">					<field type="string" length="16">1904190000003247</field>				</data>				<data name="SEQ_NO">					<field type="string" length="17">39385991538409472</field>				</data>				<data name="SERVICE_CODE">					<field type="string" length="11">MBSD_IFP_TP</field>				</data>				<data name="SOURCE_TYPE">					<field type="string" length="2">43</field>				</data>				<data name="THIRD_ID">					<field type="string" length="32">7b581155a0664bbab9c53d307f9ec847					</field>				</data>				<data name="TRAN_CODE">					<field type="string" length="8">88888888</field>				</data>				<data name="TRAN_DATE">					<field type="string" length="8">20190419</field>				</data>				<data name="TRAN_TIMESTAMP">					<field type="string" length="9">162552139</field>				</data>				<data name="RET_STATUS">					<field type="string" length="1">S</field>				</data>				<data name="RET">					<array>						<struct>							<data name="RET_CODE">								<field type="string" length="6">000000</field>							</data>							<data name="RET_MSG">								<field type="string" length="7">SUCCESS</field>							</data>						</struct>					</array>				</data>			</struct>		</data>	</sys-header>	<app-header>		<data name="APP_HEAD">			<struct>				<data name="CURRENT_NUM">					<field type="string" length="1">0</field>				</data>				<data name="PGUP_OR_PGDN">					<field type="string" length="1">1</field>				</data>				<data name="TOTAL_FLAG">					<field type="string" length="1">E</field>				</data>				<data name="TOTAL_NUM">					<field type="string" length="2">-1</field>				</data>			</struct>		</data>	</app-header>	<local-header />	<body>		<data name="LIST_DETAIL">			<array>				<struct>					<data name="BANK_ID">						<field type="string" length="12">2013-09-10</field>					</data>					<data name="BANK_NAME">						<field type="string" length="6">中国农业银行</field>					</data>					<data name="CARD_DAY_LIMIT">						<field type="double" length="128">999999.0</field>					</data>					<data name="CARD_TYPE">						<field type="string" length="2">01</field>					</data>					<data name="LIMIT">						<field type="double" length="128">9999.0</field>					</data>				</struct>				<struct>					<data name="BANK_ID">						<field type="string" length="12">104100000004</field>					</data>					<data name="BANK_NAME">						<field type="string" length="4">中国银行</field>					</data>					<data name="CARD_DAY_LIMIT">						<field type="double" length="128">999999.0</field>					</data>					<data name="CARD_TYPE">						<field type="string" length="2">01</field>					</data>					<data name="LIMIT">						<field type="double" length="128">9999.0</field>					</data>				</struct>				<struct>					<data name="BANK_ID">						<field type="string" length="12">102100099996</field>					</data>					<data name="BANK_NAME">						<field type="string" length="6">中国工商银行</field>					</data>					<data name="CARD_DAY_LIMIT">						<field type="double" length="128">999999.0</field>					</data>					<data name="CARD_TYPE">						<field type="string" length="2">01</field>					</data>					<data name="LIMIT">						<field type="double" length="128">9999.0</field>					</data>				</struct>				<struct>					<data name="BANK_ID">						<field type="string" length="12">105100000017</field>					</data>					<data name="BANK_NAME">						<field type="string" length="6">中国建设银行</field>					</data>					<data name="CARD_DAY_LIMIT">						<field type="double" length="128">999999.0</field>					</data>					<data name="CARD_TYPE">						<field type="string" length="2">01</field>					</data>					<data name="LIMIT">						<field type="double" length="128">9999.0</field>					</data>				</struct>				<struct>					<data name="BANK_ID">						<field type="string" length="12">308584000013</field>					</data>					<data name="BANK_NAME">						<field type="string" length="4">招商银行</field>					</data>					<data name="CARD_DAY_LIMIT">						<field type="double" length="128">999999.0</field>					</data>					<data name="CARD_TYPE">						<field type="string" length="2">01</field>					</data>					<data name="LIMIT">						<field type="double" length="128">9999.0</field>					</data>				</struct>			</array>		</data>		<data name="STATUS">			<field type="string" length="1">S</field>		</data>	</body></service>，渠道名称是：test
+2019-04-28 11:54:45,271 main INFO  [PackProcessEngine:65] 8819b347-8e45-4cbf-8782-42e8c3cd9606----ESB转成Json的模板是：test_service_req
+2019-04-28 11:54:45,680 main INFO  [PackProcessEngine:68] 8819b347-8e45-4cbf-8782-42e8c3cd9606----JSON转成ESB XML的模板是：test_service_resp
+2019-04-28 11:54:47,039 main INFO  [PackProcessEngine:72] 8819b347-8e45-4cbf-8782-42e8c3cd9606----ESB XML转换成map之后的结果是：{sys-header={SYS_HEAD={RET=[{RET_CODE=000000, RET_MSG=SUCCESS}], SERVICE_CODE=MBSD_IFP_TP, MESSAGE_TYPE=1400, THIRD_ID=7b581155a0664bbab9c53d307f9ec847					, TRAN_TIMESTAMP=162552139, CONSUMER_ID=143, EC_NO=100430, COMPANY=BODC, SEQ_NO=39385991538409472, SOURCE_TYPE=43, CONSUMER_BUSI_NO=10112323435556, MESSAGE_CODE=0020, REFERENCE=1904190000003247, RET_STATUS=S, TRAN_DATE=20190419, TRAN_CODE=88888888}}, app-header={APP_HEAD={TOTAL_NUM=-1, TOTAL_FLAG=E, CURRENT_NUM=0, PGUP_OR_PGDN=1}}, body={STATUS=S, LIST_DETAIL=[{CARD_DAY_LIMIT=999999.0, CARD_TYPE=01, BANK_ID=2013-09-10, LIMIT=9999.0, BANK_NAME=中国农业银行}, {CARD_DAY_LIMIT=999999.0, CARD_TYPE=01, BANK_ID=104100000004, LIMIT=9999.0, BANK_NAME=中国银行}, {CARD_DAY_LIMIT=999999.0, CARD_TYPE=01, BANK_ID=102100099996, LIMIT=9999.0, BANK_NAME=中国工商银行}, {CARD_DAY_LIMIT=999999.0, CARD_TYPE=01, BANK_ID=105100000017, LIMIT=9999.0, BANK_NAME=中国建设银行}, {CARD_DAY_LIMIT=999999.0, CARD_TYPE=01, BANK_ID=308584000013, LIMIT=9999.0, BANK_NAME=招商银行}]}}
+2019-04-28 11:54:47,785 main INFO  [PackProcessEngine:76] 8819b347-8e45-4cbf-8782-42e8c3cd9606----map转换成json之后的结果是：{"data":{"limit":9999,"listDetail":[{"BANK_ID":"2013-09-10","BANK_NAME":"中国农业银行","CARD_DAY_LIMIT":"999999.0","CARD_TYPE":"01","LIMIT":"9999.0"},{"BANK_ID":"104100000004","BANK_NAME":"中国银行","CARD_DAY_LIMIT":"999999.0","CARD_TYPE":"01","LIMIT":"9999.0"},{"BANK_ID":"102100099996","BANK_NAME":"中国工商银行","CARD_DAY_LIMIT":"999999.0","CARD_TYPE":"01","LIMIT":"9999.0"},{"BANK_ID":"105100000017","BANK_NAME":"中国建设银行","CARD_DAY_LIMIT":"999999.0","CARD_TYPE":"01","LIMIT":"9999.0"},{"BANK_ID":"308584000013","BANK_NAME":"招商银行","CARD_DAY_LIMIT":"999999.0","CARD_TYPE":"01","LIMIT":"9999.0"}],"retMsg":"BODC","tranDate":20190419},"retCode":"000000"}
+2019-04-28 11:54:48,967 main INFO  [PackProcessEngine:83] 8819b347-8e45-4cbf-8782-42e8c3cd9606----加密之后的结果是：{"data":{"limit":9999,"listDetail":[{"BANK_ID":"2013-09-10","BANK_NAME":"中国农业银行","CARD_DAY_LIMIT":"999999.0","CARD_TYPE":"01","LIMIT":"9999.0"},{"BANK_ID":"104100000004","BANK_NAME":"中国银行","CARD_DAY_LIMIT":"999999.0","CARD_TYPE":"01","LIMIT":"9999.0"},{"BANK_ID":"102100099996","BANK_NAME":"中国工商银行","CARD_DAY_LIMIT":"999999.0","CARD_TYPE":"01","LIMIT":"9999.0"},{"BANK_ID":"105100000017","BANK_NAME":"中国建设银行","CARD_DAY_LIMIT":"999999.0","CARD_TYPE":"01","LIMIT":"9999.0"},{"BANK_ID":"308584000013","BANK_NAME":"招商银行","CARD_DAY_LIMIT":"999999.0","CARD_TYPE":"01","LIMIT":"9999.0"}],"retMsg":"BODC","tranDate":20190419},"retCode":"000000"}
+2019-04-28 11:54:49,376 main INFO  [PackProcessEngine:86] 8819b347-8e45-4cbf-8782-42e8c3cd9606----发送请求到到null请求参数是:{data={"data":{"limit":9999,"listDetail":[{"BANK_ID":"2013-09-10","BANK_NAME":"中国农业银行","CARD_DAY_LIMIT":"999999.0","CARD_TYPE":"01","LIMIT":"9999.0"},{"BANK_ID":"104100000004","BANK_NAME":"中国银行","CARD_DAY_LIMIT":"999999.0","CARD_TYPE":"01","LIMIT":"9999.0"},{"BANK_ID":"102100099996","BANK_NAME":"中国工商银行","CARD_DAY_LIMIT":"999999.0","CARD_TYPE":"01","LIMIT":"9999.0"},{"BANK_ID":"105100000017","BANK_NAME":"中国建设银行","CARD_DAY_LIMIT":"999999.0","CARD_TYPE":"01","LIMIT":"9999.0"},{"BANK_ID":"308584000013","BANK_NAME":"招商银行","CARD_DAY_LIMIT":"999999.0","CARD_TYPE":"01","LIMIT":"9999.0"}],"retMsg":"BODC","tranDate":20190419},"retCode":"000000"}, aeskey=@#$%@#$%$@#%}
+2019-04-28 11:54:49,738 main INFO  [PackProcessEngine:88] 8819b347-8e45-4cbf-8782-42e8c3cd9606----得到的响应是:{"data":{"limit":9999,"listDetail":[{"BANK_ID":"2013-09-10","BANK_NAME":"中国农业银行","CARD_DAY_LIMIT":"999999.0","CARD_TYPE":"01","LIMIT":"9999.0"},{"BANK_ID":"104100000004","BANK_NAME":"中国银行","CARD_DAY_LIMIT":"999999.0","CARD_TYPE":"01","LIMIT":"9999.0"},{"BANK_ID":"102100099996","BANK_NAME":"中国工商银行","CARD_DAY_LIMIT":"999999.0","CARD_TYPE":"01","LIMIT":"9999.0"},{"BANK_ID":"105100000017","BANK_NAME":"中国建设银行","CARD_DAY_LIMIT":"999999.0","CARD_TYPE":"01","LIMIT":"9999.0"},{"BANK_ID":"308584000013","BANK_NAME":"招商银行","CARD_DAY_LIMIT":"999999.0","CARD_TYPE":"01","LIMIT":"9999.0"}],"retMsg":"BODC","tranDate":20190419},"retCode":"000000"}
+2019-04-28 11:54:50,104 main INFO  [PackProcessEngine:91] 8819b347-8e45-4cbf-8782-42e8c3cd9606----解密后的结果是:{"data":{"limit":9999,"listDetail":[{"BANK_ID":"2013-09-10","BANK_NAME":"中国农业银行","CARD_DAY_LIMIT":"999999.0","CARD_TYPE":"01","LIMIT":"9999.0"},{"BANK_ID":"104100000004","BANK_NAME":"中国银行","CARD_DAY_LIMIT":"999999.0","CARD_TYPE":"01","LIMIT":"9999.0"},{"BANK_ID":"102100099996","BANK_NAME":"中国工商银行","CARD_DAY_LIMIT":"999999.0","CARD_TYPE":"01","LIMIT":"9999.0"},{"BANK_ID":"105100000017","BANK_NAME":"中国建设银行","CARD_DAY_LIMIT":"999999.0","CARD_TYPE":"01","LIMIT":"9999.0"},{"BANK_ID":"308584000013","BANK_NAME":"招商银行","CARD_DAY_LIMIT":"999999.0","CARD_TYPE":"01","LIMIT":"9999.0"}],"retMsg":"BODC","tranDate":20190419},"retCode":"000000"}
+2019-04-28 11:54:50,789 main INFO  [PackProcessEngine:96] 8819b347-8e45-4cbf-8782-42e8c3cd9606----转换成ESB XML的模型数据是:{model={"data":{"limit":9999,"listDetail":[{"BANK_ID":"2013-09-10","BANK_NAME":"中国农业银行","CARD_DAY_LIMIT":"999999.0","CARD_TYPE":"01","LIMIT":"9999.0"},{"BANK_ID":"104100000004","BANK_NAME":"中国银行","CARD_DAY_LIMIT":"999999.0","CARD_TYPE":"01","LIMIT":"9999.0"},{"BANK_ID":"102100099996","BANK_NAME":"中国工商银行","CARD_DAY_LIMIT":"999999.0","CARD_TYPE":"01","LIMIT":"9999.0"},{"BANK_ID":"105100000017","BANK_NAME":"中国建设银行","CARD_DAY_LIMIT":"999999.0","CARD_TYPE":"01","LIMIT":"9999.0"},{"BANK_ID":"308584000013","BANK_NAME":"招商银行","CARD_DAY_LIMIT":"999999.0","CARD_TYPE":"01","LIMIT":"9999.0"}],"retMsg":"BODC","tranDate":20190419},"retCode":"000000"}}
+2019-04-28 11:54:52,361 main INFO  [PackProcessEngine:99] 8819b347-8e45-4cbf-8782-42e8c3cd9606----响应ESB XML报文是：<?xml version="1.0" encoding="UTF-8"?>
+<!--
+{
+"model": {
+"retCode": "000000",
+"retMsg": "SUCCESS",
+"data": {
+"limit": "9999.0",
+"tranDate": "20190419",
+"listDetail": [{
+"totalNum": "-1",
+"bankName": "中国农业银行",
+"bankId": "103100000026"
+}, {
+"totalNum": "-1",
+"bankName": "中国银行",
+"bankId": "104100000004"
+}, {
+"totalNum": "-1",
+"bankName": "中国工商银行",
+"bankId": "102100099996"
+}, {
+"totalNum": "-1",
+"bankName": "中国建设银行",
+"bankId": "105100000017"
+}, {
+"totalNum": "-1",
+"bankName": "招商银行",
+"bankId": "308584000013"
+}]
+}
+}
+}
+-->
+<service>
+<sys-header>
+<data name="SYS_HEAD">
+<struct>
+<data name="COMPANY">
+<field type="string" length="4">BODC</field>
+</data>
+<data name="CONSUMER_BUSI_NO">
+<field type="string" length="14">10112323435556</field>
+</data>
+<data name="CONSUMER_ID">
+<field type="string" length="3">143</field>
+</data>
+<data name="EC_NO">
+<field type="string" length="6">100430</field>
+</data>
+<data name="MESSAGE_CODE">
+<field type="string" length="4">0020</field>
+</data>
+<data name="MESSAGE_TYPE">
+<field type="string" length="4">1400</field>
+</data>
+<data name="REFERENCE">
+<field type="string" length="16">1904190000003247</field>
+</data>
+<data name="SEQ_NO">
+<field type="string" length="17">39385991538409472</field>
+</data>
+<data name="SERVICE_CODE">
+<field type="string" length="11">MBSD_IFP_TP</field>
+</data>
+<data name="SOURCE_TYPE">
+<field type="string" length="2">43</field>
+</data>
+<data name="THIRD_ID">
+<field type="string" length="32">7b581155a0664bbab9c53d307f9ec847
+</field>
+</data>
+<data name="TRAN_CODE">
+<field type="string" length="8">88888888</field>
+</data>
+<data name="TRAN_DATE">
+<field type="string" length="8">20190419</field>
+</data>
+<data name="TRAN_TIMESTAMP">
+<field type="string" length="9">162552139</field>
+</data>
+<data name="RET_STATUS">
+<field type="string" length="1">S</field>
+</data>
+<data name="RET">
+<array>
+<data name="RET_CODE">
+<field type="string" length="6">000000</field>
+</data>
+<data name="RET_MSG">
+<field type="string" length="7"></field>
+</data>
+</array>
+</data>
+</struct>
+</data>
+</sys-header>
+<app-header>
+<data name="APP_HEAD">
+<struct>
+<data name="CURRENT_NUM">
+<field type="string" length="1">0</field>
+</data>
+<data name="PGUP_OR_PGDN">
+<field type="string" length="1">1</field>
+</data>
+<data name="TOTAL_FLAG">
+<field type="string" length="1">E</field>
+</data>
+<data name="TOTAL_NUM">
+<field type="string" length="2">
+-1
+</field>
+</data>
+</struct>
+</data>
+</app-header>
+<local-header />
+<body>
+<data name="LIST_DETAIL">
+<array>
+<struct>
+<data name="BANK_ID">
+<field type="string" length="12"></field>
+</data>
+<data name="BANK_NAME">
+<field type="string" length="6"></field>
+</data>
+<data name="CARD_DAY_LIMIT">
+<field type="double" length="128">999999.0</field>
+</data>
+<data name="CARD_TYPE">
+<field type="string" length="2">01</field>
+</data>
+<data name="LIMIT">
+<!-- 如果mode中的数据是数字类型，为避免数据超过四位之后自动用逗号分隔就采用 加?c的的方式-->
+<field type="double" length="128">9999</field>
+</data>
+</struct>
+<struct>
+<data name="BANK_ID">
+<field type="string" length="12"></field>
+</data>
+<data name="BANK_NAME">
+<field type="string" length="6"></field>
+</data>
+<data name="CARD_DAY_LIMIT">
+<field type="double" length="128">999999.0</field>
+</data>
+<data name="CARD_TYPE">
+<field type="string" length="2">01</field>
+</data>
+<data name="LIMIT">
+<!-- 如果mode中的数据是数字类型，为避免数据超过四位之后自动用逗号分隔就采用 加?c的的方式-->
+<field type="double" length="128">9999</field>
+</data>
+</struct>
+<struct>
+<data name="BANK_ID">
+<field type="string" length="12"></field>
+</data>
+<data name="BANK_NAME">
+<field type="string" length="6"></field>
+</data>
+<data name="CARD_DAY_LIMIT">
+<field type="double" length="128">999999.0</field>
+</data>
+<data name="CARD_TYPE">
+<field type="string" length="2">01</field>
+</data>
+<data name="LIMIT">
+<!-- 如果mode中的数据是数字类型，为避免数据超过四位之后自动用逗号分隔就采用 加?c的的方式-->
+<field type="double" length="128">9999</field>
+</data>
+</struct>
+<struct>
+<data name="BANK_ID">
+<field type="string" length="12"></field>
+</data>
+<data name="BANK_NAME">
+<field type="string" length="6"></field>
+</data>
+<data name="CARD_DAY_LIMIT">
+<field type="double" length="128">999999.0</field>
+</data>
+<data name="CARD_TYPE">
+<field type="string" length="2">01</field>
+</data>
+<data name="LIMIT">
+<!-- 如果mode中的数据是数字类型，为避免数据超过四位之后自动用逗号分隔就采用 加?c的的方式-->
+<field type="double" length="128">9999</field>
+</data>
+</struct>
+<struct>
+<data name="BANK_ID">
+<field type="string" length="12"></field>
+</data>
+<data name="BANK_NAME">
+<field type="string" length="6"></field>
+</data>
+<data name="CARD_DAY_LIMIT">
+<field type="double" length="128">999999.0</field>
+</data>
+<data name="CARD_TYPE">
+<field type="string" length="2">01</field>
+</data>
+<data name="LIMIT">
+<!-- 如果mode中的数据是数字类型，为避免数据超过四位之后自动用逗号分隔就采用 加?c的的方式-->
+<field type="double" length="128">9999</field>
+</data>
+</struct>
+</array>
+</data>
+<data name="STATUS">
+<field type="string" length="1">S</field>
+</data>
+</body>
+</service>
+2019-04-28 12:01:31,096 main INFO  [PackProcessEngine:62] 7d537bee-268e-434a-972a-44e42e64b1e4----ESB XML报文是：﻿<?xml version="1.0" encoding="UTF-8"?><service>	<sys-header>		<data name="SYS_HEAD">			<struct>				<data name="COMPANY">					<field type="string" length="4">BODC</field>				</data>				<data name="CONSUMER_BUSI_NO">					<field type="string" length="14">10112323435556</field>				</data>				<data name="CONSUMER_ID">					<field type="string" length="3">143</field>				</data>				<data name="EC_NO">					<field type="string" length="6">100430</field>				</data>				<data name="MESSAGE_CODE">					<field type="string" length="4">0020</field>				</data>				<data name="MESSAGE_TYPE">					<field type="string" length="4">1400</field>				</data>				<data name="REFERENCE">					<field type="string" length="16">1904190000003247</field>				</data>				<data name="SEQ_NO">					<field type="string" length="17">39385991538409472</field>				</data>				<data name="SERVICE_CODE">					<field type="string" length="11">MBSD_IFP_TP</field>				</data>				<data name="SOURCE_TYPE">					<field type="string" length="2">43</field>				</data>				<data name="THIRD_ID">					<field type="string" length="32">7b581155a0664bbab9c53d307f9ec847					</field>				</data>				<data name="TRAN_CODE">					<field type="string" length="8">88888888</field>				</data>				<data name="TRAN_DATE">					<field type="string" length="8">20190419</field>				</data>				<data name="TRAN_TIMESTAMP">					<field type="string" length="9">162552139</field>				</data>				<data name="RET_STATUS">					<field type="string" length="1">S</field>				</data>				<data name="RET">					<array>						<struct>							<data name="RET_CODE">								<field type="string" length="6">000000</field>							</data>							<data name="RET_MSG">								<field type="string" length="7">SUCCESS</field>							</data>						</struct>					</array>				</data>			</struct>		</data>	</sys-header>	<app-header>		<data name="APP_HEAD">			<struct>				<data name="CURRENT_NUM">					<field type="string" length="1">0</field>				</data>				<data name="PGUP_OR_PGDN">					<field type="string" length="1">1</field>				</data>				<data name="TOTAL_FLAG">					<field type="string" length="1">E</field>				</data>				<data name="TOTAL_NUM">					<field type="string" length="2">-1</field>				</data>			</struct>		</data>	</app-header>	<local-header />	<body>		<data name="LIST_DETAIL">			<array>				<struct>					<data name="BANK_ID">						<field type="string" length="12">2013-09-10</field>					</data>					<data name="BANK_NAME">						<field type="string" length="6">中国农业银行</field>					</data>					<data name="CARD_DAY_LIMIT">						<field type="double" length="128">999999.0</field>					</data>					<data name="CARD_TYPE">						<field type="string" length="2">01</field>					</data>					<data name="LIMIT">						<field type="double" length="128">9999.0</field>					</data>				</struct>				<struct>					<data name="BANK_ID">						<field type="string" length="12">104100000004</field>					</data>					<data name="BANK_NAME">						<field type="string" length="4">中国银行</field>					</data>					<data name="CARD_DAY_LIMIT">						<field type="double" length="128">999999.0</field>					</data>					<data name="CARD_TYPE">						<field type="string" length="2">01</field>					</data>					<data name="LIMIT">						<field type="double" length="128">9999.0</field>					</data>				</struct>				<struct>					<data name="BANK_ID">						<field type="string" length="12">102100099996</field>					</data>					<data name="BANK_NAME">						<field type="string" length="6">中国工商银行</field>					</data>					<data name="CARD_DAY_LIMIT">						<field type="double" length="128">999999.0</field>					</data>					<data name="CARD_TYPE">						<field type="string" length="2">01</field>					</data>					<data name="LIMIT">						<field type="double" length="128">9999.0</field>					</data>				</struct>				<struct>					<data name="BANK_ID">						<field type="string" length="12">105100000017</field>					</data>					<data name="BANK_NAME">						<field type="string" length="6">中国建设银行</field>					</data>					<data name="CARD_DAY_LIMIT">						<field type="double" length="128">999999.0</field>					</data>					<data name="CARD_TYPE">						<field type="string" length="2">01</field>					</data>					<data name="LIMIT">						<field type="double" length="128">9999.0</field>					</data>				</struct>				<struct>					<data name="BANK_ID">						<field type="string" length="12">308584000013</field>					</data>					<data name="BANK_NAME">						<field type="string" length="4">招商银行</field>					</data>					<data name="CARD_DAY_LIMIT">						<field type="double" length="128">999999.0</field>					</data>					<data name="CARD_TYPE">						<field type="string" length="2">01</field>					</data>					<data name="LIMIT">						<field type="double" length="128">9999.0</field>					</data>				</struct>			</array>		</data>		<data name="STATUS">			<field type="string" length="1">S</field>		</data>	</body></service>，渠道名称是：test
+2019-04-28 12:01:31,098 main INFO  [PackProcessEngine:65] 7d537bee-268e-434a-972a-44e42e64b1e4----ESB转成Json的模板是：test_service_req
+2019-04-28 12:01:31,098 main INFO  [PackProcessEngine:68] 7d537bee-268e-434a-972a-44e42e64b1e4----JSON转成ESB XML的模板是：test_service_resp
+2019-04-28 12:01:31,157 main INFO  [PackProcessEngine:72] 7d537bee-268e-434a-972a-44e42e64b1e4----ESB XML转换成map之后的结果是：{sys-header={SYS_HEAD={RET=[{RET_CODE=000000, RET_MSG=SUCCESS}], SERVICE_CODE=MBSD_IFP_TP, MESSAGE_TYPE=1400, THIRD_ID=7b581155a0664bbab9c53d307f9ec847					, TRAN_TIMESTAMP=162552139, CONSUMER_ID=143, EC_NO=100430, COMPANY=BODC, SEQ_NO=39385991538409472, SOURCE_TYPE=43, CONSUMER_BUSI_NO=10112323435556, MESSAGE_CODE=0020, REFERENCE=1904190000003247, RET_STATUS=S, TRAN_DATE=20190419, TRAN_CODE=88888888}}, app-header={APP_HEAD={TOTAL_NUM=-1, TOTAL_FLAG=E, CURRENT_NUM=0, PGUP_OR_PGDN=1}}, body={STATUS=S, LIST_DETAIL=[{CARD_DAY_LIMIT=999999.0, CARD_TYPE=01, BANK_ID=2013-09-10, LIMIT=9999.0, BANK_NAME=中国农业银行}, {CARD_DAY_LIMIT=999999.0, CARD_TYPE=01, BANK_ID=104100000004, LIMIT=9999.0, BANK_NAME=中国银行}, {CARD_DAY_LIMIT=999999.0, CARD_TYPE=01, BANK_ID=102100099996, LIMIT=9999.0, BANK_NAME=中国工商银行}, {CARD_DAY_LIMIT=999999.0, CARD_TYPE=01, BANK_ID=105100000017, LIMIT=9999.0, BANK_NAME=中国建设银行}, {CARD_DAY_LIMIT=999999.0, CARD_TYPE=01, BANK_ID=308584000013, LIMIT=9999.0, BANK_NAME=招商银行}]}}
+2019-04-28 12:01:31,228 main INFO  [PackProcessEngine:76] 7d537bee-268e-434a-972a-44e42e64b1e4----map转换成json之后的结果是：{"data":{"limit":9999,"listDetail":[{"BANK_ID":"2013-09-10","BANK_NAME":"中国农业银行","CARD_DAY_LIMIT":"999999.0","CARD_TYPE":"01","LIMIT":"9999.0"},{"BANK_ID":"104100000004","BANK_NAME":"中国银行","CARD_DAY_LIMIT":"999999.0","CARD_TYPE":"01","LIMIT":"9999.0"},{"BANK_ID":"102100099996","BANK_NAME":"中国工商银行","CARD_DAY_LIMIT":"999999.0","CARD_TYPE":"01","LIMIT":"9999.0"},{"BANK_ID":"105100000017","BANK_NAME":"中国建设银行","CARD_DAY_LIMIT":"999999.0","CARD_TYPE":"01","LIMIT":"9999.0"},{"BANK_ID":"308584000013","BANK_NAME":"招商银行","CARD_DAY_LIMIT":"999999.0","CARD_TYPE":"01","LIMIT":"9999.0"}],"retMsg":"BODC","tranDate":20190419},"retCode":"000000"}
+2019-04-28 12:01:31,231 main INFO  [PackProcessEngine:83] 7d537bee-268e-434a-972a-44e42e64b1e4----加密之后的结果是：{"data":{"limit":9999,"listDetail":[{"BANK_ID":"2013-09-10","BANK_NAME":"中国农业银行","CARD_DAY_LIMIT":"999999.0","CARD_TYPE":"01","LIMIT":"9999.0"},{"BANK_ID":"104100000004","BANK_NAME":"中国银行","CARD_DAY_LIMIT":"999999.0","CARD_TYPE":"01","LIMIT":"9999.0"},{"BANK_ID":"102100099996","BANK_NAME":"中国工商银行","CARD_DAY_LIMIT":"999999.0","CARD_TYPE":"01","LIMIT":"9999.0"},{"BANK_ID":"105100000017","BANK_NAME":"中国建设银行","CARD_DAY_LIMIT":"999999.0","CARD_TYPE":"01","LIMIT":"9999.0"},{"BANK_ID":"308584000013","BANK_NAME":"招商银行","CARD_DAY_LIMIT":"999999.0","CARD_TYPE":"01","LIMIT":"9999.0"}],"retMsg":"BODC","tranDate":20190419},"retCode":"000000"}
+2019-04-28 12:01:31,233 main INFO  [PackProcessEngine:86] 7d537bee-268e-434a-972a-44e42e64b1e4----发送请求到到null请求参数是:{data={"data":{"limit":9999,"listDetail":[{"BANK_ID":"2013-09-10","BANK_NAME":"中国农业银行","CARD_DAY_LIMIT":"999999.0","CARD_TYPE":"01","LIMIT":"9999.0"},{"BANK_ID":"104100000004","BANK_NAME":"中国银行","CARD_DAY_LIMIT":"999999.0","CARD_TYPE":"01","LIMIT":"9999.0"},{"BANK_ID":"102100099996","BANK_NAME":"中国工商银行","CARD_DAY_LIMIT":"999999.0","CARD_TYPE":"01","LIMIT":"9999.0"},{"BANK_ID":"105100000017","BANK_NAME":"中国建设银行","CARD_DAY_LIMIT":"999999.0","CARD_TYPE":"01","LIMIT":"9999.0"},{"BANK_ID":"308584000013","BANK_NAME":"招商银行","CARD_DAY_LIMIT":"999999.0","CARD_TYPE":"01","LIMIT":"9999.0"}],"retMsg":"BODC","tranDate":20190419},"retCode":"000000"}, aeskey=@#$%@#$%$@#%}
+2019-04-28 12:01:31,233 main INFO  [PackProcessEngine:88] 7d537bee-268e-434a-972a-44e42e64b1e4----得到的响应是:{"data":{"limit":9999,"listDetail":[{"BANK_ID":"2013-09-10","BANK_NAME":"中国农业银行","CARD_DAY_LIMIT":"999999.0","CARD_TYPE":"01","LIMIT":"9999.0"},{"BANK_ID":"104100000004","BANK_NAME":"中国银行","CARD_DAY_LIMIT":"999999.0","CARD_TYPE":"01","LIMIT":"9999.0"},{"BANK_ID":"102100099996","BANK_NAME":"中国工商银行","CARD_DAY_LIMIT":"999999.0","CARD_TYPE":"01","LIMIT":"9999.0"},{"BANK_ID":"105100000017","BANK_NAME":"中国建设银行","CARD_DAY_LIMIT":"999999.0","CARD_TYPE":"01","LIMIT":"9999.0"},{"BANK_ID":"308584000013","BANK_NAME":"招商银行","CARD_DAY_LIMIT":"999999.0","CARD_TYPE":"01","LIMIT":"9999.0"}],"retMsg":"BODC","tranDate":20190419},"retCode":"000000"}
+2019-04-28 12:01:31,233 main INFO  [PackProcessEngine:91] 7d537bee-268e-434a-972a-44e42e64b1e4----解密后的结果是:{"data":{"limit":9999,"listDetail":[{"BANK_ID":"2013-09-10","BANK_NAME":"中国农业银行","CARD_DAY_LIMIT":"999999.0","CARD_TYPE":"01","LIMIT":"9999.0"},{"BANK_ID":"104100000004","BANK_NAME":"中国银行","CARD_DAY_LIMIT":"999999.0","CARD_TYPE":"01","LIMIT":"9999.0"},{"BANK_ID":"102100099996","BANK_NAME":"中国工商银行","CARD_DAY_LIMIT":"999999.0","CARD_TYPE":"01","LIMIT":"9999.0"},{"BANK_ID":"105100000017","BANK_NAME":"中国建设银行","CARD_DAY_LIMIT":"999999.0","CARD_TYPE":"01","LIMIT":"9999.0"},{"BANK_ID":"308584000013","BANK_NAME":"招商银行","CARD_DAY_LIMIT":"999999.0","CARD_TYPE":"01","LIMIT":"9999.0"}],"retMsg":"BODC","tranDate":20190419},"retCode":"000000"}
+2019-04-28 12:01:31,259 main INFO  [PackProcessEngine:96] 7d537bee-268e-434a-972a-44e42e64b1e4----转换成ESB XML的模型数据是:{model={"data":{"limit":9999,"listDetail":[{"BANK_ID":"2013-09-10","BANK_NAME":"中国农业银行","CARD_DAY_LIMIT":"999999.0","CARD_TYPE":"01","LIMIT":"9999.0"},{"BANK_ID":"104100000004","BANK_NAME":"中国银行","CARD_DAY_LIMIT":"999999.0","CARD_TYPE":"01","LIMIT":"9999.0"},{"BANK_ID":"102100099996","BANK_NAME":"中国工商银行","CARD_DAY_LIMIT":"999999.0","CARD_TYPE":"01","LIMIT":"9999.0"},{"BANK_ID":"105100000017","BANK_NAME":"中国建设银行","CARD_DAY_LIMIT":"999999.0","CARD_TYPE":"01","LIMIT":"9999.0"},{"BANK_ID":"308584000013","BANK_NAME":"招商银行","CARD_DAY_LIMIT":"999999.0","CARD_TYPE":"01","LIMIT":"9999.0"}],"retMsg":"BODC","tranDate":20190419},"retCode":"000000"}}
+2019-04-28 12:01:31,413 main INFO  [PackProcessEngine:99] 7d537bee-268e-434a-972a-44e42e64b1e4----响应ESB XML报文是：<?xml version="1.0" encoding="UTF-8"?>
+<!--
+{
+"model": {
+"retCode": "000000",
+"retMsg": "SUCCESS",
+"data": {
+"limit": "9999.0",
+"tranDate": "20190419",
+"listDetail": [{
+"totalNum": "-1",
+"bankName": "中国农业银行",
+"bankId": "103100000026"
+}, {
+"totalNum": "-1",
+"bankName": "中国银行",
+"bankId": "104100000004"
+}, {
+"totalNum": "-1",
+"bankName": "中国工商银行",
+"bankId": "102100099996"
+}, {
+"totalNum": "-1",
+"bankName": "中国建设银行",
+"bankId": "105100000017"
+}, {
+"totalNum": "-1",
+"bankName": "招商银行",
+"bankId": "308584000013"
+}]
+}
+}
+}
+-->
+<service>
+<sys-header>
+<data name="SYS_HEAD">
+<struct>
+<data name="COMPANY">
+<field type="string" length="4">BODC</field>
+</data>
+<data name="CONSUMER_BUSI_NO">
+<field type="string" length="14">10112323435556</field>
+</data>
+<data name="CONSUMER_ID">
+<field type="string" length="3">143</field>
+</data>
+<data name="EC_NO">
+<field type="string" length="6">100430</field>
+</data>
+<data name="MESSAGE_CODE">
+<field type="string" length="4">0020</field>
+</data>
+<data name="MESSAGE_TYPE">
+<field type="string" length="4">1400</field>
+</data>
+<data name="REFERENCE">
+<field type="string" length="16">1904190000003247</field>
+</data>
+<data name="SEQ_NO">
+<field type="string" length="17">39385991538409472</field>
+</data>
+<data name="SERVICE_CODE">
+<field type="string" length="11">MBSD_IFP_TP</field>
+</data>
+<data name="SOURCE_TYPE">
+<field type="string" length="2">43</field>
+</data>
+<data name="THIRD_ID">
+<field type="string" length="32">7b581155a0664bbab9c53d307f9ec847
+</field>
+</data>
+<data name="TRAN_CODE">
+<field type="string" length="8">88888888</field>
+</data>
+<data name="TRAN_DATE">
+<field type="string" length="8">20190419</field>
+</data>
+<data name="TRAN_TIMESTAMP">
+<field type="string" length="9">162552139</field>
+</data>
+<data name="RET_STATUS">
+<field type="string" length="1">S</field>
+</data>
+<data name="RET">
+<array>
+<data name="RET_CODE">
+<field type="string" length="6">000000</field>
+</data>
+<data name="RET_MSG">
+<field type="string" length="7"></field>
+</data>
+</array>
+</data>
+</struct>
+</data>
+</sys-header>
+<app-header>
+<data name="APP_HEAD">
+<struct>
+<data name="CURRENT_NUM">
+<field type="string" length="1">0</field>
+</data>
+<data name="PGUP_OR_PGDN">
+<field type="string" length="1">1</field>
+</data>
+<data name="TOTAL_FLAG">
+<field type="string" length="1">E</field>
+</data>
+<data name="TOTAL_NUM">
+<field type="string" length="2">
+-1
+</field>
+</data>
+</struct>
+</data>
+</app-header>
+<local-header />
+<body>
+<data name="LIST_DETAIL">
+<array>
+<struct>
+<data name="BANK_ID">
+<field type="string" length="12"></field>
+</data>
+<data name="BANK_NAME">
+<field type="string" length="6"></field>
+</data>
+<data name="CARD_DAY_LIMIT">
+<field type="double" length="128">999999.0</field>
+</data>
+<data name="CARD_TYPE">
+<field type="string" length="2">01</field>
+</data>
+<data name="LIMIT">
+<!-- 如果mode中的数据是数字类型，为避免数据超过四位之后自动用逗号分隔就采用 加?c的的方式-->
+<field type="double" length="128">9999</field>
+</data>
+</struct>
+<struct>
+<data name="BANK_ID">
+<field type="string" length="12"></field>
+</data>
+<data name="BANK_NAME">
+<field type="string" length="6"></field>
+</data>
+<data name="CARD_DAY_LIMIT">
+<field type="double" length="128">999999.0</field>
+</data>
+<data name="CARD_TYPE">
+<field type="string" length="2">01</field>
+</data>
+<data name="LIMIT">
+<!-- 如果mode中的数据是数字类型，为避免数据超过四位之后自动用逗号分隔就采用 加?c的的方式-->
+<field type="double" length="128">9999</field>
+</data>
+</struct>
+<struct>
+<data name="BANK_ID">
+<field type="string" length="12"></field>
+</data>
+<data name="BANK_NAME">
+<field type="string" length="6"></field>
+</data>
+<data name="CARD_DAY_LIMIT">
+<field type="double" length="128">999999.0</field>
+</data>
+<data name="CARD_TYPE">
+<field type="string" length="2">01</field>
+</data>
+<data name="LIMIT">
+<!-- 如果mode中的数据是数字类型，为避免数据超过四位之后自动用逗号分隔就采用 加?c的的方式-->
+<field type="double" length="128">9999</field>
+</data>
+</struct>
+<struct>
+<data name="BANK_ID">
+<field type="string" length="12"></field>
+</data>
+<data name="BANK_NAME">
+<field type="string" length="6"></field>
+</data>
+<data name="CARD_DAY_LIMIT">
+<field type="double" length="128">999999.0</field>
+</data>
+<data name="CARD_TYPE">
+<field type="string" length="2">01</field>
+</data>
+<data name="LIMIT">
+<!-- 如果mode中的数据是数字类型，为避免数据超过四位之后自动用逗号分隔就采用 加?c的的方式-->
+<field type="double" length="128">9999</field>
+</data>
+</struct>
+<struct>
+<data name="BANK_ID">
+<field type="string" length="12"></field>
+</data>
+<data name="BANK_NAME">
+<field type="string" length="6"></field>
+</data>
+<data name="CARD_DAY_LIMIT">
+<field type="double" length="128">999999.0</field>
+</data>
+<data name="CARD_TYPE">
+<field type="string" length="2">01</field>
+</data>
+<data name="LIMIT">
+<!-- 如果mode中的数据是数字类型，为避免数据超过四位之后自动用逗号分隔就采用 加?c的的方式-->
+<field type="double" length="128">9999</field>
+</data>
+</struct>
+</array>
+</data>
+<data name="STATUS">
+<field type="string" length="1">S</field>
+</data>
+</body>
+</service>
+2019-04-28 14:17:45,496 main INFO  [PackProcessEngine:42] d417caf2-3f29-4657-ab2d-eb14fc71af74----ESB XML报文是：﻿<?xml version="1.0" encoding="UTF-8"?><service>	<sys-header>		<data name="SYS_HEAD">			<struct>				<data name="COMPANY">					<field type="string" length="4">BODC</field>				</data>				<data name="CONSUMER_BUSI_NO">					<field type="string" length="14">10112323435556</field>				</data>				<data name="CONSUMER_ID">					<field type="string" length="3">143</field>				</data>				<data name="EC_NO">					<field type="string" length="6">100430</field>				</data>				<data name="MESSAGE_CODE">					<field type="string" length="4">0020</field>				</data>				<data name="MESSAGE_TYPE">					<field type="string" length="4">1400</field>				</data>				<data name="REFERENCE">					<field type="string" length="16">1904190000003247</field>				</data>				<data name="SEQ_NO">					<field type="string" length="17">39385991538409472</field>				</data>				<data name="SERVICE_CODE">					<field type="string" length="11">MBSD_IFP_TP</field>				</data>				<data name="SOURCE_TYPE">					<field type="string" length="2">43</field>				</data>				<data name="THIRD_ID">					<field type="string" length="32">7b581155a0664bbab9c53d307f9ec847					</field>				</data>				<data name="TRAN_CODE">					<field type="string" length="8">88888888</field>				</data>				<data name="TRAN_DATE">					<field type="string" length="8">20190419</field>				</data>				<data name="TRAN_TIMESTAMP">					<field type="string" length="9">162552139</field>				</data>				<data name="RET_STATUS">					<field type="string" length="1">S</field>				</data>				<data name="RET">					<array>						<struct>							<data name="RET_CODE">								<field type="string" length="6">000000</field>							</data>							<data name="RET_MSG">								<field type="string" length="7">SUCCESS</field>							</data>						</struct>					</array>				</data>			</struct>		</data>	</sys-header>	<app-header>		<data name="APP_HEAD">			<struct>				<data name="CURRENT_NUM">					<field type="string" length="1">0</field>				</data>				<data name="PGUP_OR_PGDN">					<field type="string" length="1">1</field>				</data>				<data name="TOTAL_FLAG">					<field type="string" length="1">E</field>				</data>				<data name="TOTAL_NUM">					<field type="string" length="2">-1</field>				</data>			</struct>		</data>	</app-header>	<local-header />	<body>		<data name="LIST_DETAIL">			<array>				<struct>					<data name="BANK_ID">						<field type="string" length="12">2013-09-10</field>					</data>					<data name="BANK_NAME">						<field type="string" length="6">中国农业银行</field>					</data>					<data name="CARD_DAY_LIMIT">						<field type="double" length="128">999999.0</field>					</data>					<data name="CARD_TYPE">						<field type="string" length="2">01</field>					</data>					<data name="LIMIT">						<field type="double" length="128">9999.0</field>					</data>				</struct>				<struct>					<data name="BANK_ID">						<field type="string" length="12">104100000004</field>					</data>					<data name="BANK_NAME">						<field type="string" length="4">中国银行</field>					</data>					<data name="CARD_DAY_LIMIT">						<field type="double" length="128">999999.0</field>					</data>					<data name="CARD_TYPE">						<field type="string" length="2">01</field>					</data>					<data name="LIMIT">						<field type="double" length="128">9999.0</field>					</data>				</struct>				<struct>					<data name="BANK_ID">						<field type="string" length="12">102100099996</field>					</data>					<data name="BANK_NAME">						<field type="string" length="6">中国工商银行</field>					</data>					<data name="CARD_DAY_LIMIT">						<field type="double" length="128">999999.0</field>					</data>					<data name="CARD_TYPE">						<field type="string" length="2">01</field>					</data>					<data name="LIMIT">						<field type="double" length="128">9999.0</field>					</data>				</struct>				<struct>					<data name="BANK_ID">						<field type="string" length="12">105100000017</field>					</data>					<data name="BANK_NAME">						<field type="string" length="6">中国建设银行</field>					</data>					<data name="CARD_DAY_LIMIT">						<field type="double" length="128">999999.0</field>					</data>					<data name="CARD_TYPE">						<field type="string" length="2">01</field>					</data>					<data name="LIMIT">						<field type="double" length="128">9999.0</field>					</data>				</struct>				<struct>					<data name="BANK_ID">						<field type="string" length="12">308584000013</field>					</data>					<data name="BANK_NAME">						<field type="string" length="4">招商银行</field>					</data>					<data name="CARD_DAY_LIMIT">						<field type="double" length="128">999999.0</field>					</data>					<data name="CARD_TYPE">						<field type="string" length="2">01</field>					</data>					<data name="LIMIT">						<field type="double" length="128">9999.0</field>					</data>				</struct>			</array>		</data>		<data name="STATUS">			<field type="string" length="1">S</field>		</data>	</body></service>，渠道名称是：test
+2019-04-28 14:17:45,498 main INFO  [PackProcessEngine:45] d417caf2-3f29-4657-ab2d-eb14fc71af74----ESB转成Json的模板是：test_service_req
+2019-04-28 14:17:45,498 main INFO  [PackProcessEngine:48] d417caf2-3f29-4657-ab2d-eb14fc71af74----JSON转成ESB XML的模板是：test_service_resp
+2019-04-28 14:17:45,513 main ERROR [ZbankBeanContainer:37] java.lang.NullPointerException
+2019-04-28 14:17:45,515 main ERROR [PackProcessEngine:82] java.lang.NullPointerException
+2019-04-28 14:18:26,535 main INFO  [PackProcessEngine:42] 36c9f198-e205-4a25-8fc1-e77eb4a22694----ESB XML报文是：﻿<?xml version="1.0" encoding="UTF-8"?><service>	<sys-header>		<data name="SYS_HEAD">			<struct>				<data name="COMPANY">					<field type="string" length="4">BODC</field>				</data>				<data name="CONSUMER_BUSI_NO">					<field type="string" length="14">10112323435556</field>				</data>				<data name="CONSUMER_ID">					<field type="string" length="3">143</field>				</data>				<data name="EC_NO">					<field type="string" length="6">100430</field>				</data>				<data name="MESSAGE_CODE">					<field type="string" length="4">0020</field>				</data>				<data name="MESSAGE_TYPE">					<field type="string" length="4">1400</field>				</data>				<data name="REFERENCE">					<field type="string" length="16">1904190000003247</field>				</data>				<data name="SEQ_NO">					<field type="string" length="17">39385991538409472</field>				</data>				<data name="SERVICE_CODE">					<field type="string" length="11">MBSD_IFP_TP</field>				</data>				<data name="SOURCE_TYPE">					<field type="string" length="2">43</field>				</data>				<data name="THIRD_ID">					<field type="string" length="32">7b581155a0664bbab9c53d307f9ec847					</field>				</data>				<data name="TRAN_CODE">					<field type="string" length="8">88888888</field>				</data>				<data name="TRAN_DATE">					<field type="string" length="8">20190419</field>				</data>				<data name="TRAN_TIMESTAMP">					<field type="string" length="9">162552139</field>				</data>				<data name="RET_STATUS">					<field type="string" length="1">S</field>				</data>				<data name="RET">					<array>						<struct>							<data name="RET_CODE">								<field type="string" length="6">000000</field>							</data>							<data name="RET_MSG">								<field type="string" length="7">SUCCESS</field>							</data>						</struct>					</array>				</data>			</struct>		</data>	</sys-header>	<app-header>		<data name="APP_HEAD">			<struct>				<data name="CURRENT_NUM">					<field type="string" length="1">0</field>				</data>				<data name="PGUP_OR_PGDN">					<field type="string" length="1">1</field>				</data>				<data name="TOTAL_FLAG">					<field type="string" length="1">E</field>				</data>				<data name="TOTAL_NUM">					<field type="string" length="2">-1</field>				</data>			</struct>		</data>	</app-header>	<local-header />	<body>		<data name="LIST_DETAIL">			<array>				<struct>					<data name="BANK_ID">						<field type="string" length="12">2013-09-10</field>					</data>					<data name="BANK_NAME">						<field type="string" length="6">中国农业银行</field>					</data>					<data name="CARD_DAY_LIMIT">						<field type="double" length="128">999999.0</field>					</data>					<data name="CARD_TYPE">						<field type="string" length="2">01</field>					</data>					<data name="LIMIT">						<field type="double" length="128">9999.0</field>					</data>				</struct>				<struct>					<data name="BANK_ID">						<field type="string" length="12">104100000004</field>					</data>					<data name="BANK_NAME">						<field type="string" length="4">中国银行</field>					</data>					<data name="CARD_DAY_LIMIT">						<field type="double" length="128">999999.0</field>					</data>					<data name="CARD_TYPE">						<field type="string" length="2">01</field>					</data>					<data name="LIMIT">						<field type="double" length="128">9999.0</field>					</data>				</struct>				<struct>					<data name="BANK_ID">						<field type="string" length="12">102100099996</field>					</data>					<data name="BANK_NAME">						<field type="string" length="6">中国工商银行</field>					</data>					<data name="CARD_DAY_LIMIT">						<field type="double" length="128">999999.0</field>					</data>					<data name="CARD_TYPE">						<field type="string" length="2">01</field>					</data>					<data name="LIMIT">						<field type="double" length="128">9999.0</field>					</data>				</struct>				<struct>					<data name="BANK_ID">						<field type="string" length="12">105100000017</field>					</data>					<data name="BANK_NAME">						<field type="string" length="6">中国建设银行</field>					</data>					<data name="CARD_DAY_LIMIT">						<field type="double" length="128">999999.0</field>					</data>					<data name="CARD_TYPE">						<field type="string" length="2">01</field>					</data>					<data name="LIMIT">						<field type="double" length="128">9999.0</field>					</data>				</struct>				<struct>					<data name="BANK_ID">						<field type="string" length="12">308584000013</field>					</data>					<data name="BANK_NAME">						<field type="string" length="4">招商银行</field>					</data>					<data name="CARD_DAY_LIMIT">						<field type="double" length="128">999999.0</field>					</data>					<data name="CARD_TYPE">						<field type="string" length="2">01</field>					</data>					<data name="LIMIT">						<field type="double" length="128">9999.0</field>					</data>				</struct>			</array>		</data>		<data name="STATUS">			<field type="string" length="1">S</field>		</data>	</body></service>，渠道名称是：test
+2019-04-28 14:18:27,262 main INFO  [PackProcessEngine:45] 36c9f198-e205-4a25-8fc1-e77eb4a22694----ESB转成Json的模板是：test_service_req
+2019-04-28 14:18:28,862 main INFO  [PackProcessEngine:48] 36c9f198-e205-4a25-8fc1-e77eb4a22694----JSON转成ESB XML的模板是：test_service_resp
+2019-04-28 14:18:54,813 main INFO  [PackProcessEngine:42] 8d32cc50-c021-404c-8073-70d201e4ce75----ESB XML报文是：﻿<?xml version="1.0" encoding="UTF-8"?><service>	<sys-header>		<data name="SYS_HEAD">			<struct>				<data name="COMPANY">					<field type="string" length="4">BODC</field>				</data>				<data name="CONSUMER_BUSI_NO">					<field type="string" length="14">10112323435556</field>				</data>				<data name="CONSUMER_ID">					<field type="string" length="3">143</field>				</data>				<data name="EC_NO">					<field type="string" length="6">100430</field>				</data>				<data name="MESSAGE_CODE">					<field type="string" length="4">0020</field>				</data>				<data name="MESSAGE_TYPE">					<field type="string" length="4">1400</field>				</data>				<data name="REFERENCE">					<field type="string" length="16">1904190000003247</field>				</data>				<data name="SEQ_NO">					<field type="string" length="17">39385991538409472</field>				</data>				<data name="SERVICE_CODE">					<field type="string" length="11">MBSD_IFP_TP</field>				</data>				<data name="SOURCE_TYPE">					<field type="string" length="2">43</field>				</data>				<data name="THIRD_ID">					<field type="string" length="32">7b581155a0664bbab9c53d307f9ec847					</field>				</data>				<data name="TRAN_CODE">					<field type="string" length="8">88888888</field>				</data>				<data name="TRAN_DATE">					<field type="string" length="8">20190419</field>				</data>				<data name="TRAN_TIMESTAMP">					<field type="string" length="9">162552139</field>				</data>				<data name="RET_STATUS">					<field type="string" length="1">S</field>				</data>				<data name="RET">					<array>						<struct>							<data name="RET_CODE">								<field type="string" length="6">000000</field>							</data>							<data name="RET_MSG">								<field type="string" length="7">SUCCESS</field>							</data>						</struct>					</array>				</data>			</struct>		</data>	</sys-header>	<app-header>		<data name="APP_HEAD">			<struct>				<data name="CURRENT_NUM">					<field type="string" length="1">0</field>				</data>				<data name="PGUP_OR_PGDN">					<field type="string" length="1">1</field>				</data>				<data name="TOTAL_FLAG">					<field type="string" length="1">E</field>				</data>				<data name="TOTAL_NUM">					<field type="string" length="2">-1</field>				</data>			</struct>		</data>	</app-header>	<local-header />	<body>		<data name="LIST_DETAIL">			<array>				<struct>					<data name="BANK_ID">						<field type="string" length="12">2013-09-10</field>					</data>					<data name="BANK_NAME">						<field type="string" length="6">中国农业银行</field>					</data>					<data name="CARD_DAY_LIMIT">						<field type="double" length="128">999999.0</field>					</data>					<data name="CARD_TYPE">						<field type="string" length="2">01</field>					</data>					<data name="LIMIT">						<field type="double" length="128">9999.0</field>					</data>				</struct>				<struct>					<data name="BANK_ID">						<field type="string" length="12">104100000004</field>					</data>					<data name="BANK_NAME">						<field type="string" length="4">中国银行</field>					</data>					<data name="CARD_DAY_LIMIT">						<field type="double" length="128">999999.0</field>					</data>					<data name="CARD_TYPE">						<field type="string" length="2">01</field>					</data>					<data name="LIMIT">						<field type="double" length="128">9999.0</field>					</data>				</struct>				<struct>					<data name="BANK_ID">						<field type="string" length="12">102100099996</field>					</data>					<data name="BANK_NAME">						<field type="string" length="6">中国工商银行</field>					</data>					<data name="CARD_DAY_LIMIT">						<field type="double" length="128">999999.0</field>					</data>					<data name="CARD_TYPE">						<field type="string" length="2">01</field>					</data>					<data name="LIMIT">						<field type="double" length="128">9999.0</field>					</data>				</struct>				<struct>					<data name="BANK_ID">						<field type="string" length="12">105100000017</field>					</data>					<data name="BANK_NAME">						<field type="string" length="6">中国建设银行</field>					</data>					<data name="CARD_DAY_LIMIT">						<field type="double" length="128">999999.0</field>					</data>					<data name="CARD_TYPE">						<field type="string" length="2">01</field>					</data>					<data name="LIMIT">						<field type="double" length="128">9999.0</field>					</data>				</struct>				<struct>					<data name="BANK_ID">						<field type="string" length="12">308584000013</field>					</data>					<data name="BANK_NAME">						<field type="string" length="4">招商银行</field>					</data>					<data name="CARD_DAY_LIMIT">						<field type="double" length="128">999999.0</field>					</data>					<data name="CARD_TYPE">						<field type="string" length="2">01</field>					</data>					<data name="LIMIT">						<field type="double" length="128">9999.0</field>					</data>				</struct>			</array>		</data>		<data name="STATUS">			<field type="string" length="1">S</field>		</data>	</body></service>，渠道名称是：test
+2019-04-28 14:18:54,813 main INFO  [PackProcessEngine:45] 8d32cc50-c021-404c-8073-70d201e4ce75----ESB转成Json的模板是：test_service_req
+2019-04-28 14:18:54,813 main INFO  [PackProcessEngine:48] 8d32cc50-c021-404c-8073-70d201e4ce75----JSON转成ESB XML的模板是：test_service_resp
+2019-04-28 14:18:54,833 main ERROR [ZbankBeanContainer:37] java.lang.NullPointerException
+2019-04-28 14:18:54,833 main ERROR [PackProcessEngine:82] java.lang.NullPointerException
+2019-04-28 14:19:09,693 main INFO  [PackProcessEngine:42] 857214fe-3564-4f07-a975-6d8091d0b475----ESB XML报文是：﻿<?xml version="1.0" encoding="UTF-8"?><service>	<sys-header>		<data name="SYS_HEAD">			<struct>				<data name="COMPANY">					<field type="string" length="4">BODC</field>				</data>				<data name="CONSUMER_BUSI_NO">					<field type="string" length="14">10112323435556</field>				</data>				<data name="CONSUMER_ID">					<field type="string" length="3">143</field>				</data>				<data name="EC_NO">					<field type="string" length="6">100430</field>				</data>				<data name="MESSAGE_CODE">					<field type="string" length="4">0020</field>				</data>				<data name="MESSAGE_TYPE">					<field type="string" length="4">1400</field>				</data>				<data name="REFERENCE">					<field type="string" length="16">1904190000003247</field>				</data>				<data name="SEQ_NO">					<field type="string" length="17">39385991538409472</field>				</data>				<data name="SERVICE_CODE">					<field type="string" length="11">MBSD_IFP_TP</field>				</data>				<data name="SOURCE_TYPE">					<field type="string" length="2">43</field>				</data>				<data name="THIRD_ID">					<field type="string" length="32">7b581155a0664bbab9c53d307f9ec847					</field>				</data>				<data name="TRAN_CODE">					<field type="string" length="8">88888888</field>				</data>				<data name="TRAN_DATE">					<field type="string" length="8">20190419</field>				</data>				<data name="TRAN_TIMESTAMP">					<field type="string" length="9">162552139</field>				</data>				<data name="RET_STATUS">					<field type="string" length="1">S</field>				</data>				<data name="RET">					<array>						<struct>							<data name="RET_CODE">								<field type="string" length="6">000000</field>							</data>							<data name="RET_MSG">								<field type="string" length="7">SUCCESS</field>							</data>						</struct>					</array>				</data>			</struct>		</data>	</sys-header>	<app-header>		<data name="APP_HEAD">			<struct>				<data name="CURRENT_NUM">					<field type="string" length="1">0</field>				</data>				<data name="PGUP_OR_PGDN">					<field type="string" length="1">1</field>				</data>				<data name="TOTAL_FLAG">					<field type="string" length="1">E</field>				</data>				<data name="TOTAL_NUM">					<field type="string" length="2">-1</field>				</data>			</struct>		</data>	</app-header>	<local-header />	<body>		<data name="LIST_DETAIL">			<array>				<struct>					<data name="BANK_ID">						<field type="string" length="12">2013-09-10</field>					</data>					<data name="BANK_NAME">						<field type="string" length="6">中国农业银行</field>					</data>					<data name="CARD_DAY_LIMIT">						<field type="double" length="128">999999.0</field>					</data>					<data name="CARD_TYPE">						<field type="string" length="2">01</field>					</data>					<data name="LIMIT">						<field type="double" length="128">9999.0</field>					</data>				</struct>				<struct>					<data name="BANK_ID">						<field type="string" length="12">104100000004</field>					</data>					<data name="BANK_NAME">						<field type="string" length="4">中国银行</field>					</data>					<data name="CARD_DAY_LIMIT">						<field type="double" length="128">999999.0</field>					</data>					<data name="CARD_TYPE">						<field type="string" length="2">01</field>					</data>					<data name="LIMIT">						<field type="double" length="128">9999.0</field>					</data>				</struct>				<struct>					<data name="BANK_ID">						<field type="string" length="12">102100099996</field>					</data>					<data name="BANK_NAME">						<field type="string" length="6">中国工商银行</field>					</data>					<data name="CARD_DAY_LIMIT">						<field type="double" length="128">999999.0</field>					</data>					<data name="CARD_TYPE">						<field type="string" length="2">01</field>					</data>					<data name="LIMIT">						<field type="double" length="128">9999.0</field>					</data>				</struct>				<struct>					<data name="BANK_ID">						<field type="string" length="12">105100000017</field>					</data>					<data name="BANK_NAME">						<field type="string" length="6">中国建设银行</field>					</data>					<data name="CARD_DAY_LIMIT">						<field type="double" length="128">999999.0</field>					</data>					<data name="CARD_TYPE">						<field type="string" length="2">01</field>					</data>					<data name="LIMIT">						<field type="double" length="128">9999.0</field>					</data>				</struct>				<struct>					<data name="BANK_ID">						<field type="string" length="12">308584000013</field>					</data>					<data name="BANK_NAME">						<field type="string" length="4">招商银行</field>					</data>					<data name="CARD_DAY_LIMIT">						<field type="double" length="128">999999.0</field>					</data>					<data name="CARD_TYPE">						<field type="string" length="2">01</field>					</data>					<data name="LIMIT">						<field type="double" length="128">9999.0</field>					</data>				</struct>			</array>		</data>		<data name="STATUS">			<field type="string" length="1">S</field>		</data>	</body></service>，渠道名称是：test
+2019-04-28 14:19:09,695 main INFO  [PackProcessEngine:45] 857214fe-3564-4f07-a975-6d8091d0b475----ESB转成Json的模板是：test_service_req
+2019-04-28 14:19:09,695 main INFO  [PackProcessEngine:48] 857214fe-3564-4f07-a975-6d8091d0b475----JSON转成ESB XML的模板是：test_service_resp
+2019-04-28 14:25:33,909 main INFO  [PackProcessEngine:42] 70a498e5-3a04-408d-be3d-ef7a9f5fcc42----ESB XML报文是：﻿<?xml version="1.0" encoding="UTF-8"?><service>	<sys-header>		<data name="SYS_HEAD">			<struct>				<data name="COMPANY">					<field type="string" length="4">BODC</field>				</data>				<data name="CONSUMER_BUSI_NO">					<field type="string" length="14">10112323435556</field>				</data>				<data name="CONSUMER_ID">					<field type="string" length="3">143</field>				</data>				<data name="EC_NO">					<field type="string" length="6">100430</field>				</data>				<data name="MESSAGE_CODE">					<field type="string" length="4">0020</field>				</data>				<data name="MESSAGE_TYPE">					<field type="string" length="4">1400</field>				</data>				<data name="REFERENCE">					<field type="string" length="16">1904190000003247</field>				</data>				<data name="SEQ_NO">					<field type="string" length="17">39385991538409472</field>				</data>				<data name="SERVICE_CODE">					<field type="string" length="11">MBSD_IFP_TP</field>				</data>				<data name="SOURCE_TYPE">					<field type="string" length="2">43</field>				</data>				<data name="THIRD_ID">					<field type="string" length="32">7b581155a0664bbab9c53d307f9ec847					</field>				</data>				<data name="TRAN_CODE">					<field type="string" length="8">88888888</field>				</data>				<data name="TRAN_DATE">					<field type="string" length="8">20190419</field>				</data>				<data name="TRAN_TIMESTAMP">					<field type="string" length="9">162552139</field>				</data>				<data name="RET_STATUS">					<field type="string" length="1">S</field>				</data>				<data name="RET">					<array>						<struct>							<data name="RET_CODE">								<field type="string" length="6">000000</field>							</data>							<data name="RET_MSG">								<field type="string" length="7">SUCCESS</field>							</data>						</struct>					</array>				</data>			</struct>		</data>	</sys-header>	<app-header>		<data name="APP_HEAD">			<struct>				<data name="CURRENT_NUM">					<field type="string" length="1">0</field>				</data>				<data name="PGUP_OR_PGDN">					<field type="string" length="1">1</field>				</data>				<data name="TOTAL_FLAG">					<field type="string" length="1">E</field>				</data>				<data name="TOTAL_NUM">					<field type="string" length="2">-1</field>				</data>			</struct>		</data>	</app-header>	<local-header />	<body>		<data name="LIST_DETAIL">			<array>				<struct>					<data name="BANK_ID">						<field type="string" length="12">2013-09-10</field>					</data>					<data name="BANK_NAME">						<field type="string" length="6">中国农业银行</field>					</data>					<data name="CARD_DAY_LIMIT">						<field type="double" length="128">999999.0</field>					</data>					<data name="CARD_TYPE">						<field type="string" length="2">01</field>					</data>					<data name="LIMIT">						<field type="double" length="128">9999.0</field>					</data>				</struct>				<struct>					<data name="BANK_ID">						<field type="string" length="12">104100000004</field>					</data>					<data name="BANK_NAME">						<field type="string" length="4">中国银行</field>					</data>					<data name="CARD_DAY_LIMIT">						<field type="double" length="128">999999.0</field>					</data>					<data name="CARD_TYPE">						<field type="string" length="2">01</field>					</data>					<data name="LIMIT">						<field type="double" length="128">9999.0</field>					</data>				</struct>				<struct>					<data name="BANK_ID">						<field type="string" length="12">102100099996</field>					</data>					<data name="BANK_NAME">						<field type="string" length="6">中国工商银行</field>					</data>					<data name="CARD_DAY_LIMIT">						<field type="double" length="128">999999.0</field>					</data>					<data name="CARD_TYPE">						<field type="string" length="2">01</field>					</data>					<data name="LIMIT">						<field type="double" length="128">9999.0</field>					</data>				</struct>				<struct>					<data name="BANK_ID">						<field type="string" length="12">105100000017</field>					</data>					<data name="BANK_NAME">						<field type="string" length="6">中国建设银行</field>					</data>					<data name="CARD_DAY_LIMIT">						<field type="double" length="128">999999.0</field>					</data>					<data name="CARD_TYPE">						<field type="string" length="2">01</field>					</data>					<data name="LIMIT">						<field type="double" length="128">9999.0</field>					</data>				</struct>				<struct>					<data name="BANK_ID">						<field type="string" length="12">308584000013</field>					</data>					<data name="BANK_NAME">						<field type="string" length="4">招商银行</field>					</data>					<data name="CARD_DAY_LIMIT">						<field type="double" length="128">999999.0</field>					</data>					<data name="CARD_TYPE">						<field type="string" length="2">01</field>					</data>					<data name="LIMIT">						<field type="double" length="128">9999.0</field>					</data>				</struct>			</array>		</data>		<data name="STATUS">			<field type="string" length="1">S</field>		</data>	</body></service>，渠道名称是：test
+2019-04-28 14:25:33,911 main INFO  [PackProcessEngine:45] 70a498e5-3a04-408d-be3d-ef7a9f5fcc42----ESB转成Json的模板是：test_service_req
+2019-04-28 14:25:33,911 main INFO  [PackProcessEngine:48] 70a498e5-3a04-408d-be3d-ef7a9f5fcc42----JSON转成ESB XML的模板是：test_service_resp
+2019-04-28 14:25:33,929 main ERROR [ZbankBeanContainer:35] z_bank.scanner.package在配置文件中配置有误或者未做任何配置!!
+2019-04-28 14:25:33,929 main ERROR [ZbankBeanContainer:46] java.lang.NullPointerException
+2019-04-28 14:25:33,931 main ERROR [ZbankBeanContainer:60] com.z_bank.pack.frame.esbparser.EsbXml2MapImpl未找到，原因是com.z_bank.pack.frame.esbparser.EsbXml2MapImpl未加@ZbankBean注解，或者该类不在包扫描配置com.z_bank.pack.frame下!
+2019-04-28 14:25:33,931 main ERROR [PackProcessEngine:82] java.lang.NullPointerException
+2019-04-28 14:26:34,562 main INFO  [PackProcessEngine:42] 4d0d6aeb-7bbb-444b-8b01-922d1badf957----ESB XML报文是：﻿<?xml version="1.0" encoding="UTF-8"?><service>	<sys-header>		<data name="SYS_HEAD">			<struct>				<data name="COMPANY">					<field type="string" length="4">BODC</field>				</data>				<data name="CONSUMER_BUSI_NO">					<field type="string" length="14">10112323435556</field>				</data>				<data name="CONSUMER_ID">					<field type="string" length="3">143</field>				</data>				<data name="EC_NO">					<field type="string" length="6">100430</field>				</data>				<data name="MESSAGE_CODE">					<field type="string" length="4">0020</field>				</data>				<data name="MESSAGE_TYPE">					<field type="string" length="4">1400</field>				</data>				<data name="REFERENCE">					<field type="string" length="16">1904190000003247</field>				</data>				<data name="SEQ_NO">					<field type="string" length="17">39385991538409472</field>				</data>				<data name="SERVICE_CODE">					<field type="string" length="11">MBSD_IFP_TP</field>				</data>				<data name="SOURCE_TYPE">					<field type="string" length="2">43</field>				</data>				<data name="THIRD_ID">					<field type="string" length="32">7b581155a0664bbab9c53d307f9ec847					</field>				</data>				<data name="TRAN_CODE">					<field type="string" length="8">88888888</field>				</data>				<data name="TRAN_DATE">					<field type="string" length="8">20190419</field>				</data>				<data name="TRAN_TIMESTAMP">					<field type="string" length="9">162552139</field>				</data>				<data name="RET_STATUS">					<field type="string" length="1">S</field>				</data>				<data name="RET">					<array>						<struct>							<data name="RET_CODE">								<field type="string" length="6">000000</field>							</data>							<data name="RET_MSG">								<field type="string" length="7">SUCCESS</field>							</data>						</struct>					</array>				</data>			</struct>		</data>	</sys-header>	<app-header>		<data name="APP_HEAD">			<struct>				<data name="CURRENT_NUM">					<field type="string" length="1">0</field>				</data>				<data name="PGUP_OR_PGDN">					<field type="string" length="1">1</field>				</data>				<data name="TOTAL_FLAG">					<field type="string" length="1">E</field>				</data>				<data name="TOTAL_NUM">					<field type="string" length="2">-1</field>				</data>			</struct>		</data>	</app-header>	<local-header />	<body>		<data name="LIST_DETAIL">			<array>				<struct>					<data name="BANK_ID">						<field type="string" length="12">2013-09-10</field>					</data>					<data name="BANK_NAME">						<field type="string" length="6">中国农业银行</field>					</data>					<data name="CARD_DAY_LIMIT">						<field type="double" length="128">999999.0</field>					</data>					<data name="CARD_TYPE">						<field type="string" length="2">01</field>					</data>					<data name="LIMIT">						<field type="double" length="128">9999.0</field>					</data>				</struct>				<struct>					<data name="BANK_ID">						<field type="string" length="12">104100000004</field>					</data>					<data name="BANK_NAME">						<field type="string" length="4">中国银行</field>					</data>					<data name="CARD_DAY_LIMIT">						<field type="double" length="128">999999.0</field>					</data>					<data name="CARD_TYPE">						<field type="string" length="2">01</field>					</data>					<data name="LIMIT">						<field type="double" length="128">9999.0</field>					</data>				</struct>				<struct>					<data name="BANK_ID">						<field type="string" length="12">102100099996</field>					</data>					<data name="BANK_NAME">						<field type="string" length="6">中国工商银行</field>					</data>					<data name="CARD_DAY_LIMIT">						<field type="double" length="128">999999.0</field>					</data>					<data name="CARD_TYPE">						<field type="string" length="2">01</field>					</data>					<data name="LIMIT">						<field type="double" length="128">9999.0</field>					</data>				</struct>				<struct>					<data name="BANK_ID">						<field type="string" length="12">105100000017</field>					</data>					<data name="BANK_NAME">						<field type="string" length="6">中国建设银行</field>					</data>					<data name="CARD_DAY_LIMIT">						<field type="double" length="128">999999.0</field>					</data>					<data name="CARD_TYPE">						<field type="string" length="2">01</field>					</data>					<data name="LIMIT">						<field type="double" length="128">9999.0</field>					</data>				</struct>				<struct>					<data name="BANK_ID">						<field type="string" length="12">308584000013</field>					</data>					<data name="BANK_NAME">						<field type="string" length="4">招商银行</field>					</data>					<data name="CARD_DAY_LIMIT">						<field type="double" length="128">999999.0</field>					</data>					<data name="CARD_TYPE">						<field type="string" length="2">01</field>					</data>					<data name="LIMIT">						<field type="double" length="128">9999.0</field>					</data>				</struct>			</array>		</data>		<data name="STATUS">			<field type="string" length="1">S</field>		</data>	</body></service>，渠道名称是：test
+2019-04-28 14:26:34,565 main INFO  [PackProcessEngine:45] 4d0d6aeb-7bbb-444b-8b01-922d1badf957----ESB转成Json的模板是：test_service_req
+2019-04-28 14:26:34,565 main INFO  [PackProcessEngine:48] 4d0d6aeb-7bbb-444b-8b01-922d1badf957----JSON转成ESB XML的模板是：test_service_resp
+2019-04-28 14:26:34,590 main ERROR [ZbankBeanContainer:35] z_bank.scanner.package在配置文件中配置有误或者未做任何配置!!
+2019-04-28 14:26:34,590 main ERROR [ZbankBeanContainer:46] java.lang.NullPointerException
+2019-04-28 14:26:34,592 main ERROR [ZbankBeanContainer:60] com.z_bank.pack.frame.esbparser.EsbXml2MapImpl未找到，原因是com.z_bank.pack.frame.esbparser.EsbXml2MapImpl未加@ZbankBean注解，或者该类不在包扫描配置z_bank.scanner.package=com.z_bank.pack.frame下!
+2019-04-28 14:26:34,592 main ERROR [PackProcessEngine:82] java.lang.NullPointerException
+2019-04-28 14:27:41,696 main INFO  [PackProcessEngine:42] 41749012-9e0e-4e0f-807a-f8ae399a56c6----ESB XML报文是：﻿<?xml version="1.0" encoding="UTF-8"?><service>	<sys-header>		<data name="SYS_HEAD">			<struct>				<data name="COMPANY">					<field type="string" length="4">BODC</field>				</data>				<data name="CONSUMER_BUSI_NO">					<field type="string" length="14">10112323435556</field>				</data>				<data name="CONSUMER_ID">					<field type="string" length="3">143</field>				</data>				<data name="EC_NO">					<field type="string" length="6">100430</field>				</data>				<data name="MESSAGE_CODE">					<field type="string" length="4">0020</field>				</data>				<data name="MESSAGE_TYPE">					<field type="string" length="4">1400</field>				</data>				<data name="REFERENCE">					<field type="string" length="16">1904190000003247</field>				</data>				<data name="SEQ_NO">					<field type="string" length="17">39385991538409472</field>				</data>				<data name="SERVICE_CODE">					<field type="string" length="11">MBSD_IFP_TP</field>				</data>				<data name="SOURCE_TYPE">					<field type="string" length="2">43</field>				</data>				<data name="THIRD_ID">					<field type="string" length="32">7b581155a0664bbab9c53d307f9ec847					</field>				</data>				<data name="TRAN_CODE">					<field type="string" length="8">88888888</field>				</data>				<data name="TRAN_DATE">					<field type="string" length="8">20190419</field>				</data>				<data name="TRAN_TIMESTAMP">					<field type="string" length="9">162552139</field>				</data>				<data name="RET_STATUS">					<field type="string" length="1">S</field>				</data>				<data name="RET">					<array>						<struct>							<data name="RET_CODE">								<field type="string" length="6">000000</field>							</data>							<data name="RET_MSG">								<field type="string" length="7">SUCCESS</field>							</data>						</struct>					</array>				</data>			</struct>		</data>	</sys-header>	<app-header>		<data name="APP_HEAD">			<struct>				<data name="CURRENT_NUM">					<field type="string" length="1">0</field>				</data>				<data name="PGUP_OR_PGDN">					<field type="string" length="1">1</field>				</data>				<data name="TOTAL_FLAG">					<field type="string" length="1">E</field>				</data>				<data name="TOTAL_NUM">					<field type="string" length="2">-1</field>				</data>			</struct>		</data>	</app-header>	<local-header />	<body>		<data name="LIST_DETAIL">			<array>				<struct>					<data name="BANK_ID">						<field type="string" length="12">2013-09-10</field>					</data>					<data name="BANK_NAME">						<field type="string" length="6">中国农业银行</field>					</data>					<data name="CARD_DAY_LIMIT">						<field type="double" length="128">999999.0</field>					</data>					<data name="CARD_TYPE">						<field type="string" length="2">01</field>					</data>					<data name="LIMIT">						<field type="double" length="128">9999.0</field>					</data>				</struct>				<struct>					<data name="BANK_ID">						<field type="string" length="12">104100000004</field>					</data>					<data name="BANK_NAME">						<field type="string" length="4">中国银行</field>					</data>					<data name="CARD_DAY_LIMIT">						<field type="double" length="128">999999.0</field>					</data>					<data name="CARD_TYPE">						<field type="string" length="2">01</field>					</data>					<data name="LIMIT">						<field type="double" length="128">9999.0</field>					</data>				</struct>				<struct>					<data name="BANK_ID">						<field type="string" length="12">102100099996</field>					</data>					<data name="BANK_NAME">						<field type="string" length="6">中国工商银行</field>					</data>					<data name="CARD_DAY_LIMIT">						<field type="double" length="128">999999.0</field>					</data>					<data name="CARD_TYPE">						<field type="string" length="2">01</field>					</data>					<data name="LIMIT">						<field type="double" length="128">9999.0</field>					</data>				</struct>				<struct>					<data name="BANK_ID">						<field type="string" length="12">105100000017</field>					</data>					<data name="BANK_NAME">						<field type="string" length="6">中国建设银行</field>					</data>					<data name="CARD_DAY_LIMIT">						<field type="double" length="128">999999.0</field>					</data>					<data name="CARD_TYPE">						<field type="string" length="2">01</field>					</data>					<data name="LIMIT">						<field type="double" length="128">9999.0</field>					</data>				</struct>				<struct>					<data name="BANK_ID">						<field type="string" length="12">308584000013</field>					</data>					<data name="BANK_NAME">						<field type="string" length="4">招商银行</field>					</data>					<data name="CARD_DAY_LIMIT">						<field type="double" length="128">999999.0</field>					</data>					<data name="CARD_TYPE">						<field type="string" length="2">01</field>					</data>					<data name="LIMIT">						<field type="double" length="128">9999.0</field>					</data>				</struct>			</array>		</data>		<data name="STATUS">			<field type="string" length="1">S</field>		</data>	</body></service>，渠道名称是：test
+2019-04-28 14:27:41,698 main INFO  [PackProcessEngine:45] 41749012-9e0e-4e0f-807a-f8ae399a56c6----ESB转成Json的模板是：test_service_req
+2019-04-28 14:27:41,698 main INFO  [PackProcessEngine:48] 41749012-9e0e-4e0f-807a-f8ae399a56c6----JSON转成ESB XML的模板是：test_service_resp
+2019-04-28 14:28:16,735 main ERROR [ZbankBeanContainer:35] z_bank.scanner.package在配置文件中配置有误或者未做任何配置!!
+2019-04-28 14:28:16,736 main ERROR [ZbankBeanContainer:46] java.lang.NullPointerException
+2019-04-28 14:28:16,737 main ERROR [ZbankBeanContainer:60] com.z_bank.pack.frame.esbparser.EsbXml2MapImpl未找到，原因是com.z_bank.pack.frame.esbparser.EsbXml2MapImpl未加@ZbankBean注解，或者该类不在包扫描配置z_bank.scanner.package=com.z_bank.pack.frame下!
+2019-04-28 14:28:16,737 main ERROR [PackProcessEngine:82] java.lang.NullPointerException
+2019-04-28 14:28:22,783 main INFO  [PackProcessEngine:42] 99541ad4-18e3-4085-945b-ebf8f384b589----ESB XML报文是：﻿<?xml version="1.0" encoding="UTF-8"?><service>	<sys-header>		<data name="SYS_HEAD">			<struct>				<data name="COMPANY">					<field type="string" length="4">BODC</field>				</data>				<data name="CONSUMER_BUSI_NO">					<field type="string" length="14">10112323435556</field>				</data>				<data name="CONSUMER_ID">					<field type="string" length="3">143</field>				</data>				<data name="EC_NO">					<field type="string" length="6">100430</field>				</data>				<data name="MESSAGE_CODE">					<field type="string" length="4">0020</field>				</data>				<data name="MESSAGE_TYPE">					<field type="string" length="4">1400</field>				</data>				<data name="REFERENCE">					<field type="string" length="16">1904190000003247</field>				</data>				<data name="SEQ_NO">					<field type="string" length="17">39385991538409472</field>				</data>				<data name="SERVICE_CODE">					<field type="string" length="11">MBSD_IFP_TP</field>				</data>				<data name="SOURCE_TYPE">					<field type="string" length="2">43</field>				</data>				<data name="THIRD_ID">					<field type="string" length="32">7b581155a0664bbab9c53d307f9ec847					</field>				</data>				<data name="TRAN_CODE">					<field type="string" length="8">88888888</field>				</data>				<data name="TRAN_DATE">					<field type="string" length="8">20190419</field>				</data>				<data name="TRAN_TIMESTAMP">					<field type="string" length="9">162552139</field>				</data>				<data name="RET_STATUS">					<field type="string" length="1">S</field>				</data>				<data name="RET">					<array>						<struct>							<data name="RET_CODE">								<field type="string" length="6">000000</field>							</data>							<data name="RET_MSG">								<field type="string" length="7">SUCCESS</field>							</data>						</struct>					</array>				</data>			</struct>		</data>	</sys-header>	<app-header>		<data name="APP_HEAD">			<struct>				<data name="CURRENT_NUM">					<field type="string" length="1">0</field>				</data>				<data name="PGUP_OR_PGDN">					<field type="string" length="1">1</field>				</data>				<data name="TOTAL_FLAG">					<field type="string" length="1">E</field>				</data>				<data name="TOTAL_NUM">					<field type="string" length="2">-1</field>				</data>			</struct>		</data>	</app-header>	<local-header />	<body>		<data name="LIST_DETAIL">			<array>				<struct>					<data name="BANK_ID">						<field type="string" length="12">2013-09-10</field>					</data>					<data name="BANK_NAME">						<field type="string" length="6">中国农业银行</field>					</data>					<data name="CARD_DAY_LIMIT">						<field type="double" length="128">999999.0</field>					</data>					<data name="CARD_TYPE">						<field type="string" length="2">01</field>					</data>					<data name="LIMIT">						<field type="double" length="128">9999.0</field>					</data>				</struct>				<struct>					<data name="BANK_ID">						<field type="string" length="12">104100000004</field>					</data>					<data name="BANK_NAME">						<field type="string" length="4">中国银行</field>					</data>					<data name="CARD_DAY_LIMIT">						<field type="double" length="128">999999.0</field>					</data>					<data name="CARD_TYPE">						<field type="string" length="2">01</field>					</data>					<data name="LIMIT">						<field type="double" length="128">9999.0</field>					</data>				</struct>				<struct>					<data name="BANK_ID">						<field type="string" length="12">102100099996</field>					</data>					<data name="BANK_NAME">						<field type="string" length="6">中国工商银行</field>					</data>					<data name="CARD_DAY_LIMIT">						<field type="double" length="128">999999.0</field>					</data>					<data name="CARD_TYPE">						<field type="string" length="2">01</field>					</data>					<data name="LIMIT">						<field type="double" length="128">9999.0</field>					</data>				</struct>				<struct>					<data name="BANK_ID">						<field type="string" length="12">105100000017</field>					</data>					<data name="BANK_NAME">						<field type="string" length="6">中国建设银行</field>					</data>					<data name="CARD_DAY_LIMIT">						<field type="double" length="128">999999.0</field>					</data>					<data name="CARD_TYPE">						<field type="string" length="2">01</field>					</data>					<data name="LIMIT">						<field type="double" length="128">9999.0</field>					</data>				</struct>				<struct>					<data name="BANK_ID">						<field type="string" length="12">308584000013</field>					</data>					<data name="BANK_NAME">						<field type="string" length="4">招商银行</field>					</data>					<data name="CARD_DAY_LIMIT">						<field type="double" length="128">999999.0</field>					</data>					<data name="CARD_TYPE">						<field type="string" length="2">01</field>					</data>					<data name="LIMIT">						<field type="double" length="128">9999.0</field>					</data>				</struct>			</array>		</data>		<data name="STATUS">			<field type="string" length="1">S</field>		</data>	</body></service>，渠道名称是：test
+2019-04-28 14:28:22,785 main INFO  [PackProcessEngine:45] 99541ad4-18e3-4085-945b-ebf8f384b589----ESB转成Json的模板是：test_service_req
+2019-04-28 14:28:22,785 main INFO  [PackProcessEngine:48] 99541ad4-18e3-4085-945b-ebf8f384b589----JSON转成ESB XML的模板是：test_service_resp
+2019-04-28 14:29:58,780 main ERROR [ZbankBeanContainer:35] z_bank.scanner.package在配置文件中配置有误或者未做任何配置!!
+2019-04-28 14:29:58,781 main ERROR [ZbankBeanContainer:46] java.lang.NullPointerException
+2019-04-28 14:29:58,783 main ERROR [ZbankBeanContainer:60] com.z_bank.pack.frame.esbparser.EsbXml2MapImpl未找到，原因是com.z_bank.pack.frame.esbparser.EsbXml2MapImpl未加@ZbankBean注解，或者该类不在包扫描配置z_bank.scanner.package=com.z_bank.pack.frame下!
+2019-04-28 14:29:58,784 main ERROR [PackProcessEngine:82] java.lang.NullPointerException
+2019-04-28 14:30:19,048 main INFO  [PackProcessEngine:42] b88a9e5c-df82-4d96-80ac-f642ac64a868----ESB XML报文是：﻿<?xml version="1.0" encoding="UTF-8"?><service>	<sys-header>		<data name="SYS_HEAD">			<struct>				<data name="COMPANY">					<field type="string" length="4">BODC</field>				</data>				<data name="CONSUMER_BUSI_NO">					<field type="string" length="14">10112323435556</field>				</data>				<data name="CONSUMER_ID">					<field type="string" length="3">143</field>				</data>				<data name="EC_NO">					<field type="string" length="6">100430</field>				</data>				<data name="MESSAGE_CODE">					<field type="string" length="4">0020</field>				</data>				<data name="MESSAGE_TYPE">					<field type="string" length="4">1400</field>				</data>				<data name="REFERENCE">					<field type="string" length="16">1904190000003247</field>				</data>				<data name="SEQ_NO">					<field type="string" length="17">39385991538409472</field>				</data>				<data name="SERVICE_CODE">					<field type="string" length="11">MBSD_IFP_TP</field>				</data>				<data name="SOURCE_TYPE">					<field type="string" length="2">43</field>				</data>				<data name="THIRD_ID">					<field type="string" length="32">7b581155a0664bbab9c53d307f9ec847					</field>				</data>				<data name="TRAN_CODE">					<field type="string" length="8">88888888</field>				</data>				<data name="TRAN_DATE">					<field type="string" length="8">20190419</field>				</data>				<data name="TRAN_TIMESTAMP">					<field type="string" length="9">162552139</field>				</data>				<data name="RET_STATUS">					<field type="string" length="1">S</field>				</data>				<data name="RET">					<array>						<struct>							<data name="RET_CODE">								<field type="string" length="6">000000</field>							</data>							<data name="RET_MSG">								<field type="string" length="7">SUCCESS</field>							</data>						</struct>					</array>				</data>			</struct>		</data>	</sys-header>	<app-header>		<data name="APP_HEAD">			<struct>				<data name="CURRENT_NUM">					<field type="string" length="1">0</field>				</data>				<data name="PGUP_OR_PGDN">					<field type="string" length="1">1</field>				</data>				<data name="TOTAL_FLAG">					<field type="string" length="1">E</field>				</data>				<data name="TOTAL_NUM">					<field type="string" length="2">-1</field>				</data>			</struct>		</data>	</app-header>	<local-header />	<body>		<data name="LIST_DETAIL">			<array>				<struct>					<data name="BANK_ID">						<field type="string" length="12">2013-09-10</field>					</data>					<data name="BANK_NAME">						<field type="string" length="6">中国农业银行</field>					</data>					<data name="CARD_DAY_LIMIT">						<field type="double" length="128">999999.0</field>					</data>					<data name="CARD_TYPE">						<field type="string" length="2">01</field>					</data>					<data name="LIMIT">						<field type="double" length="128">9999.0</field>					</data>				</struct>				<struct>					<data name="BANK_ID">						<field type="string" length="12">104100000004</field>					</data>					<data name="BANK_NAME">						<field type="string" length="4">中国银行</field>					</data>					<data name="CARD_DAY_LIMIT">						<field type="double" length="128">999999.0</field>					</data>					<data name="CARD_TYPE">						<field type="string" length="2">01</field>					</data>					<data name="LIMIT">						<field type="double" length="128">9999.0</field>					</data>				</struct>				<struct>					<data name="BANK_ID">						<field type="string" length="12">102100099996</field>					</data>					<data name="BANK_NAME">						<field type="string" length="6">中国工商银行</field>					</data>					<data name="CARD_DAY_LIMIT">						<field type="double" length="128">999999.0</field>					</data>					<data name="CARD_TYPE">						<field type="string" length="2">01</field>					</data>					<data name="LIMIT">						<field type="double" length="128">9999.0</field>					</data>				</struct>				<struct>					<data name="BANK_ID">						<field type="string" length="12">105100000017</field>					</data>					<data name="BANK_NAME">						<field type="string" length="6">中国建设银行</field>					</data>					<data name="CARD_DAY_LIMIT">						<field type="double" length="128">999999.0</field>					</data>					<data name="CARD_TYPE">						<field type="string" length="2">01</field>					</data>					<data name="LIMIT">						<field type="double" length="128">9999.0</field>					</data>				</struct>				<struct>					<data name="BANK_ID">						<field type="string" length="12">308584000013</field>					</data>					<data name="BANK_NAME">						<field type="string" length="4">招商银行</field>					</data>					<data name="CARD_DAY_LIMIT">						<field type="double" length="128">999999.0</field>					</data>					<data name="CARD_TYPE">						<field type="string" length="2">01</field>					</data>					<data name="LIMIT">						<field type="double" length="128">9999.0</field>					</data>				</struct>			</array>		</data>		<data name="STATUS">			<field type="string" length="1">S</field>		</data>	</body></service>，渠道名称是：test
+2019-04-28 14:30:19,050 main INFO  [PackProcessEngine:45] b88a9e5c-df82-4d96-80ac-f642ac64a868----ESB转成Json的模板是：test_service_req
+2019-04-28 14:30:19,050 main INFO  [PackProcessEngine:48] b88a9e5c-df82-4d96-80ac-f642ac64a868----JSON转成ESB XML的模板是：test_service_resp
+2019-04-28 14:30:19,079 main ERROR [ZbankBeanContainer:60] com.z_bank.pack.frame.esbparser.EsbXml2MapImpl未找到，原因是com.z_bank.pack.frame.esbparser.EsbXml2MapImpl未加@ZbankBean注解，或者该类不在包扫描配置z_bank.scanner.package=com.z_bank.pack.frame下!
+2019-04-28 14:30:19,079 main ERROR [PackProcessEngine:82] java.lang.NullPointerException
+2019-04-28 14:31:49,583 main INFO  [PackProcessEngine:42] 2e2e8d02-88af-4ca5-a5ac-47c331f740d1----ESB XML报文是：﻿<?xml version="1.0" encoding="UTF-8"?><service>	<sys-header>		<data name="SYS_HEAD">			<struct>				<data name="COMPANY">					<field type="string" length="4">BODC</field>				</data>				<data name="CONSUMER_BUSI_NO">					<field type="string" length="14">10112323435556</field>				</data>				<data name="CONSUMER_ID">					<field type="string" length="3">143</field>				</data>				<data name="EC_NO">					<field type="string" length="6">100430</field>				</data>				<data name="MESSAGE_CODE">					<field type="string" length="4">0020</field>				</data>				<data name="MESSAGE_TYPE">					<field type="string" length="4">1400</field>				</data>				<data name="REFERENCE">					<field type="string" length="16">1904190000003247</field>				</data>				<data name="SEQ_NO">					<field type="string" length="17">39385991538409472</field>				</data>				<data name="SERVICE_CODE">					<field type="string" length="11">MBSD_IFP_TP</field>				</data>				<data name="SOURCE_TYPE">					<field type="string" length="2">43</field>				</data>				<data name="THIRD_ID">					<field type="string" length="32">7b581155a0664bbab9c53d307f9ec847					</field>				</data>				<data name="TRAN_CODE">					<field type="string" length="8">88888888</field>				</data>				<data name="TRAN_DATE">					<field type="string" length="8">20190419</field>				</data>				<data name="TRAN_TIMESTAMP">					<field type="string" length="9">162552139</field>				</data>				<data name="RET_STATUS">					<field type="string" length="1">S</field>				</data>				<data name="RET">					<array>						<struct>							<data name="RET_CODE">								<field type="string" length="6">000000</field>							</data>							<data name="RET_MSG">								<field type="string" length="7">SUCCESS</field>							</data>						</struct>					</array>				</data>			</struct>		</data>	</sys-header>	<app-header>		<data name="APP_HEAD">			<struct>				<data name="CURRENT_NUM">					<field type="string" length="1">0</field>				</data>				<data name="PGUP_OR_PGDN">					<field type="string" length="1">1</field>				</data>				<data name="TOTAL_FLAG">					<field type="string" length="1">E</field>				</data>				<data name="TOTAL_NUM">					<field type="string" length="2">-1</field>				</data>			</struct>		</data>	</app-header>	<local-header />	<body>		<data name="LIST_DETAIL">			<array>				<struct>					<data name="BANK_ID">						<field type="string" length="12">2013-09-10</field>					</data>					<data name="BANK_NAME">						<field type="string" length="6">中国农业银行</field>					</data>					<data name="CARD_DAY_LIMIT">						<field type="double" length="128">999999.0</field>					</data>					<data name="CARD_TYPE">						<field type="string" length="2">01</field>					</data>					<data name="LIMIT">						<field type="double" length="128">9999.0</field>					</data>				</struct>				<struct>					<data name="BANK_ID">						<field type="string" length="12">104100000004</field>					</data>					<data name="BANK_NAME">						<field type="string" length="4">中国银行</field>					</data>					<data name="CARD_DAY_LIMIT">						<field type="double" length="128">999999.0</field>					</data>					<data name="CARD_TYPE">						<field type="string" length="2">01</field>					</data>					<data name="LIMIT">						<field type="double" length="128">9999.0</field>					</data>				</struct>				<struct>					<data name="BANK_ID">						<field type="string" length="12">102100099996</field>					</data>					<data name="BANK_NAME">						<field type="string" length="6">中国工商银行</field>					</data>					<data name="CARD_DAY_LIMIT">						<field type="double" length="128">999999.0</field>					</data>					<data name="CARD_TYPE">						<field type="string" length="2">01</field>					</data>					<data name="LIMIT">						<field type="double" length="128">9999.0</field>					</data>				</struct>				<struct>					<data name="BANK_ID">						<field type="string" length="12">105100000017</field>					</data>					<data name="BANK_NAME">						<field type="string" length="6">中国建设银行</field>					</data>					<data name="CARD_DAY_LIMIT">						<field type="double" length="128">999999.0</field>					</data>					<data name="CARD_TYPE">						<field type="string" length="2">01</field>					</data>					<data name="LIMIT">						<field type="double" length="128">9999.0</field>					</data>				</struct>				<struct>					<data name="BANK_ID">						<field type="string" length="12">308584000013</field>					</data>					<data name="BANK_NAME">						<field type="string" length="4">招商银行</field>					</data>					<data name="CARD_DAY_LIMIT">						<field type="double" length="128">999999.0</field>					</data>					<data name="CARD_TYPE">						<field type="string" length="2">01</field>					</data>					<data name="LIMIT">						<field type="double" length="128">9999.0</field>					</data>				</struct>			</array>		</data>		<data name="STATUS">			<field type="string" length="1">S</field>		</data>	</body></service>，渠道名称是：test
+2019-04-28 14:31:49,585 main INFO  [PackProcessEngine:45] 2e2e8d02-88af-4ca5-a5ac-47c331f740d1----ESB转成Json的模板是：test_service_req
+2019-04-28 14:31:49,585 main INFO  [PackProcessEngine:48] 2e2e8d02-88af-4ca5-a5ac-47c331f740d1----JSON转成ESB XML的模板是：test_service_resp
+2019-04-28 14:34:20,531 main INFO  [PackProcessEngine:42] d6595642-062c-4c13-b020-a6feccd3f98b----ESB XML报文是：﻿<?xml version="1.0" encoding="UTF-8"?><service>	<sys-header>		<data name="SYS_HEAD">			<struct>				<data name="COMPANY">					<field type="string" length="4">BODC</field>				</data>				<data name="CONSUMER_BUSI_NO">					<field type="string" length="14">10112323435556</field>				</data>				<data name="CONSUMER_ID">					<field type="string" length="3">143</field>				</data>				<data name="EC_NO">					<field type="string" length="6">100430</field>				</data>				<data name="MESSAGE_CODE">					<field type="string" length="4">0020</field>				</data>				<data name="MESSAGE_TYPE">					<field type="string" length="4">1400</field>				</data>				<data name="REFERENCE">					<field type="string" length="16">1904190000003247</field>				</data>				<data name="SEQ_NO">					<field type="string" length="17">39385991538409472</field>				</data>				<data name="SERVICE_CODE">					<field type="string" length="11">MBSD_IFP_TP</field>				</data>				<data name="SOURCE_TYPE">					<field type="string" length="2">43</field>				</data>				<data name="THIRD_ID">					<field type="string" length="32">7b581155a0664bbab9c53d307f9ec847					</field>				</data>				<data name="TRAN_CODE">					<field type="string" length="8">88888888</field>				</data>				<data name="TRAN_DATE">					<field type="string" length="8">20190419</field>				</data>				<data name="TRAN_TIMESTAMP">					<field type="string" length="9">162552139</field>				</data>				<data name="RET_STATUS">					<field type="string" length="1">S</field>				</data>				<data name="RET">					<array>						<struct>							<data name="RET_CODE">								<field type="string" length="6">000000</field>							</data>							<data name="RET_MSG">								<field type="string" length="7">SUCCESS</field>							</data>						</struct>					</array>				</data>			</struct>		</data>	</sys-header>	<app-header>		<data name="APP_HEAD">			<struct>				<data name="CURRENT_NUM">					<field type="string" length="1">0</field>				</data>				<data name="PGUP_OR_PGDN">					<field type="string" length="1">1</field>				</data>				<data name="TOTAL_FLAG">					<field type="string" length="1">E</field>				</data>				<data name="TOTAL_NUM">					<field type="string" length="2">-1</field>				</data>			</struct>		</data>	</app-header>	<local-header />	<body>		<data name="LIST_DETAIL">			<array>				<struct>					<data name="BANK_ID">						<field type="string" length="12">2013-09-10</field>					</data>					<data name="BANK_NAME">						<field type="string" length="6">中国农业银行</field>					</data>					<data name="CARD_DAY_LIMIT">						<field type="double" length="128">999999.0</field>					</data>					<data name="CARD_TYPE">						<field type="string" length="2">01</field>					</data>					<data name="LIMIT">						<field type="double" length="128">9999.0</field>					</data>				</struct>				<struct>					<data name="BANK_ID">						<field type="string" length="12">104100000004</field>					</data>					<data name="BANK_NAME">						<field type="string" length="4">中国银行</field>					</data>					<data name="CARD_DAY_LIMIT">						<field type="double" length="128">999999.0</field>					</data>					<data name="CARD_TYPE">						<field type="string" length="2">01</field>					</data>					<data name="LIMIT">						<field type="double" length="128">9999.0</field>					</data>				</struct>				<struct>					<data name="BANK_ID">						<field type="string" length="12">102100099996</field>					</data>					<data name="BANK_NAME">						<field type="string" length="6">中国工商银行</field>					</data>					<data name="CARD_DAY_LIMIT">						<field type="double" length="128">999999.0</field>					</data>					<data name="CARD_TYPE">						<field type="string" length="2">01</field>					</data>					<data name="LIMIT">						<field type="double" length="128">9999.0</field>					</data>				</struct>				<struct>					<data name="BANK_ID">						<field type="string" length="12">105100000017</field>					</data>					<data name="BANK_NAME">						<field type="string" length="6">中国建设银行</field>					</data>					<data name="CARD_DAY_LIMIT">						<field type="double" length="128">999999.0</field>					</data>					<data name="CARD_TYPE">						<field type="string" length="2">01</field>					</data>					<data name="LIMIT">						<field type="double" length="128">9999.0</field>					</data>				</struct>				<struct>					<data name="BANK_ID">						<field type="string" length="12">308584000013</field>					</data>					<data name="BANK_NAME">						<field type="string" length="4">招商银行</field>					</data>					<data name="CARD_DAY_LIMIT">						<field type="double" length="128">999999.0</field>					</data>					<data name="CARD_TYPE">						<field type="string" length="2">01</field>					</data>					<data name="LIMIT">						<field type="double" length="128">9999.0</field>					</data>				</struct>			</array>		</data>		<data name="STATUS">			<field type="string" length="1">S</field>		</data>	</body></service>，渠道名称是：test
+2019-04-28 14:34:20,532 main INFO  [PackProcessEngine:45] d6595642-062c-4c13-b020-a6feccd3f98b----ESB转成Json的模板是：test_service_req
+2019-04-28 14:34:20,532 main INFO  [PackProcessEngine:48] d6595642-062c-4c13-b020-a6feccd3f98b----JSON转成ESB XML的模板是：test_service_resp
+2019-04-28 14:34:20,612 main INFO  [PackProcessEngine:52] d6595642-062c-4c13-b020-a6feccd3f98b----ESB XML转换成map之后的结果是：{sys-header={SYS_HEAD={RET=[{RET_CODE=000000, RET_MSG=SUCCESS}], SERVICE_CODE=MBSD_IFP_TP, MESSAGE_TYPE=1400, THIRD_ID=7b581155a0664bbab9c53d307f9ec847					, TRAN_TIMESTAMP=162552139, CONSUMER_ID=143, EC_NO=100430, COMPANY=BODC, SEQ_NO=39385991538409472, SOURCE_TYPE=43, CONSUMER_BUSI_NO=10112323435556, MESSAGE_CODE=0020, REFERENCE=1904190000003247, RET_STATUS=S, TRAN_DATE=20190419, TRAN_CODE=88888888}}, app-header={APP_HEAD={TOTAL_NUM=-1, TOTAL_FLAG=E, CURRENT_NUM=0, PGUP_OR_PGDN=1}}, body={STATUS=S, LIST_DETAIL=[{CARD_DAY_LIMIT=999999.0, CARD_TYPE=01, BANK_ID=2013-09-10, LIMIT=9999.0, BANK_NAME=中国农业银行}, {CARD_DAY_LIMIT=999999.0, CARD_TYPE=01, BANK_ID=104100000004, LIMIT=9999.0, BANK_NAME=中国银行}, {CARD_DAY_LIMIT=999999.0, CARD_TYPE=01, BANK_ID=102100099996, LIMIT=9999.0, BANK_NAME=中国工商银行}, {CARD_DAY_LIMIT=999999.0, CARD_TYPE=01, BANK_ID=105100000017, LIMIT=9999.0, BANK_NAME=中国建设银行}, {CARD_DAY_LIMIT=999999.0, CARD_TYPE=01, BANK_ID=308584000013, LIMIT=9999.0, BANK_NAME=招商银行}]}}
+2019-04-28 14:34:20,680 main INFO  [PackProcessEngine:56] d6595642-062c-4c13-b020-a6feccd3f98b----map转换成json之后的结果是：{"data":{"limit":9999,"listDetail":[{"BANK_ID":"2013-09-10","BANK_NAME":"中国农业银行","CARD_DAY_LIMIT":"999999.0","CARD_TYPE":"01","LIMIT":"9999.0"},{"BANK_ID":"104100000004","BANK_NAME":"中国银行","CARD_DAY_LIMIT":"999999.0","CARD_TYPE":"01","LIMIT":"9999.0"},{"BANK_ID":"102100099996","BANK_NAME":"中国工商银行","CARD_DAY_LIMIT":"999999.0","CARD_TYPE":"01","LIMIT":"9999.0"},{"BANK_ID":"105100000017","BANK_NAME":"中国建设银行","CARD_DAY_LIMIT":"999999.0","CARD_TYPE":"01","LIMIT":"9999.0"},{"BANK_ID":"308584000013","BANK_NAME":"招商银行","CARD_DAY_LIMIT":"999999.0","CARD_TYPE":"01","LIMIT":"9999.0"}],"retMsg":"BODC","tranDate":20190419},"retCode":"000000"}
+2019-04-28 14:34:20,680 main INFO  [PackProcessEngine:63] d6595642-062c-4c13-b020-a6feccd3f98b----加密之后的结果是：{"data":{"limit":9999,"listDetail":[{"BANK_ID":"2013-09-10","BANK_NAME":"中国农业银行","CARD_DAY_LIMIT":"999999.0","CARD_TYPE":"01","LIMIT":"9999.0"},{"BANK_ID":"104100000004","BANK_NAME":"中国银行","CARD_DAY_LIMIT":"999999.0","CARD_TYPE":"01","LIMIT":"9999.0"},{"BANK_ID":"102100099996","BANK_NAME":"中国工商银行","CARD_DAY_LIMIT":"999999.0","CARD_TYPE":"01","LIMIT":"9999.0"},{"BANK_ID":"105100000017","BANK_NAME":"中国建设银行","CARD_DAY_LIMIT":"999999.0","CARD_TYPE":"01","LIMIT":"9999.0"},{"BANK_ID":"308584000013","BANK_NAME":"招商银行","CARD_DAY_LIMIT":"999999.0","CARD_TYPE":"01","LIMIT":"9999.0"}],"retMsg":"BODC","tranDate":20190419},"retCode":"000000"}
+2019-04-28 14:34:20,680 main INFO  [PackProcessEngine:66] d6595642-062c-4c13-b020-a6feccd3f98b----发送请求到到null请求参数是:{data={"data":{"limit":9999,"listDetail":[{"BANK_ID":"2013-09-10","BANK_NAME":"中国农业银行","CARD_DAY_LIMIT":"999999.0","CARD_TYPE":"01","LIMIT":"9999.0"},{"BANK_ID":"104100000004","BANK_NAME":"中国银行","CARD_DAY_LIMIT":"999999.0","CARD_TYPE":"01","LIMIT":"9999.0"},{"BANK_ID":"102100099996","BANK_NAME":"中国工商银行","CARD_DAY_LIMIT":"999999.0","CARD_TYPE":"01","LIMIT":"9999.0"},{"BANK_ID":"105100000017","BANK_NAME":"中国建设银行","CARD_DAY_LIMIT":"999999.0","CARD_TYPE":"01","LIMIT":"9999.0"},{"BANK_ID":"308584000013","BANK_NAME":"招商银行","CARD_DAY_LIMIT":"999999.0","CARD_TYPE":"01","LIMIT":"9999.0"}],"retMsg":"BODC","tranDate":20190419},"retCode":"000000"}, aeskey=@#$%@#$%$@#%}
+2019-04-28 14:34:20,682 main INFO  [PackProcessEngine:68] d6595642-062c-4c13-b020-a6feccd3f98b----得到的响应是:{"data":{"limit":9999,"listDetail":[{"BANK_ID":"2013-09-10","BANK_NAME":"中国农业银行","CARD_DAY_LIMIT":"999999.0","CARD_TYPE":"01","LIMIT":"9999.0"},{"BANK_ID":"104100000004","BANK_NAME":"中国银行","CARD_DAY_LIMIT":"999999.0","CARD_TYPE":"01","LIMIT":"9999.0"},{"BANK_ID":"102100099996","BANK_NAME":"中国工商银行","CARD_DAY_LIMIT":"999999.0","CARD_TYPE":"01","LIMIT":"9999.0"},{"BANK_ID":"105100000017","BANK_NAME":"中国建设银行","CARD_DAY_LIMIT":"999999.0","CARD_TYPE":"01","LIMIT":"9999.0"},{"BANK_ID":"308584000013","BANK_NAME":"招商银行","CARD_DAY_LIMIT":"999999.0","CARD_TYPE":"01","LIMIT":"9999.0"}],"retMsg":"BODC","tranDate":20190419},"retCode":"000000"}
+2019-04-28 14:34:20,682 main INFO  [PackProcessEngine:71] d6595642-062c-4c13-b020-a6feccd3f98b----解密后的结果是:{"data":{"limit":9999,"listDetail":[{"BANK_ID":"2013-09-10","BANK_NAME":"中国农业银行","CARD_DAY_LIMIT":"999999.0","CARD_TYPE":"01","LIMIT":"9999.0"},{"BANK_ID":"104100000004","BANK_NAME":"中国银行","CARD_DAY_LIMIT":"999999.0","CARD_TYPE":"01","LIMIT":"9999.0"},{"BANK_ID":"102100099996","BANK_NAME":"中国工商银行","CARD_DAY_LIMIT":"999999.0","CARD_TYPE":"01","LIMIT":"9999.0"},{"BANK_ID":"105100000017","BANK_NAME":"中国建设银行","CARD_DAY_LIMIT":"999999.0","CARD_TYPE":"01","LIMIT":"9999.0"},{"BANK_ID":"308584000013","BANK_NAME":"招商银行","CARD_DAY_LIMIT":"999999.0","CARD_TYPE":"01","LIMIT":"9999.0"}],"retMsg":"BODC","tranDate":20190419},"retCode":"000000"}
+2019-04-28 14:34:20,715 main INFO  [PackProcessEngine:76] d6595642-062c-4c13-b020-a6feccd3f98b----转换成ESB XML的模型数据是:{model={"data":{"limit":9999,"listDetail":[{"BANK_ID":"2013-09-10","BANK_NAME":"中国农业银行","CARD_DAY_LIMIT":"999999.0","CARD_TYPE":"01","LIMIT":"9999.0"},{"BANK_ID":"104100000004","BANK_NAME":"中国银行","CARD_DAY_LIMIT":"999999.0","CARD_TYPE":"01","LIMIT":"9999.0"},{"BANK_ID":"102100099996","BANK_NAME":"中国工商银行","CARD_DAY_LIMIT":"999999.0","CARD_TYPE":"01","LIMIT":"9999.0"},{"BANK_ID":"105100000017","BANK_NAME":"中国建设银行","CARD_DAY_LIMIT":"999999.0","CARD_TYPE":"01","LIMIT":"9999.0"},{"BANK_ID":"308584000013","BANK_NAME":"招商银行","CARD_DAY_LIMIT":"999999.0","CARD_TYPE":"01","LIMIT":"9999.0"}],"retMsg":"BODC","tranDate":20190419},"retCode":"000000"}}
+2019-04-28 14:34:20,861 main INFO  [PackProcessEngine:79] d6595642-062c-4c13-b020-a6feccd3f98b----响应ESB XML报文是：<?xml version="1.0" encoding="UTF-8"?>
+<!--
+{
+"model": {
+"retCode": "000000",
+"retMsg": "SUCCESS",
+"data": {
+"limit": "9999.0",
+"tranDate": "20190419",
+"listDetail": [{
+"totalNum": "-1",
+"bankName": "中国农业银行",
+"bankId": "103100000026"
+}, {
+"totalNum": "-1",
+"bankName": "中国银行",
+"bankId": "104100000004"
+}, {
+"totalNum": "-1",
+"bankName": "中国工商银行",
+"bankId": "102100099996"
+}, {
+"totalNum": "-1",
+"bankName": "中国建设银行",
+"bankId": "105100000017"
+}, {
+"totalNum": "-1",
+"bankName": "招商银行",
+"bankId": "308584000013"
+}]
+}
+}
+}
+-->
+<service>
+<sys-header>
+<data name="SYS_HEAD">
+<struct>
+<data name="COMPANY">
+<field type="string" length="4">BODC</field>
+</data>
+<data name="CONSUMER_BUSI_NO">
+<field type="string" length="14">10112323435556</field>
+</data>
+<data name="CONSUMER_ID">
+<field type="string" length="3">143</field>
+</data>
+<data name="EC_NO">
+<field type="string" length="6">100430</field>
+</data>
+<data name="MESSAGE_CODE">
+<field type="string" length="4">0020</field>
+</data>
+<data name="MESSAGE_TYPE">
+<field type="string" length="4">1400</field>
+</data>
+<data name="REFERENCE">
+<field type="string" length="16">1904190000003247</field>
+</data>
+<data name="SEQ_NO">
+<field type="string" length="17">39385991538409472</field>
+</data>
+<data name="SERVICE_CODE">
+<field type="string" length="11">MBSD_IFP_TP</field>
+</data>
+<data name="SOURCE_TYPE">
+<field type="string" length="2">43</field>
+</data>
+<data name="THIRD_ID">
+<field type="string" length="32">7b581155a0664bbab9c53d307f9ec847
+</field>
+</data>
+<data name="TRAN_CODE">
+<field type="string" length="8">88888888</field>
+</data>
+<data name="TRAN_DATE">
+<field type="string" length="8">20190419</field>
+</data>
+<data name="TRAN_TIMESTAMP">
+<field type="string" length="9">162552139</field>
+</data>
+<data name="RET_STATUS">
+<field type="string" length="1">S</field>
+</data>
+<data name="RET">
+<array>
+<data name="RET_CODE">
+<field type="string" length="6">000000</field>
+</data>
+<data name="RET_MSG">
+<field type="string" length="7"></field>
+</data>
+</array>
+</data>
+</struct>
+</data>
+</sys-header>
+<app-header>
+<data name="APP_HEAD">
+<struct>
+<data name="CURRENT_NUM">
+<field type="string" length="1">0</field>
+</data>
+<data name="PGUP_OR_PGDN">
+<field type="string" length="1">1</field>
+</data>
+<data name="TOTAL_FLAG">
+<field type="string" length="1">E</field>
+</data>
+<data name="TOTAL_NUM">
+<field type="string" length="2">
+-1
+</field>
+</data>
+</struct>
+</data>
+</app-header>
+<local-header />
+<body>
+<data name="LIST_DETAIL">
+<array>
+<struct>
+<data name="BANK_ID">
+<field type="string" length="12"></field>
+</data>
+<data name="BANK_NAME">
+<field type="string" length="6"></field>
+</data>
+<data name="CARD_DAY_LIMIT">
+<field type="double" length="128">999999.0</field>
+</data>
+<data name="CARD_TYPE">
+<field type="string" length="2">01</field>
+</data>
+<data name="LIMIT">
+<!-- 如果mode中的数据是数字类型，为避免数据超过四位之后自动用逗号分隔就采用 加?c的的方式-->
+<field type="double" length="128">9999</field>
+</data>
+</struct>
+<struct>
+<data name="BANK_ID">
+<field type="string" length="12"></field>
+</data>
+<data name="BANK_NAME">
+<field type="string" length="6"></field>
+</data>
+<data name="CARD_DAY_LIMIT">
+<field type="double" length="128">999999.0</field>
+</data>
+<data name="CARD_TYPE">
+<field type="string" length="2">01</field>
+</data>
+<data name="LIMIT">
+<!-- 如果mode中的数据是数字类型，为避免数据超过四位之后自动用逗号分隔就采用 加?c的的方式-->
+<field type="double" length="128">9999</field>
+</data>
+</struct>
+<struct>
+<data name="BANK_ID">
+<field type="string" length="12"></field>
+</data>
+<data name="BANK_NAME">
+<field type="string" length="6"></field>
+</data>
+<data name="CARD_DAY_LIMIT">
+<field type="double" length="128">999999.0</field>
+</data>
+<data name="CARD_TYPE">
+<field type="string" length="2">01</field>
+</data>
+<data name="LIMIT">
+<!-- 如果mode中的数据是数字类型，为避免数据超过四位之后自动用逗号分隔就采用 加?c的的方式-->
+<field type="double" length="128">9999</field>
+</data>
+</struct>
+<struct>
+<data name="BANK_ID">
+<field type="string" length="12"></field>
+</data>
+<data name="BANK_NAME">
+<field type="string" length="6"></field>
+</data>
+<data name="CARD_DAY_LIMIT">
+<field type="double" length="128">999999.0</field>
+</data>
+<data name="CARD_TYPE">
+<field type="string" length="2">01</field>
+</data>
+<data name="LIMIT">
+<!-- 如果mode中的数据是数字类型，为避免数据超过四位之后自动用逗号分隔就采用 加?c的的方式-->
+<field type="double" length="128">9999</field>
+</data>
+</struct>
+<struct>
+<data name="BANK_ID">
+<field type="string" length="12"></field>
+</data>
+<data name="BANK_NAME">
+<field type="string" length="6"></field>
+</data>
+<data name="CARD_DAY_LIMIT">
+<field type="double" length="128">999999.0</field>
+</data>
+<data name="CARD_TYPE">
+<field type="string" length="2">01</field>
+</data>
+<data name="LIMIT">
+<!-- 如果mode中的数据是数字类型，为避免数据超过四位之后自动用逗号分隔就采用 加?c的的方式-->
+<field type="double" length="128">9999</field>
+</data>
+</struct>
+</array>
+</data>
+<data name="STATUS">
+<field type="string" length="1">S</field>
+</data>
+</body>
+</service>
